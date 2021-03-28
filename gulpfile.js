@@ -1,6 +1,6 @@
 // let project_folder = 'dist';
 let project_folder = 'static';
-let source_folder = 'assets';
+let source_folder = '#assets';
 let images_folder = 'images';
 let media_folder = 'media';
 
@@ -15,11 +15,11 @@ let path = {
         fonts: `./${project_folder}/fonts`
     },
     src: {
-        css: `./${source_folder}/scss/style.scss`,
-        js:  `./${source_folder}/js/script.js`,
-        img: `./${source_folder}/img/**/*.{jpg,png,svg,gif,ico,webp}`,
+        css: `./${source_folder}/#scss/style.scss`,
+        js:  `./${source_folder}/#js/script.js`,
+        img: `./${source_folder}/#img/**/*.{jpg,png,svg,gif,ico,webp}`,
         images: `${images_folder}/**/*.{jpg,png,svg,gif,ico,webp}`,
-        fonts: `./${source_folder}/fonts/*.{ttf,eot,woff,woff2}`
+        fonts: `./${source_folder}/#fonts/*.{ttf,eot,woff,woff2}`
     },
     watch: {
         css: `${source_folder}/**/*.scss`,
@@ -50,7 +50,7 @@ const {src, dest} = require('gulp'),
 
 function css() {
     return src(path.src.css)
-        .pipe(wait(1000))
+        // .pipe(wait(1000))
         .pipe(fileinclude())
         .pipe(scss({
             outputStyle: "expanded"
@@ -71,10 +71,7 @@ function css() {
 
 function js() {
     return src(path.src.js)
-        .pipe(fileinclude({
-            basepath: '@root',
-            prefix: '~~'
-        }))
+        .pipe(fileinclude({basepath: '@root'}))
         .pipe(babel({ // изменение кода для старых браузеров
             ignore: [
                 "node_modules/**"

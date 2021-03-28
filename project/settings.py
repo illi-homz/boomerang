@@ -66,7 +66,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(os.path.abspath(BASE_DIR), 'assets'),
+            os.path.join(os.path.abspath(BASE_DIR), '#assets'),
             os.path.join(os.path.abspath(BASE_DIR), 'app', 'templates'),
         ],
         'APP_DIRS': True,
@@ -82,7 +82,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.jinja2.Jinja2',
         'DIRS': [
-            os.path.join(os.path.abspath(BASE_DIR), 'assets'),
+            os.path.join(os.path.abspath(BASE_DIR), '#assets'),
             os.path.join(os.path.abspath(BASE_DIR), 'app', 'templates'),
         ],
         'APP_DIRS': True,
@@ -142,10 +142,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.1/howto/static-files/
-
 MEDIA_LOCATION = 'media'
 
 STATIC_URL = '/staticfiles/'
@@ -156,11 +152,5 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "media"),
 )
 
-# MEDIAFILES_DIRS = (
-#     os.path.join(BASE_DIR, "media"),
-# )
-
 STATIC_ROOT = os.path.join(BASE_DIR, '/')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-# LIVERELOAD_PORT = 8000

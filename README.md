@@ -1,3 +1,11 @@
-## Django template
+## Boomerang
 
-gulp + django
+#####django + jinja + gulp
+
+`source env/bin/activate`
+
+`py manage.py livereload`
+
+`py manage.py runserver`
+
+`gulp`

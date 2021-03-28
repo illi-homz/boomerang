@@ -1,13 +1,12 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.template import loader
+from .data import data as main_data
 
 def index(request):
     template = loader.get_template('Index.jinja')
     data = {
-        'data': {
-            'title': 'Hello man',
-            'arr': [1,2,3,4,5,6,7,8,9]
-        }
+        'header': main_data['header'],
+        'banner': main_data['banner']
     }
     return HttpResponse(template.render(data))

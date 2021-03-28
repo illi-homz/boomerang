@@ -1,0 +1,22 @@
+<section class="banner">
+    <div class="banner__bg">
+    </div>
+
+    <div class="container">
+        <div class="banner__wrap">
+            <h1 class="banner__title">{{ banner.title|safe }}</h1>
+            <div class="banner__gotoblock" onclick="gz.goToBlock('#services')">
+                {% include '#img/arrow-down.svg' %}
+            </div>
+        </div>
+        <ul class="banner__list">
+            {% for el in banner.data %}
+            <li>
+                <div class="banner__count">{{ el.count|safe }}</div>
+                <div class="banner__text">{{ el.text|safe }}</div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+</section>

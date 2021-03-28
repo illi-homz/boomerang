@@ -1,0 +1,44 @@
+@import 'lib/null';
+@import 'lib/variables';
+@import 'lib/mixins';
+@import 'lib/tipografy';
+@import 'lib/fragments';
+@import 'lib/fonts';
+
+// global classes
+@import 'g-classes/g-burger';
+
+// components
+@import '@@webRoot/#assets/components/header/header';
+@import '@@webRoot/#assets/components/footer/footer';
+@import '@@webRoot/#assets/components/banner/banner';
+
+// pages
+
+*
+{
+    font-family: 'Helvetica', sans-serif;
+    @include font-set(18, 21px, 400);
+    color: #fff;
+}
+
+body
+{
+    background-color: $bg;
+
+    .lock {overflow: hidden;}
+}
+
+.container
+{
+    max-width: ($lg+32)+px;
+    margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.row {display: flex;}
+
+.col {flex: 1 0;}
+
+.text-center {text-align: center;}
