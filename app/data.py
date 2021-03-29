@@ -18,5 +18,22 @@ data = {
             {'count': 52, 'text': 'единицы <br>огнестрельного оружия'},
             {'count': 750, 'text': 'наш штат работников в настоящее время'},
         ]
+    },
+    'services': {
+        'slides': [
+            'img/slider/home',
+            'img/slider/home',
+            'img/slider/home',
+            'img/slider/home',
+            'img/slider/home',
+            'img/slider/home',
+            'img/slider/home',
+        ]
     }
+}
+
+header = {
+    'header': data['header'],
+    'banner': data['banner'],
+    'services': data['services'],
 }

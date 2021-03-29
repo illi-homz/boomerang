@@ -1,6 +1,6 @@
 ## Boomerang
 
-#####django + jinja + gulp
+####django + jinja + gulp
 
 `source env/bin/activate`
 

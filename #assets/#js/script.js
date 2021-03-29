@@ -39,4 +39,5 @@ gz.init = function() {
 
 $(document).ready(() => {
     gz.init()
+    gz.services.init()
 })

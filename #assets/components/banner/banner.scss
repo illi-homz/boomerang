@@ -1,8 +1,12 @@
 .banner
 {
-    height: 1px;
-    min-height: calc(100vh - 104px);
     position: relative;
+
+    @include tablet
+    {
+        height: calc(100vh - 104px);
+        min-height: 600px;
+    }
 
     &__bg
     {
@@ -116,7 +120,6 @@
         font-family: Aldrich, sans-serif;
         font-size: 50px;
         line-height: 50px;
-        letter-spacing: 0.01em;
         color: #31343e;
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke: 2px $red;
@@ -126,6 +129,5 @@
     &__text
     {
         @include font-set(16, 22px, 400);
-        letter-spacing: 0.01em;
     }
 }

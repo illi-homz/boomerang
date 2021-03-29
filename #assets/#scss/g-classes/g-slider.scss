@@ -1,0 +1,58 @@
+.slick-track
+{
+    display: flex;
+}
+.slick-slide
+{
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease;
+}
+
+.slick-current,
+.slick-active
+{
+    opacity: 1;
+    visibility: visible;
+}
+
+.slick-dots
+{
+    display: flex;
+
+    * {font-size: 0;}
+
+    li
+    {
+        width: 8px;
+        height: 8px;
+        background-color: #fff;
+        opacity: .7;
+        margin: 0 3px;
+
+        &.slick-active
+        {
+            background-color: $red;
+        }
+    }
+}
+
+.slick-arrow
+{
+    font-size: 0;
+    width: 60px;
+    height: 40px;
+    opacity: .7;
+
+    &:hover {opacity: 1;}
+}
+
+
+.slick-prev
+{
+    background: url('/'+$static+'/img/arrow-body-l.svg') center/cover no-repeat;
+}
+.slick-next
+{
+    background: url('/'+$static+'/img/arrow-body-r.svg') center/cover no-repeat;
+}

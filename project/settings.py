@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'app',
-    'livereload'
+    'livereload',
+    # 'django_webp',
 ]
 
 MIDDLEWARE_CLASSES = (
@@ -76,6 +77,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                # 'django_webp.context_processors.webp',
             ],
         },
     },
@@ -92,6 +94,9 @@ TEMPLATES = [
             'lstrip_blocks': True,
             'environment': 'project.jinja2.environment',
             # 'extensions': ['jinja2.ext.do', 'jinja2.ext.loopcontrols', 'jinja2.ext.i18n', 'jinja2.ext.with_',],
+            'context_processors': [
+                # 'django_webp.context_processors.webp',
+            ]
         },
     }
 ]

@@ -1,1 +1,32 @@
-<section class="services" id="services"></section>
+{% load static %}
+
+<section class="services" id="services">
+    <div class="container">
+        <div class="g-block__title">
+            услуги
+
+            <div class="services__more">
+                ВСЕ УСЛУГИ{% include '#img/arrow-empty-r.svg' %}
+            </div>
+        </div>
+        <div class="services__desc">
+            Группа охранных предприятий "Бумеранг" прочно обосновалось на рынке предоставления охранных услуг, более чем двадцатилетнюю работу создало себе имидж надежного, высокоинтеллектуального охранного предприятия.
+        </div>
+        <div class="services__wrapper">
+            <div class="services__wrap">
+                <div class="services__slider-title">Охрана объектов</div>
+                <div class="services__slider _services__slider">
+                    {% for url in services.slides %}
+                    <div class="services__slider-item">
+                        <picture>
+                            <source srcset="{% static 'img/slider/home.webp' %}" type="image/webp">
+                            <img src="{% static 'img/slider/home.jpg' %}" alt="slide" />
+                        </picture>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="services__nav _services__nav"></div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,9 @@
+.g-block
+{
+    &__title
+    {
+        text-transform: uppercase;
+        color: $red;
+        @include font-set(25, 29px, 700);
+    }
+}
