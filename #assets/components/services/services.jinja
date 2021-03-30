@@ -3,20 +3,27 @@
         <div class="g-block__title">
             услуги
 
-            <div class="services__more">
+            <a class="services__more" href="#">
                 ВСЕ УСЛУГИ{% include '#img/arrow-empty-r.svg' %}
-            </div>
+            </a>
         </div>
         <div class="services__desc">
             Группа охранных предприятий "Бумеранг" прочно обосновалось на рынке предоставления охранных услуг, более чем двадцатилетнюю работу создало себе имидж надежного, высокоинтеллектуального охранного предприятия.
         </div>
         <div class="services__wrapper">
-            <div class="services__wrap">
-                <div class="services__slider-title _services__slider-title">
-                    Охрана объектоввввввв
+            <div class="services__col services__col--first">
+                <div>
+                    <div class="services__slider-title _services__slider-title">
+                        Что то пошло не так
+                    </div>
+                    <a href="#" class="services__to-article _services__to-article">
+                        Что то пошло не так
+                    </a>
                 </div>
+                <div class="services__nav _services__nav"></div>
+            </div>
+            <div class="services__col services__col--second">
                 <div class="services__slider _services__slider">
-
                     {% for slide in services.slides %}
                     <div
                         class="services__slider-item"
@@ -25,15 +32,11 @@
                         data-url="{{slide.link.url}}">
                         <picture>
                             <source srcset="{{slide.img}}.webp" type="image/webp">
-                            <img src="{{slide.img}}.jpg" alt="slide" />
+                            <img data-lazy="{{slide.img}}.jpg" alt="slide" />
                         </picture>
                     </div>
                     {% endfor %}
                 </div>
-                <a href="####" class="services__to-article _services__to-article">
-                    лалала
-                </a>
-                <div class="services__nav _services__nav"></div>
             </div>
         </div>
     </div>

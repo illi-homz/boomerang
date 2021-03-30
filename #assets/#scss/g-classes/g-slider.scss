@@ -1,19 +1,18 @@
+.slick-slider
+{
+    overflow: hidden;
+}
+
 .slick-track
 {
     display: flex;
-}
-.slick-slide
-{
-    opacity: 0;
-    visibility: hidden;
-    transition: all .3s ease;
+    height: inherit;
 }
 
-.slick-current,
-.slick-active
+.slick-list
 {
-    opacity: 1;
-    visibility: visible;
+    height: inherit;
+    width: inherit;
 }
 
 .slick-dots

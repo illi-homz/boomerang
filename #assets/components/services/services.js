@@ -7,14 +7,16 @@ gz.services = {
     sliderInit()
     {
         $('._services__slider').slick({
+            lazyLoad: 'ondemand',
             mobileFirst: true,
             infinite: true,
             dots: true,
             arrows: true,
             slidesToScroll: 1
-        }).on('afterChange', () => {
-            this.changeSlideData()
         })
+            .on('afterChange', () => this.changeSlideData())
+
+        this.changeSlideData()
     },
     moveNavs()
     {

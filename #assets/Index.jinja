@@ -1,9 +1,11 @@
 {% extends 'layouts/Base.jinja' %}
-{% load static %}
 
 {% block content %}
 
-    {% include 'components/banner/banner.jinja' %}
-    {% include 'components/services/services.jinja' %}
+    <div class="index">
+        {% include 'components/banner/banner.jinja' %}
+        {% include 'components/services/services.jinja' %}
+        {% include 'components/about/about.jinja' %}
+    </div>
 
 {% endblock %}

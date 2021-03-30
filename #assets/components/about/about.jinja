@@ -1,0 +1,23 @@
+<div class="index-about container">
+    <div class="g-block__title">
+        о нас
+    </div>
+    <div class="index-about__wrapper">
+        <div class="index-about__img">
+            <picture>
+                <source srcset="{{ about.img }}.webp" type="image/webp">
+                <img src="{{ about.img }}.jpg" alt="slide" />
+            </picture>
+        </div>
+        <div class="index-about__data">
+            <div class="index-about__text">
+                {% for text in about.text_list %}
+                <p>{{ text }}</p>
+                {% endfor %}
+            </div>
+            <a class="index-about__link" href="{{ about.link.url }}">
+                {{ about.link.text }}
+            </a>
+        </div>
+    </div>
+</div>
