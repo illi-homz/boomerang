@@ -581,6 +581,24 @@ h1 {
      object-fit: cover;
 }
 
+.services__to-article {
+  display: block;
+  width: 100%;
+  height: 65px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-transform: uppercase;
+}
+
 .services__nav {
   display: -webkit-box;
   display: -ms-flexbox;

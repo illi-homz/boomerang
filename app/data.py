@@ -1,3 +1,6 @@
+from django.conf import settings
+static = settings.STATIC_URL
+
 data = {
     'header': {
         'links': [
@@ -21,13 +24,38 @@ data = {
     },
     'services': {
         'slides': [
-            'img/slider/home',
-            'img/slider/home',
-            'img/slider/home',
-            'img/slider/home',
-            'img/slider/home',
-            'img/slider/home',
-            'img/slider/home',
+            {
+                'title': 'Охрана объектов',
+                'link': {
+                    'title': 'про охрану объектов',
+                    'url': '#'
+                },
+                'img': static + 'img/slider/home'
+            },
+            {
+                'title': 'Охрана объектов',
+                'link': {
+                    'title': 'про еще чего нибудь там',
+                    'url': '#'
+                },
+                'img': static + 'img/slider/home'
+            },
+            {
+                'title': 'Охрана объектов',
+                'link': {
+                    'title': 'про охрану объектов',
+                    'url': '#'
+                },
+                'img': static + 'img/slider/home'
+            },
+            {
+                'title': 'Охрана объектов',
+                'link': {
+                    'title': 'про охрану объектов',
+                    'url': '#'
+                },
+                'img': static + 'img/slider/home'
+            },
         ]
     }
 }

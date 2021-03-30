@@ -1,5 +1,3 @@
-{% load static %}
-
 <section class="services" id="services">
     <div class="container">
         <div class="g-block__title">
@@ -14,17 +12,27 @@
         </div>
         <div class="services__wrapper">
             <div class="services__wrap">
-                <div class="services__slider-title">Охрана объектов</div>
+                <div class="services__slider-title _services__slider-title">
+                    Охрана объектоввввввв
+                </div>
                 <div class="services__slider _services__slider">
-                    {% for url in services.slides %}
-                    <div class="services__slider-item">
+
+                    {% for slide in services.slides %}
+                    <div
+                        class="services__slider-item"
+                        data-title="{{slide.title}}"
+                        data-link="{{slide.link.title}}"
+                        data-url="{{slide.link.url}}">
                         <picture>
-                            <source srcset="{% static 'img/slider/home.webp' %}" type="image/webp">
-                            <img src="{% static 'img/slider/home.jpg' %}" alt="slide" />
+                            <source srcset="{{slide.img}}.webp" type="image/webp">
+                            <img src="{{slide.img}}.jpg" alt="slide" />
                         </picture>
                     </div>
                     {% endfor %}
                 </div>
+                <a href="####" class="services__to-article _services__to-article">
+                    лалала
+                </a>
                 <div class="services__nav _services__nav"></div>
             </div>
         </div>

@@ -6438,6 +6438,8 @@ gz.services = {
       dots: true,
       arrows: true,
       slidesToScroll: 1
+    }).on('afterChange', () => {
+      this.changeSlideData();
     });
   },
 
@@ -6446,6 +6448,15 @@ gz.services = {
     $nav.append($('._services__slider .slick-prev'));
     $nav.append($('._services__slider .slick-dots'));
     $nav.append($('._services__slider .slick-next'));
+  },
+
+  changeSlideData() {
+    var $slide = $('.services .slick-slide.slick-active');
+    var title = $slide.data('title');
+    var linkTitle = $slide.data('link');
+    var url = $slide.data('url');
+    $('._services__slider-title').html(title);
+    $('._services__to-article').html(linkTitle).attr('href', url);
   }
 
 };
