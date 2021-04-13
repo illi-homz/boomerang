@@ -1,0 +1,67 @@
+.about-training
+{
+    background: $black2;
+    padding: 32px 0 80px;
+
+    @include tablet
+    {
+        padding: 56px 0 56px;
+    }
+
+    &__container
+    {
+        @include tablet
+        {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__wrapper
+    {}
+
+    &__title
+    {
+        @include font-set(20, 24px, 400);
+        margin-bottom: 24px;
+        text-transform: uppercase;
+
+        @include tablet
+        {
+            max-width: 737px;
+        }
+    }
+
+    &__text
+    {
+        line-height: 24px;
+        margin-bottom: 43px;
+
+        @include tablet
+        {
+            max-width: 663px;
+            margin-bottom: 0;
+        }
+    }
+
+    &__img
+    {
+        height: 395px;
+        display: block;
+        margin: 0 auto;
+
+        @include tablet
+        {
+            margin: 0;
+            margin-left: 10px;
+            // margin-right: 50px;
+            // transform: translateY(-25%);
+            margin-top: -8%;
+        }
+
+        @include desktop
+        {
+            margin-right: 148px;
+        }
+    }
+}

@@ -4,21 +4,41 @@
 @import 'lib/tipografy';
 @import 'lib/fragments';
 @import 'lib/fonts';
+@import 'lib/popup';
 
 // global classes
 @import 'g-classes/g-burger';
 @import 'g-classes/g-block';
 @import 'g-classes/g-slider';
+@import 'g-classes/g-img-bg';
 
 // components
+@import '@@webRoot/#assets/components/popup-img/popup-img';
+@import '@@webRoot/#assets/components/popup-galery/popup-galery';
 @import '@@webRoot/#assets/components/header/header';
 @import '@@webRoot/#assets/components/footer/footer';
-@import '@@webRoot/#assets/components/banner/banner';
-@import '@@webRoot/#assets/components/services/services';
-@import '@@webRoot/#assets/components/about/about';
+@import '@@webRoot/#assets/components/bread-crumbs/bread-crumbs';
+@import '@@webRoot/#assets/components/links-list/links-list';
+@import '@@webRoot/#assets/components/no-many-banner/no-many-banner';
+@import '@@webRoot/#assets/components/index-banner/index-banner';
+@import '@@webRoot/#assets/components/index-services/index-services';
+@import '@@webRoot/#assets/components/index-about/index-about';
+@import '@@webRoot/#assets/components/index-promo/index-promo';
+@import '@@webRoot/#assets/components/index-news/index-news';
+@import '@@webRoot/#assets/components/about-history/about-history';
+@import '@@webRoot/#assets/components/about-services/about-services';
+@import '@@webRoot/#assets/components/about-tasks/about-tasks';
+@import '@@webRoot/#assets/components/about-training/about-training';
+@import '@@webRoot/#assets/components/about-any-info/about-any-info';
+@import '@@webRoot/#assets/components/about-arsenal/about-arsenal';
+@import '@@webRoot/#assets/components/about-clients/about-clients';
+@import '@@webRoot/#assets/components/about-vacancies/about-vacancies';
+@import '@@webRoot/#assets/components/about-galery/about-galery';
 
 // pages
 @import '@@webRoot/#assets/pages/index/index';
+@import '@@webRoot/#assets/pages/about/about';
+@import '@@webRoot/#assets/pages/news/news';
 
 *
 {
@@ -32,7 +52,7 @@ body
 {
     background-color: $bg;
 
-    .lock {overflow: hidden;}
+    &.lock {overflow: hidden;}
 }
 
 .container
@@ -41,6 +61,7 @@ body
     max-width: ($lg+32)+px;
     padding-left: 16px;
     padding-right: 16px;
+    min-width: 320px;
 
     @include tablet
     {
@@ -50,8 +71,4 @@ body
     }
 }
 
-.row {display: flex;}
-
-.col {flex: 1 0;}
-
-.text-center {text-align: center;}
+.g-loading {background: url($static + 'img/loading.gif') center / 100px 100px no-repeat;}

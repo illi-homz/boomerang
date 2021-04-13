@@ -26,7 +26,7 @@ SECRET_KEY = 'x9-jat#3l&4!+517wd(=u(!7n#gzb%%%ol*fnqr@fk-f_3cw%p'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -41,7 +41,9 @@ INSTALLED_APPS = [
 
     'app',
     'livereload',
-    # 'django_webp',
+    'webp_converter',
+    'django_webp',
+    'rest_framework',
 ]
 
 MIDDLEWARE_CLASSES = (
@@ -77,6 +79,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
+                # 'webp_converter.context_processors.webp_support',
                 # 'django_webp.context_processors.webp',
             ],
         },
@@ -93,8 +97,8 @@ TEMPLATES = [
             'trim_blocks': True,
             'lstrip_blocks': True,
             'environment': 'project.jinja2.environment',
-            # 'extensions': ['jinja2.ext.do', 'jinja2.ext.loopcontrols', 'jinja2.ext.i18n', 'jinja2.ext.with_',],
             'context_processors': [
+                # 'webp_converter.context_processors.webp_support',
                 # 'django_webp.context_processors.webp',
             ]
         },
@@ -133,11 +137,17 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-RU'
 
 TIME_ZONE = 'UTC'
 
@@ -147,15 +157,13 @@ USE_L10N = True
 
 USE_TZ = True
 
-MEDIA_LOCATION = 'media'
-
 STATIC_URL = '/staticfiles/'
 MEDIA_URL = '/mediafiles/'
 
-STATICFILES_DIRS = (
+STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
-    os.path.join(BASE_DIR, "media"),
-)
+]
+
 
 STATIC_ROOT = os.path.join(BASE_DIR, '/')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

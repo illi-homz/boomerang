@@ -1,0 +1,29 @@
+{% load webp_converter %}
+{% load webp %}
+{% load static %}
+
+<div class="index-news container">
+    <div class="g-block__title">
+        Новости
+    </div>
+    <div class="index-news__wrapper">
+        <div class="index-news__slider g-slider _index-news__slider">
+            {% for new in news %}
+            <div class="index-news__slider-item">
+                <div class="index-news__slider-item-title"><a href="/news/{{new.id}}">{{new.title}}</a></div>
+                <div class="index-news__slider-item-text">{{new.desc}}</div>
+                <div class="index-news__slider-item-nav">
+                    <div class="index-news__slider-item-date">{{new.date|date:"d E"}}</div>
+                    <div class="index-news__slider-item-details">
+                        <a href="/news/{{new.id}}">Подробнее</a>
+                    </div>
+                </div>
+                <div class="index-news__slider-item-img">
+                    <a href="/news/{{new.id}}"><img src="{{ new.img.url }}" alt="Изображение"></a>
+                </div>
+                <a class="index-news__details-btn" href="/news/{{new.id}}">Подробнее</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

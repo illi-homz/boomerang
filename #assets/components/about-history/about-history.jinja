@@ -1,0 +1,16 @@
+<div class="about-history">
+    <ul class="about-history__texts">
+        {% for history in historys %}
+            <li>{{history}}</li>
+        {% endfor %}
+    </ul>
+
+    <div class="about-history__photos">
+        {% for url in historyPhotos %}
+            <picture>
+                <source srcset="{{ url }}.webp" type="image/webp">
+                <img src="{{ url }}.jpg" alt="office" />
+            </picture>
+        {% endfor %}
+    </div>
+</div>

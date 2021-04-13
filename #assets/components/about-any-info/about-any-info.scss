@@ -1,0 +1,43 @@
+.about-any-info
+{
+    padding: 53px 0 96px;
+
+    @include tablet
+    {
+        display: flex;
+        justify-content: space-between;
+        padding: 69px 0 104px;
+    }
+
+    &__item
+    {
+        padding-top: 75px;
+        margin-bottom: 29px;
+        position: relative;
+
+        &:last-child
+        {
+            margin-bottom: 0;
+        }
+
+        &::before
+        {
+            content: '';
+            width: 46px;
+            height: 46px;
+            background: url($static + 'img/mark-cube.svg') center / cover no-repeat;
+            position: absolute;
+            top: 0;
+            left: 13px;
+        }
+
+        @include tablet
+        {
+            flex: 1 0;
+            max-width: 400px;
+            margin-bottom: 0;
+
+            &:not(:last-child) {margin-right: 10px;}
+        }
+    }
+}

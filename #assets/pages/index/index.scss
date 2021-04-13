@@ -1,20 +1,32 @@
 .index
 {
-    .banner
+    .index-banner
     {
         margin-bottom: 64px;
-        @include tablet {margin-bottom: 103px;}
+        @include tablet {margin-bottom: 88px;}
     }
 
-    .services
+    .index-services
     {
         margin-bottom: 80px;
-        @include tablet {margin-bottom: 112px;}
+        @include tablet {margin-bottom: 146px;}
     }
 
     .index-about
     {
         margin-bottom: 40px;
         @include tablet {margin-bottom: 112px;}
+    }
+
+    .index-promo
+    {
+        margin-bottom: 40px;
+        @include tablet {margin-bottom: 112px;}
+    }
+
+    .index-news
+    {
+        margin-bottom: 97px;
+        @include tablet {margin-bottom: 104px;}
     }
 }

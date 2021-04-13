@@ -1,2 +1,39 @@
-<div class="footer">
+{% load static %}
+
+<div class="footer container">
+    <a class="footer__gotoup" href="#header" onclick="gz.goToBlock(this)">Наверх</a>
+    <div class="footer__row footer__row--first">
+        <a href="/" class="footer__logo">
+            <img src="{% static 'img/logo.svg' %}" alt="logo" />
+        </a>
+        <div class="footer__links">
+            <ul class="footer__links-list">
+                <li><a href="#">Услуги</a></li>
+                <li><a href="#">Наши цены</a></li>
+                <li><a href="#">Новости</a></li>
+            </ul>
+            <ul class="footer__links-list">
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Статьи</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </div>
+        <ul class="footer__contacts">
+            <li><a href="tel:+7 (831) 28-28-911">+7 (831) 28-28-911</a></li>
+            <li><a href="tel:28-26-112">28-26-112</a></li>
+            <li><a href="tel:28-26-110">28-26-110</a></li>
+            <li><a href="mailto:bumerang52@list.ru">bumerang52@list.ru</a></li>
+        </ul>
+    </div>
+
+
+
+    <div class="footer__row footer__row--second">
+        <div class="footer__copyright">© 2006‐2020 ЧОП «Бумеранг»</div>
+        <ul class="footer__map">
+            <li><a href="#">Карта сайта</a></li>
+            <li><a href="#">Полезные ссылки</a></li>
+            <li><a href="#">Документы</a></li>
+        </ul>
+    </div>
 </div>

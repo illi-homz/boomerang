@@ -1,0 +1,26 @@
+<section class="index-banner">
+    <div class="index-banner__bg">
+        <picture>
+            <source srcset="{{ banner.bg }}.webp" type="image/webp">
+            <img class="g-img-bg" src="{{ banner.bg }}.jpg" alt="bg" />
+        </picture>
+    </div>
+
+    <div class="container">
+        <div class="index-banner__wrap">
+            <h1 class="index-banner__title">{{ banner.title|safe }}</h1>
+            <div class="index-banner__gotoblock" onclick="gz.goToBlock('#index-services')">
+                {% include '#img/arrow-empty-d.svg' %}
+            </div>
+        </div>
+        <ul class="index-banner__list">
+            {% for el in banner.data %}
+            <li>
+                <div class="index-banner__count">{{ el.count|safe }}</div>
+                <div class="index-banner__text">{{ el.text|safe }}</div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+</section>

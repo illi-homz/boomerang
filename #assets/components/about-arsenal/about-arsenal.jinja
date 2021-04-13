@@ -1,0 +1,43 @@
+{% load static %}
+
+<div class="about-arsenal">
+    <div class="about-arsenal__slider g-slider _about-arsenal__slider">
+        {% for weapon in weapons %}
+        <div class="about-arsenal__item _about-arsenal__item">
+            <h6 class="about-arsenal__item-title">{{weapon.title}}</h6>
+            <div class="about-arsenal__item-wrap">
+                <div class="about-arsenal__img">
+                    <picture>
+                        <source srcset="{{ weapon.img }}.webp" type="image/webp">
+                        <img src="{{ weapon.img }}.jpg" alt="bg" />
+                    </picture>
+                </div>
+                <div class="about-arsenal__item-data _about-arsenal__item-data">
+                    <div class="about-arsenal__item-type">{{ weapon.type }}</div>
+                    <div class="about-arsenal__item-tech">{{techСharacteristic}}:</div>
+
+                    {% for characteristic in weapon.characteristics %}
+                    <div class="about-arsenal__item-characteristic">
+                        {{characteristic.0}}<span>{{ characteristic.1 }}</span>
+                    </div>
+                    {% endfor %}
+
+                    {% for text in weapon.texts %}
+                    <p class="about-arsenal__item-text">{{text}}</p>
+                    {% endfor %}
+                    <button
+                        class="about-arsenal__item-detail"
+                        onclick="gz.aboutArsenal.toggleDetails(this)">
+                        {{detail}}<img src="{% static 'img/arrow-empty-d.svg' %}"/>
+                    </button>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <button
+        class="about-arsenal__show-more _about-arsenal__show-more"
+        onclick="gz.aboutArsenal.showMoreItems()">
+        {{showMore}}
+    </button>
+</div>

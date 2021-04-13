@@ -1,0 +1,11 @@
+{% load static %}
+
+<div class="about-training">
+    <div class="container about-training__container">
+        <div class="about-training__wrapper">
+            <div class="about-training__title">{{trainingTitle}}</div>
+            <div class="about-training__text">{{trainingText}}</div>
+        </div>
+        <img src="{% static trainingImg %}" alt="" class="about-training__img">
+    </div>
+</div>

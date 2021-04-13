@@ -1,0 +1,48 @@
+.about
+{
+    .bread-crumbs
+    {
+        margin: 24px 0 18px;
+        @include tablet {margin-bottom: 24px 0 20px;}
+    }
+
+    .g-block__title
+    {
+        margin-bottom: 24px;
+        @include tablet {margin-bottom: 52px;}
+    }
+
+    .links-list
+    {
+        margin-bottom: 24px;
+        @include tablet {margin-bottom: 33px;}
+    }
+
+    .about-history,
+    .about-arsenal,
+    .about-clients,
+    .about-feedbacks,
+    .about-vacancies
+    {
+        margin-bottom: 56px;
+        @include tablet {margin-bottom: 40px;}
+    }
+
+    .about-services
+    {
+        margin-bottom: 56px;
+        @include tablet {margin-bottom: 56px;}
+    }
+
+    .about-tasks
+    {
+        margin-bottom: 56px;
+        @include tablet {margin-bottom: 60px;}
+    }
+
+    .no-many-banner
+    {
+        margin-bottom: 56px;
+        @include tablet {margin-bottom: 103px;}
+    }
+}

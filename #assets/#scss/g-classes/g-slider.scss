@@ -1,57 +1,58 @@
-.slick-slider
+.g-slider
 {
-    overflow: hidden;
-}
-
-.slick-track
-{
-    display: flex;
-    height: inherit;
-}
-
-.slick-list
-{
-    height: inherit;
-    width: inherit;
-}
-
-.slick-dots
-{
-    display: flex;
-
-    * {font-size: 0;}
-
-    li
+    .slick-track
     {
-        width: 8px;
-        height: 8px;
-        background-color: #fff;
-        opacity: .7;
-        margin: 0 3px;
+        display: flex;
+        height: inherit;
+    }
 
-        &.slick-active
+    .slick-list
+    {
+        height: inherit;
+        width: inherit;
+    }
+
+    .slick-dots
+    {
+        display: flex;
+
+        * {font-size: 0;}
+
+        li
         {
-            background-color: $red;
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+            opacity: .7;
+            margin: 0 3px;
+            cursor: pointer;
+
+            &.slick-active
+            {
+                background-color: $red;
+            }
         }
     }
-}
 
-.slick-arrow
-{
-    font-size: 0;
-    width: 60px;
-    height: 40px;
-    opacity: .7;
+    .slick-arrow
+    {
+        font-size: 0;
+        width: 60px;
+        height: 40px;
+        opacity: .7;
 
-    &:hover {opacity: 1;}
-}
+        &:active {transform: translateY(3px);}
+
+        &:hover {opacity: 1;}
+    }
 
 
-.slick-prev
-{
-    background: url('/'+$static+'/img/arrow-body-l.svg') center/cover no-repeat;
-}
-.slick-next
-{
-    background: url('/'+$static+'/img/arrow-body-r.svg') center/cover no-repeat;
+    .slick-prev
+    {
+        background: url($static+'img/arrow-body-l.svg') center/cover no-repeat;
+    }
+    .slick-next
+    {
+        background: url($static+'img/arrow-body-r.svg') center/cover no-repeat;
+    }
 }

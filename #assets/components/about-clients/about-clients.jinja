@@ -1,0 +1,40 @@
+{% load static %}
+
+<div class="about-clients">
+    <div class="about-clients__slider g-slider _about-clients__slider">
+        {% for client in clients %}
+        <div
+            class="about-clients__item _about-clients__item"
+            data-img="{{client.img}}"
+            onclick="gz.popup.open('_popup-img', gz.aboutClients.showDetail, [this])">
+            <div class="about-clients__item-bg">
+                <picture>
+                    <source srcset="{{ client.img }}.webp" type="image/webp">
+                    <img src="{{ client.img }}.png" alt="bg" />
+                </picture>
+            </div>
+            <div class="about-clients__item-text">{{client.text}}</div>
+        </div>
+        {% endfor %}
+
+        {% for client in clients %}
+        <div
+            class="about-clients__item _about-clients__item"
+            data-img="{{client.img}}"
+            onclick="gz.popup.open('_popup-img', gz.aboutClients.showDetail, [this])">
+            <div class="about-clients__item-bg">
+                <picture>
+                    <source srcset="{{ client.img }}.webp" type="image/webp">
+                    <img src="{{ client.img }}.png" alt="bg" />
+                </picture>
+            </div>
+            <div class="about-clients__item-text">{{client.text}}</div>
+        </div>
+        {% endfor %}
+    </div>
+    <button
+        class="about-clients__show-more _about-clients__show-more"
+        onclick="gz.aboutClients.showMoreItems()">
+        {{showMore}}
+    </button>
+</div>

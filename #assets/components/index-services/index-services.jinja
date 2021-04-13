@@ -1,0 +1,43 @@
+<section class="index-services" id="index-services">
+    <div class="container">
+        <div class="g-block__title">
+            услуги
+
+            <a class="index-services__more" href="#">
+                ВСЕ УСЛУГИ{% include '#img/arrow-empty-r.svg' %}
+            </a>
+        </div>
+        <div class="index-services__desc">
+            Группа охранных предприятий "Бумеранг" прочно обосновалось на рынке предоставления охранных услуг, более чем двадцатилетнюю работу создало себе имидж надежного, высокоинтеллектуального охранного предприятия.
+        </div>
+        <div class="index-services__wrapper">
+            <div class="index-services__col index-services__col--first">
+                <div>
+                    <div class="index-services__slider-title _index-services__slider-title">
+                        Что то пошло не так
+                    </div>
+                    <a href="#" class="index-services__to-article _index-services__to-article">
+                        Что то пошло не так
+                    </a>
+                </div>
+                <div class="index-services__nav g-slider _index-services__nav"></div>
+            </div>
+            <div class="index-services__col index-services__col--second">
+                <div class="index-services__slider g-slider _index-services__slider">
+                    {% for slide in services.slides %}
+                    <div
+                        class="index-services__slider-item"
+                        data-title="{{slide.title}}"
+                        data-link="{{slide.link.title}}"
+                        data-url="{{slide.link.url}}">
+                        <picture>
+                            <source srcset="{{slide.img}}.webp" type="image/webp">
+                            <img data-lazy="{{slide.img}}.jpg" alt="slide" />
+                        </picture>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

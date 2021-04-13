@@ -1,0 +1,26 @@
+.bread-crumbs
+{
+    display: flex;
+
+    li
+    {
+        @include font-set(12, 16px);
+        position: relative;
+        padding: 0 2px;
+
+        &::after
+        {
+            content: '';
+            height: 100%;
+            width: 1px;
+            background: #fff;
+            position: absolute;
+            right: 0;
+            transform: rotate(20deg);
+        }
+
+        &:last-child::after {display: none;}
+
+        a:hover {border-bottom: 1px solid #fff;}
+    }
+}

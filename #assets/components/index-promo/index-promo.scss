@@ -1,0 +1,72 @@
+.index-promo
+{
+    &__container.container
+    {
+        margin-bottom: 48px;
+        @include tablet {margin-bottom: 112px;}
+    }
+
+    &__list
+    {
+        margin-top: 24px;
+
+        @include tablet
+        {
+            display: flex;
+
+            & li
+            {
+                flex: 1 0;
+                margin-bottom: 0;
+                border-radius: 5px;
+                overflow: hidden;
+                &:not(:last-child) {margin-right: 20px;}
+            }
+        }
+    }
+
+    &__item
+    {
+        background: #fff;
+        margin-bottom: 16px;
+
+        &:last-child {margin-bottom: 0;}
+
+        img
+        {
+            width: 100%;
+            height: 255px;
+            object-fit: cover
+        }
+    }
+
+    &__item-data
+    {
+        padding: 24px;
+        min-height: 156px;
+    }
+
+    &__item-title
+    {
+        @include font-set(20, 24px, 700);
+        color: $black;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-height: 46px;
+    }
+
+    &__item-text
+    {
+        color: $black;
+        margin-top: 16px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-height: 46px;
+    }
+}

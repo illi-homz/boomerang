@@ -1,0 +1,53 @@
+.about-services
+{
+    background: $black2;
+    padding: 32px 16px;
+    padding-right: 29px;
+    margin-left: -16px;
+    width: calc(100% + 32px);
+
+    @include desktop
+    {
+        column-count: 2;
+        padding: 56px 62px;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    &__title
+    {
+        @include font-set(20, 24px, 700);
+        text-transform: uppercase;
+        max-width: 600px;
+        margin: 0;
+        margin-bottom: 16px;
+
+        @include tablet
+        {
+            margin-bottom: 32px;
+            max-width: 412px;
+        }
+    }
+
+    &__item
+    {
+        line-height: 24px;
+        max-width: 600px;
+        padding-left: 88px;
+        margin-bottom: 32px;
+        position: relative;
+
+        img
+        {
+            position: absolute;
+            left: 16px;
+            top: 13px;
+        }
+
+        @include tablet
+        {
+            max-width: 483px;
+            margin-bottom: 24px;
+        }
+    }
+}

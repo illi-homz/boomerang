@@ -1,0 +1,31 @@
+{% extends 'layouts/Base.jinja' %}
+
+{% block content %}
+
+    <div class="news container">
+        {% include 'components/bread-crumbs/bread-crumbs.jinja' %}
+        <div class="g-block__title">
+            {{title}}
+        </div>
+        <div class="news__wrapper">
+            {% for new in news %}
+                <div class="news__item">
+                    <div class="news__item-title">
+                        <a href="/news/{{new.id}}">{{new.title}}</a>
+                    </div>
+                    <div class="news__item-desc">{{new.desc}}</div>
+                    <div class="news__item-df-jcsb">
+                        <div class="news__item-date">{{new.date|date:"d E"}}</div>
+                        <a href="/news/{{new.id}}" class="news__item-detail">Подробнее</a>
+                    </div>
+                    <div class="news__item-img">
+                        <a href="/news/{{new.id}}">
+                            <img src="{{ new.img.url }}" alt="img">
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,39 @@
+.about-history
+{
+    &__texts
+    {
+        li
+        {
+            margin-bottom: 24px;
+        }
+
+        @include tablet
+        {
+            display: flex;
+            margin-bottom: 40px;
+
+            li
+            {
+                margin-right: 105px;
+            }
+        }
+    }
+
+    &__photos
+    {
+        text-align: center;
+
+        img
+        {
+            border-radius: 5px;
+            max-width: 412px;
+            width: 100%;
+        }
+
+        @include tablet
+        {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}

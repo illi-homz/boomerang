@@ -1,0 +1,42 @@
+{% extends 'layouts/Base.jinja' %}
+
+{% block content %}
+
+    <div class="about">
+        <div class="container">
+            {% include 'components/bread-crumbs/bread-crumbs.jinja' %}
+            <div class="g-block__title">
+                {{title}}
+            </div>
+            {% include 'components/links-list/links-list.jinja' %}
+
+            {% if tab == 'history' %}
+                {% include 'components/about-history/about-history.jinja' %}
+            {% elif tab == 'arsenal' %}
+                {% include 'components/about-arsenal/about-arsenal.jinja' %}
+            {% elif tab == 'clients' %}
+                {% include 'components/about-clients/about-clients.jinja' %}
+            {% elif tab == 'feedbacks' %}
+                {% include 'components/about-feedbacks/about-feedbacks.jinja' %}
+            {% elif tab == 'feedbacks' %}
+                {% include 'components/about-feedbacks/about-feedbacks.jinja' %}
+            {% elif tab == 'vacancies' %}
+                {% include 'components/about-vacancies/about-vacancies.jinja' %}
+            {% elif tab == 'galery' %}
+                {% include 'components/about-galery/about-galery.jinja' %}
+            {% endif %}
+
+            {% include 'components/about-services/about-services.jinja' %}
+            {% include 'components/about-tasks/about-tasks.jinja' %}
+        </div>
+        {% include 'components/no-many-banner/no-many-banner.jinja' %}
+        {% include 'components/about-training/about-training.jinja' %}
+        <div class="container">
+            {% include 'components/about-any-info/about-any-info.jinja' %}
+        </div>
+
+        {% include 'components/popup-img/popup-img.jinja' %}
+        {% include 'components/popup-galery/popup-galery.jinja' %}
+    </div>
+
+{% endblock %}

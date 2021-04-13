@@ -4,8 +4,9 @@
 
 `source env/bin/activate`
 
-`py manage.py livereload`
 
-`py manage.py runserver`
+`./manage.py runserver`
+
+`./manage.py livereload`
 
 `gulp`

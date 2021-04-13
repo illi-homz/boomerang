@@ -1,0 +1,107 @@
+.popup-galery
+{
+    .popup__content
+    {
+        max-width: 702px;
+        position: relative;
+        padding: 0 24px;
+        background: transparent;
+
+        @include tablet
+        {
+            padding: 0;
+        }
+    }
+
+    .slick-list
+    {
+        border-radius: 5px;
+
+        @include tablet
+        {
+            overflow: hidden;
+        }
+    }
+
+    .slick-track {align-items: flex-end;}
+
+    .slick-slide
+    {
+        transform: scale(.94);
+        transition: transform .3s ease;
+
+        &.slick-current.slick-active
+        {
+            transform: scale(1);
+        }
+
+        @include tablet
+        {
+            transform: scale(1);
+            &.slick-current.slick-active {margin: 0;}
+        }
+    }
+
+    .slick-arrow
+    {
+        position: absolute;
+        z-index: 100;
+        top: 50%;
+        width: 54px;
+        height: 54px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover div {background: #fff;}
+
+        div
+        {
+            width: 32px;
+            height: 32px;
+            background: #F9F9F9;
+            border-radius: 50%;
+            position: relative;
+
+            &::before,
+            &::after
+            {
+                content: '';
+                width: 9px;
+                height: 2px;
+                background-color: #243138;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+            }
+        }
+    }
+
+    .slick-popup-prev
+    {
+        left: 0;
+        transform: translate(-100%, -50%);
+
+        &:active {transform: translate(-100%, -48%);}
+
+        div
+        {
+            &::before {transform: translate(-60%, calc(-50% + 3px)) rotate(45deg);}
+            &::after {transform: translate(-60%, calc(-50% - 3px)) rotate(-45deg);}
+        }
+    }
+
+    .slick-popup-next
+    {
+        right: 0;
+        transform: translate(100%, -50%);
+
+        &:active {transform: translate(100%, -48%);}
+
+        div
+        {
+            &::before {transform: translate(-40%, calc(-50% - 3px)) rotate(45deg);}
+            &::after {transform: translate(-40%, calc(-50% + 3px)) rotate(-45deg);}
+        }
+    }
+}

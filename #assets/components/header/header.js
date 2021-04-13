@@ -10,6 +10,6 @@ gz.header = {
         $('._burger').toggleClass('burger--close')
         $('._header__topline').toggleClass('header__topline--shadow')
 
-        setTimeout(() => {$('body').toggleClass('lock')}, 300)
+        $('body').toggleClass('lock')
     }
 }

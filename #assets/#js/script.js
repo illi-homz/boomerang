@@ -1,12 +1,9 @@
 'use strict';
 
+// global components
 @@include('@@webRoot/#assets/#js/lib/webp.js');
 @@include('@@webRoot/#assets/#js/lib/jquery.min.js');
 @@include('@@webRoot/#assets/#js/lib/slick.min.js');
-@@include('@@webRoot/#assets/#js/lib/validator.js');
-@@include('@@webRoot/#assets/#js/lib/maskedinput.min.js');
-
-@@include('@@webRoot/#assets/components/air-datepicker/air-datepicker.js');
 
 
 const gz = {
@@ -28,16 +25,30 @@ const gz = {
     }
 }
 
-@@include('@@webRoot/#assets/components/select/select.js')
+// components
+@@include('@@webRoot/#assets/#js/lib/popup.js');
+@@include('@@webRoot/#assets/components/popup-galery/popup-galery.js');
 @@include('@@webRoot/#assets/components/header/header.js');
-@@include('@@webRoot/#assets/components/services/services.js');
+@@include('@@webRoot/#assets/components/index-services/index-services.js');
+@@include('@@webRoot/#assets/components/index-news/index-news.js');
+@@include('@@webRoot/#assets/components/about-arsenal/about-arsenal.js');
+@@include('@@webRoot/#assets/components/about-clients/about-clients.js');
+@@include('@@webRoot/#assets/components/about-galery/about-galery.js');
+
+// pages
+@@include('@@webRoot/#assets/pages/news/news.js');
 
 
 gz.init = function() {
-    $("._input-phone").mask("+7(999)999-99-99");
+    // $("._input-phone").mask("+7(999)999-99-99");
+
+    gz.indexServices.init()
+    gz.indexNews.init()
+    gz.aboutArsenal.init()
+    gz.aboutClients.init()
+    gz.popup.init()
 }
 
 $(document).ready(() => {
     gz.init()
-    gz.services.init()
 })

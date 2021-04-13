@@ -1,0 +1,17 @@
+{% load static %}
+
+<div class="popup popup-img _popup-img">
+    <div class="popup__body">
+        <div class="popup__content">
+            <div class="popup__close" onclick="gz.popup.close('_popup-img')">
+                <div class="popup__close-btn"></div>
+            </div>
+            <div class="popup-img__img-wrap">
+                <picture>
+                    <source class="_popup-img__img-source" srcset="{% static 'img/empty.gif' %}" type="image/webp">
+                    <img class="popup-img__img _popup-img__img" src="{% static 'img/empty.gif' %}" alt="bg" />
+                </picture>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,48 @@
+.no-many-banner
+{
+    height: 208px;
+    position: relative;
+    padding-top: 33px;
+
+    @include tablet
+    {
+        height: 358px;
+        padding-top: 80px;
+    }
+
+    &__banner-bg
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+    }
+
+    &__banner-title
+    {
+        color: $black;
+        @include font-set(25, 29px, 700);
+        text-transform: uppercase;
+        max-width: 228px;
+
+        @include tablet
+        {
+            @include font-set(40, 46px, 700);
+            max-width: 614px;
+        }
+    }
+
+    &__banner-text
+    {
+        color: $black;
+        @include font-set(18, 21px, 400);
+        margin-top: 16px;
+
+        @include tablet
+        {
+            @include font-set(25, 29px, 400);
+        }
+    }
+}

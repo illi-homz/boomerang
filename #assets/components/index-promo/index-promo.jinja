@@ -1,0 +1,25 @@
+{% load webp_converter %}
+
+<div class="index-promo">
+    <div class="container index-promo__container">
+        <div class="g-block__title">
+            Акции
+        </div>
+        <ul class="index-promo__list">
+            {% for promo in promo.promos %}
+                <li class="index-promo__item">
+                    <picture>
+                        <source srcset="{{ promo.img }}.webp" type="image/webp">
+                        <img src="{{ promo.img }}.jpg" alt="slide" />
+                    </picture>
+                    <div class="index-promo__item-data">
+                        <div class="index-promo__item-title">{{ promo.title }}</div>
+                        <div class="index-promo__item-text">{{ promo.text }}</div>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    {% include 'components/no-many-banner/no-many-banner.jinja' %}
+</div>

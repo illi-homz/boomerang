@@ -1,0 +1,15 @@
+.popup-img
+{
+    .popup__content
+    {
+        max-width: 397px;
+    }
+    &__img-wrap
+    {}
+
+    &__img
+    {
+        width: 100%;
+        object-fit: cover;
+    }
+}
