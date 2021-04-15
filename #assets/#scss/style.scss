@@ -11,6 +11,8 @@
 @import 'g-classes/g-block';
 @import 'g-classes/g-slider';
 @import 'g-classes/g-img-bg';
+@import 'g-classes/g-news';
+@import 'g-classes/g-service';
 
 // components
 @import '@@webRoot/#assets/components/popup-img/popup-img';
@@ -20,25 +22,28 @@
 @import '@@webRoot/#assets/components/bread-crumbs/bread-crumbs';
 @import '@@webRoot/#assets/components/links-list/links-list';
 @import '@@webRoot/#assets/components/no-many-banner/no-many-banner';
-@import '@@webRoot/#assets/components/index-banner/index-banner';
-@import '@@webRoot/#assets/components/index-services/index-services';
-@import '@@webRoot/#assets/components/index-about/index-about';
-@import '@@webRoot/#assets/components/index-promo/index-promo';
-@import '@@webRoot/#assets/components/index-news/index-news';
-@import '@@webRoot/#assets/components/about-history/about-history';
-@import '@@webRoot/#assets/components/about-services/about-services';
-@import '@@webRoot/#assets/components/about-tasks/about-tasks';
-@import '@@webRoot/#assets/components/about-training/about-training';
-@import '@@webRoot/#assets/components/about-any-info/about-any-info';
-@import '@@webRoot/#assets/components/about-arsenal/about-arsenal';
-@import '@@webRoot/#assets/components/about-clients/about-clients';
-@import '@@webRoot/#assets/components/about-vacancies/about-vacancies';
-@import '@@webRoot/#assets/components/about-galery/about-galery';
+@import '@@webRoot/#assets/components/index/index-banner/index-banner';
+@import '@@webRoot/#assets/components/index/index-services/index-services';
+@import '@@webRoot/#assets/components/index/index-about/index-about';
+@import '@@webRoot/#assets/components/index/index-promo/index-promo';
+@import '@@webRoot/#assets/components/index/index-news/index-news';
+@import '@@webRoot/#assets/components/about/about-history/about-history';
+@import '@@webRoot/#assets/components/about/about-services/about-services';
+@import '@@webRoot/#assets/components/about/about-tasks/about-tasks';
+@import '@@webRoot/#assets/components/about/about-training/about-training';
+@import '@@webRoot/#assets/components/about/about-any-info/about-any-info';
+@import '@@webRoot/#assets/components/about/about-arsenal/about-arsenal';
+@import '@@webRoot/#assets/components/about/about-clients/about-clients';
+@import '@@webRoot/#assets/components/about/about-vacancies/about-vacancies';
+@import '@@webRoot/#assets/components/about/about-galery/about-galery';
+@import '@@webRoot/#assets/components/services/services-human/services-human';
 
 // pages
 @import '@@webRoot/#assets/pages/index/index';
 @import '@@webRoot/#assets/pages/about/about';
 @import '@@webRoot/#assets/pages/news/news';
+@import '@@webRoot/#assets/pages/news-detail/news-detail';
+@import '@@webRoot/#assets/pages/services/services';
 
 *
 {
@@ -61,7 +66,7 @@ body
     max-width: ($lg+32)+px;
     padding-left: 16px;
     padding-right: 16px;
-    min-width: 320px;
+    min-width: 375px;
 
     @include tablet
     {

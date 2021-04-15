@@ -1,0 +1,20 @@
+{% extends 'layouts/Base.jinja' %}
+
+{% block content %}
+
+    <div class="services">
+        <div class="container">
+            {% include 'components/bread-crumbs/bread-crumbs.jinja' %}
+            <div class="g-block__title">
+                {{title}}
+            </div>
+            {% include 'components/links-list/links-list.jinja' %}
+
+            {% if tab == 'hm' %}
+                {% include 'components/services/services-human/services-human.jinja' %}
+            {% endif %}
+
+        </div>
+    </div>
+
+{% endblock %}

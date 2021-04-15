@@ -1,0 +1,16 @@
+<div class="services-list services-human">
+    {% for service in services %}
+        <a href="/services/{{service.id}}">
+            <div class="g-service">
+                <div class="g-service__img">
+                    <img src="{{service.img.url}}" alt="service">
+                </div>
+                {% if service.price %}
+                    <div class="g-service__price">от {{service.price}} р.</div>
+                {% endif %}
+                <div class="g-service__title">{{service.title}}</div>
+                <div class="g-service__desc">{{service.desc}}</div>
+            </div>
+        </a>
+    {% endfor %}
+</div>

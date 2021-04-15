@@ -1,6 +1,9 @@
 .bread-crumbs
 {
     display: flex;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 
     li
     {

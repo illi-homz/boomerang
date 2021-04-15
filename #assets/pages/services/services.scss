@@ -1,0 +1,32 @@
+.services
+{
+    padding-top: 24px;
+    margin-bottom: 56px;
+
+    @include tablet
+    {}
+
+    .bread-crumbs
+    {
+        margin-bottom: 18px;
+        @include tablet {margin-bottom: 32px;}
+    }
+
+    .g-block__title
+    {
+        margin-bottom: 24px;
+        @include tablet {margin-bottom: 40px;}
+    }
+
+    .links-list
+    {
+        margin-bottom: 25px;
+        @include tablet {margin-bottom: 27px;}
+    }
+
+    .services-list
+    {
+        padding: 0 19px;
+        @include tablet {padding: 0;}
+    }
+}

@@ -6,7 +6,7 @@ data = {
         'links': [
             {'title': 'о нас', 'url': '/about?tab=history'},
             {'title': 'новости', 'url': '/news'},
-            {'title': 'услуги ', 'url': '#'},
+            {'title': 'услуги ', 'url': '/services?tab=hm'},
             {'title': 'наши цены', 'url': '#'},
             {'title': 'статьи', 'url': '#'},
             {'title': 'контакты', 'url': '#'},
@@ -14,14 +14,7 @@ data = {
         ]
     },
     'footer': {},
-    'linksList': [
-        {'title': 'История', 'url': '/about?tab=history', 'tab': 'history'},
-        {'title': 'Наш арсенал', 'url': '/about?tab=arsenal', 'tab': 'arsenal'},
-        {'title': 'Наши клиенты', 'url': '/about?tab=clients', 'tab': 'clients'},
-        {'title': 'Отзывы', 'url': '/about?tab=feedbacks', 'tab': 'feedbacks'},
-        {'title': 'Вакансии', 'url': '/about?tab=vacancies', 'tab': 'vacancies'},
-        {'title': 'Галерея', 'url': '/about?tab=galery', 'tab': 'galery'},
-    ],
+
     'noManyBanner': static + 'img/index/promo/big',
 
     'techСharacteristic': 'Технические характеристики',

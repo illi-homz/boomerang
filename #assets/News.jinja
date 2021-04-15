@@ -7,25 +7,26 @@
         <div class="g-block__title">
             {{title}}
         </div>
-        <div class="news__wrapper">
+        <div class="news__wrapper _news__wrapper">
             {% for new in news %}
-                <div class="news__item">
-                    <div class="news__item-title">
+                <div class="news__item g-news">
+                    <div class="g-news__item-title">
                         <a href="/news/{{new.id}}">{{new.title}}</a>
                     </div>
-                    <div class="news__item-desc">{{new.desc}}</div>
-                    <div class="news__item-df-jcsb">
-                        <div class="news__item-date">{{new.date|date:"d E"}}</div>
-                        <a href="/news/{{new.id}}" class="news__item-detail">Подробнее</a>
+                    <div class="g-news__item-desc">{{new.desc}}</div>
+                    <div class="g-news__item-df-jcsb">
+                        <div class="g-news__item-date">{{new.date|date:"d E"}}</div>
+                        <a href="/news/{{new.id}}" class="g-news__item-detail">Подробнее</a>
                     </div>
-                    <div class="news__item-img">
+                    <div class="g-news__item-img">
                         <a href="/news/{{new.id}}">
-                            <img src="{{ new.img.url }}" alt="img">
+                            <img src="{{new.img.url}}" alt="img">
                         </a>
                     </div>
                 </div>
             {% endfor %}
         </div>
+        <button class="g-news__show-more" onclick="gz.news.getNews()">Показать ещё</button>
     </div>
 
 {% endblock %}

@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.template import loader
-from django.core.paginator import Paginator
+from django.shortcuts import redirect
 
 from . import data
 from . import models
@@ -13,7 +13,10 @@ def index(request):
     return render(request, 'Index.jinja', data.Index.data)
 
 def about(request):
-    data.About.data['tab'] = request.GET.get('tab')
+    tab =  request.GET.get('tab')
+    if (not bool(tab)):
+        return redirect('/about?tab=history')
+    data.About.data['tab'] = tab
     data.About.data.update(data.Global.data)
     return render(request, 'About.jinja', data.About.data)
 
@@ -23,8 +26,19 @@ def news(request):
     return render(request, 'News.jinja', data.News.data)
 
 def news_item(request, pk):
-    data.News.data['new'] = models.New.objects.get(id = pk)
-    return render(request, 'NewsDetail.jinja', data.News.data)
+    data.NewsDetail.data['new'] = models.New.objects.get(id = pk)
+    data.NewsDetail.data['news'] = models.New.objects.all().order_by('-date')[:6]
+    data.NewsDetail.data['breadCrumbs'][-1]['title'] = data.NewsDetail.data['new'].desc
+    return render(request, 'NewsDetail.jinja', data.NewsDetail.data)
+
+def services(request):
+    tab =  request.GET.get('tab')
+    if (not bool(tab)):
+        return redirect('/services?tab=hm')
+    data.Services.data['tab'] = tab
+    data.Services.data['services'] = models.Service.objects.filter(type = tab)
+    data.Services.data.update(data.Global.data)
+    return render(request, 'Services.jinja', data.Services.data)
 
 
 def test(request):

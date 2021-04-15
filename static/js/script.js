@@ -1,6 +1,10 @@
 'use strict'; // global components
 // Проверка поддержки webp браузером и добавление класса webp
 
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 function testWebP(callback) {
   var webP = new Image();
 
@@ -5211,7 +5215,70 @@ gz.aboutGalery = {
 
 }; // pages
 
-gz.news = {};
+gz.news = {
+  page: 1,
+
+  getNews() {
+    var _this = this;
+
+    return _asyncToGenerator(function* () {
+      var news = yield fetch("/api/get-news?page=".concat(_this.page)).then(response => {
+        return response.json();
+      });
+      _this.page++;
+      var template = news.reduce((acc, n) => {
+        var date = new Intl.DateTimeFormat('ru-RU', {
+          day: '2-digit',
+          month: 'long'
+        }).format(new Date(n.date));
+        return acc += _this.newTemplate.replace(/{{id}}/ig, n.id).replace(/{{title}}/ig, n.title).replace(/{{desc}}/ig, n.desc).replace(/{{date}}/ig, date).replace(/{{url}}/ig, n.img);
+      }, '');
+      document.querySelector('._news__wrapper').insertAdjacentHTML('beforeend', template);
+    })();
+  },
+
+  newTemplate: "\n        <div class=\"news__item g-news\">\n            <div class=\"g-news__item-title\">\n                <a href=\"/news/{{id}}\">{{title}}</a>\n            </div>\n            <div class=\"g-news__item-desc\">{{desc}}</div>\n            <div class=\"g-news__item-df-jcsb\">\n                <div class=\"news__item-date\">{{date}}</div>\n                <a href=\"/news/{{id}}\" class=\"g-news__item-detail\">\u041F\u043E\u0434\u0440\u043E\u0431\u043D\u0435\u0435</a>\n            </div>\n            <div class=\"g-news__item-img\">\n                <a href=\"/news/{{id}}\">\n                    <img src=\"{{url}}\" alt=\"img\">\n                </a>\n            </div>\n        </div>\n    "
+};
+gz.newsDetail = {
+  init() {
+    this.sliderInit();
+  },
+
+  sliderInit() {
+    $('._news-detail__slider').slick({
+      lazyLoad: 'ondemand',
+      mobileFirst: true,
+      infinite: false,
+      dots: false,
+      arrows: false,
+      vertical: true,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      responsive: [{
+        breakpoint: 768,
+        settings: {
+          vertical: false,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          arrows: true,
+          dots: true
+        }
+      }, {
+        breakpoint: 1024,
+        settings: {
+          vertical: false,
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          infinite: true,
+          arrows: true,
+          dots: true
+        }
+      }]
+    });
+  }
+
+};
 
 gz.init = function () {
   // $("._input-phone").mask("+7(999)999-99-99");
@@ -5220,6 +5287,7 @@ gz.init = function () {
   gz.aboutArsenal.init();
   gz.aboutClients.init();
   gz.popup.init();
+  gz.newsDetail.init();
 };
 
 $(document).ready(() => {

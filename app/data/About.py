@@ -4,11 +4,18 @@ static = settings.STATIC_URL
 data = {
     'title': 'О нас',
 
-    'activeLink': 'history',
-
     'breadCrumbs': [
         {'title': 'Главная', 'url': '/'},
         {'title': 'О нас', 'url': '#'}
+    ],
+
+    'linksList': [
+        {'title': 'История', 'url': '/about?tab=history', 'tab': 'history'},
+        {'title': 'Наш арсенал', 'url': '/about?tab=arsenal', 'tab': 'arsenal'},
+        {'title': 'Наши клиенты', 'url': '/about?tab=clients', 'tab': 'clients'},
+        {'title': 'Отзывы', 'url': '/about?tab=feedbacks', 'tab': 'feedbacks'},
+        {'title': 'Вакансии', 'url': '/about?tab=vacancies', 'tab': 'vacancies'},
+        {'title': 'Галерея', 'url': '/about?tab=galery', 'tab': 'galery'},
     ],
 
     'historys': [
@@ -70,18 +77,21 @@ data = {
             ],
             'img': static + 'img/about/arsenal/weapon_1'
         } for i in range(20)],
+
     'clients': [
         {'text': 'Оркомитет по подготовке и проведению Эстафеты Олимпийского огня Сочи 2014', 'img': static + 'img/about/clients/sogaz'},
         {'text': 'Оркомитет по подготовке и проведению Международного Фестиваля болельщиков FIFA 2014', 'img': static + 'img/about/clients/sogaz'},
         {'text': 'ОАО «СОГАЗ» Нижегородский филиал', 'img': static + 'img/about/clients/sogaz'},
         {'text': 'ФКП «Завод имени Я.М. Свердлова»', 'img': static + 'img/about/clients/sogaz'},
     ],
+
     'feedbacks': [
         {'text': 'Оркомитет по подготовке и проведению Эстафеты Олимпийского огня Сочи 2014', 'img': static + 'img/about/clients/sogaz'},
         {'text': 'Оркомитет по подготовке и проведению Международного Фестиваля болельщиков FIFA 2014', 'img': static + 'img/about/clients/sogaz'},
         {'text': 'ОАО «СОГАЗ» Нижегородский филиал', 'img': static + 'img/about/clients/sogaz'},
         {'text': 'ФКП «Завод имени Я.М. Свердлова»', 'img': static + 'img/about/clients/sogaz'},
     ],
+
     'vacancies': {
         'desc': 'В связи с расширением компании примем на работу охранников.',
         'items': [
@@ -103,6 +113,7 @@ data = {
             },
         ],
     },
+
     'galery': [
         static + 'img/about/historys/photo_3' for i in range(20)
     ],

@@ -29,14 +29,15 @@ const gz = {
 @@include('@@webRoot/#assets/#js/lib/popup.js');
 @@include('@@webRoot/#assets/components/popup-galery/popup-galery.js');
 @@include('@@webRoot/#assets/components/header/header.js');
-@@include('@@webRoot/#assets/components/index-services/index-services.js');
-@@include('@@webRoot/#assets/components/index-news/index-news.js');
-@@include('@@webRoot/#assets/components/about-arsenal/about-arsenal.js');
-@@include('@@webRoot/#assets/components/about-clients/about-clients.js');
-@@include('@@webRoot/#assets/components/about-galery/about-galery.js');
+@@include('@@webRoot/#assets/components/index/index-services/index-services.js');
+@@include('@@webRoot/#assets/components/index/index-news/index-news.js');
+@@include('@@webRoot/#assets/components/about/about-arsenal/about-arsenal.js');
+@@include('@@webRoot/#assets/components/about/about-clients/about-clients.js');
+@@include('@@webRoot/#assets/components/about/about-galery/about-galery.js');
 
 // pages
 @@include('@@webRoot/#assets/pages/news/news.js');
+@@include('@@webRoot/#assets/pages/news-detail/news-detail.js');
 
 
 gz.init = function() {
@@ -47,6 +48,7 @@ gz.init = function() {
     gz.aboutArsenal.init()
     gz.aboutClients.init()
     gz.popup.init()
+    gz.newsDetail.init()
 }
 
 $(document).ready(() => {
