@@ -20,7 +20,12 @@ def index(request):
     services = models.Service.objects.all()
     current_data = data.Index.data[locale]
     current_data['locale'] = locale
-    current_data['services']['slides'] = [services[1]] + random.sample(list(services)[1:], 5)
+    if len(services) > 0:
+        mainService = services[1]
+        randomServices = random.sample(list(services)[1:], 5)
+        current_data['services']['slides'] = [mainService] + randomServices
+    else:
+        current_data['services']['slides'] = []
     current_data['news'] = models.New.objects.all().order_by('-date')[:10]
     current_data.update(g_data[locale])
     response = HttpResponse(render(request, 'Index.jinja', current_data))

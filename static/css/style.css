@@ -325,7 +325,6 @@ h1 {
 
 .select__body {
   display: none;
-  padding: 20px 0;
   max-height: 300px;
   width: calc(100% + 2px);
   overflow-y: auto;
@@ -396,6 +395,15 @@ h1 {
 .select.error .select__header:before,
 .select.error .select__header:after {
   background-color: red;
+}
+
+.select__item {
+  border-bottom: 1px solid #fff;
+  line-height: 60px;
+}
+
+.select__item:last-child {
+  border-bottom: none;
 }
 
 .g-burger {
