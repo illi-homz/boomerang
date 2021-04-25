@@ -4873,6 +4873,82 @@ testWebP(function (support) {
   };
 });
 ;
+
+function setCookie(cname, cvalue) {
+  var exdays = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
+  var d = new Date();
+  d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+  var expires = "expires=" + d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+
+  for (var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+
+  return '';
+}
+
+;
+
+function initLazyLoading() {
+  var lazyImages = Array.from(document.querySelectorAll('img[data-src],source[data-srcset]'));
+  var loadMapBlock = document.querySelector('._load-map');
+  var windowHeight = document.documentElement.clientHeight;
+  var lazyImagesPositions = [];
+
+  if (lazyImages.length > 0) {
+    lazyImages.forEach(img => {
+      if (img.dataset.src || img.dataset.srcset) {
+        lazyImagesPositions.push(img.getBoundingClientRect().top + pageYOffset);
+        lazyScrollCheck();
+      }
+    });
+  }
+
+  document.addEventListener('scroll', lazyScroll);
+
+  function lazyScroll() {
+    if (document.querySelectorAll('img[data-src],source[data-srcset]').length > 0) lazyScrollCheck();else {
+      document.removeEventListener('scroll', lazyScroll);
+    }
+  }
+
+  ;
+
+  function lazyScrollCheck() {
+    var imgIndex = lazyImagesPositions.findIndex(el => pageYOffset > el - windowHeight);
+
+    if (imgIndex >= 0) {
+      if (lazyImages[imgIndex].dataset.src) {
+        lazyImages[imgIndex].src = lazyImages[imgIndex].dataset.src;
+        lazyImages[imgIndex].removeAttribute('data-src');
+      } else if (lazyImages[imgIndex].dataset.srcset) {
+        lazyImages[imgIndex].srcset = lazyImages[imgIndex].dataset.srcset;
+        lazyImages[imgIndex].removeAttribute('data-srcset');
+      }
+
+      delete lazyImagesPositions[imgIndex];
+    }
+  }
+
+  ;
+}
+
+;
 var gz = {
   goToBlock(target) {
     var isMobile = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
@@ -4882,15 +4958,52 @@ var gz = {
     $('html,body').animate({
       scrollTop: typeof target === 'string' ? $(target).offset().top : $(target.hash).offset().top
     });
-  },
-
-  changeLang(lang) {
-    $('._lang-item').removeClass('active');
-    $('._lang-item-' + lang).addClass('active');
   }
 
 }; // components
 
+'use strict';
+
+gz.select = {
+  speed: 200,
+
+  open($select) {
+    $select.children('._options').first().slideDown(this.speed);
+    $select.toggleClass('opened');
+  },
+
+  close($select) {
+    $select.children('._options').first().slideUp(this.speed);
+    $select.toggleClass('opened');
+  },
+
+  toggle(instance) {
+    var $select = $(instance).parents('._select');
+    if (!$select.hasClass('opened')) this.open($select);else this.close($select);
+  },
+
+  setName($select, name) {
+    $select.find('._selected-text').html(name);
+  },
+
+  setInputValue($select, value) {
+    $select.find('._select-input').val(value).trigger('change');
+  },
+
+  selectItem(instance) {
+    var $inst = $(instance);
+    var $select = $inst.parents('._select');
+    $select.removeClass('error');
+    $select.find('._option').removeClass('active');
+    $inst.addClass('active');
+    var name = $inst.text();
+    var selectedValue = $inst.data('value');
+    this.setName($select, name);
+    this.setInputValue($select, selectedValue);
+    this.close($select);
+  }
+
+};
 gz.popup = {
   init() {
     this.body = $('body');
@@ -4981,12 +5094,12 @@ gz.popup = {
   }
 
 };
-gz.popupGalery = {
+gz.popupSlider = {
   $slider: null,
 
-  initSlider(id) {
-    if (!gz.popupGalery.$slider) {
-      gz.popupGalery.$slider = $('._popup-galery__slider').slick({
+  initSlider(slider, id) {
+    if (!gz.popupSlider.$slider) {
+      gz.popupSlider.$slider = $(slider).slick({
         initialSlide: id,
         lazyLoad: 'ondemand',
         mobileFirst: true,
@@ -4999,15 +5112,17 @@ gz.popupGalery = {
         slidesToScroll: 1
       });
     } else {
-      gz.popupGalery.$slider.slick('slickGoTo', id);
+      gz.popupSlider.$slider.slick('slickGoTo', id);
     }
   }
 
 };
 gz.header = {
-  changeLang(lang) {
+  changeLang(btn, lang) {
     $('._lang-item').removeClass('header__lang-item--active');
-    $('._lang-item-' + lang).addClass('header__lang-item--active');
+    $(btn).addClass('header__lang-item--active');
+    setCookie('locale', lang);
+    window.location.reload(false);
   },
 
   toggleMenu() {
@@ -5045,11 +5160,12 @@ gz.indexServices = {
 
   changeSlideData() {
     var $slide = $('.index-services .slick-slide.slick-active');
-    var title = $slide.data('title');
-    var linkTitle = $slide.data('link');
+    var title = $slide.data('title'); // const linkTitle = $slide.data('link')
+
     var url = $slide.data('url');
     $('._index-services__slider-title').html(title);
-    $('._index-services__to-article').html(linkTitle).attr('href', url);
+    $('._index-services__to-article') // .html(linkTitle)
+    .attr('href', url);
   }
 
 };
@@ -5060,8 +5176,8 @@ gz.indexNews = {
 
   sliderInit() {
     $('._index-news__slider').slick({
-      lazyLoad: 'ondemand',
-      mobileFirst: true,
+      // lazyLoad: 'ondemand',
+      // mobileFirst: true,
       infinite: false,
       dots: true,
       arrows: true,
@@ -5164,8 +5280,7 @@ gz.aboutClients = {
 
   showDetail(item) {
     var url = item.dataset.img;
-    $('._popup-img__img').attr('src', url + '.png');
-    $('._popup-img__img-source').attr('srcset', url + '.webp');
+    $('._popup-img__img').attr('src', url); // $('._popup-img__img-source').attr('srcset', url)
   },
 
   items: 4,
@@ -5193,9 +5308,9 @@ gz.aboutGalery = {
     var $imgsList = $('._about-galery ._about-galery__img');
     var id = $imgsList.index(item);
     $imgsList = $imgsList.clone().attr('onclick', null);
-    var $slider = $('._popup-galery__slider');
+    var $slider = $('._popup-slider__slider');
     if (!$slider.html()) $slider.html($imgsList);
-    gz.popup.open('_popup-galery', gz.popupGalery.initSlider, [id]);
+    gz.popup.open('_popup-slider', gz.popupSlider.initSlider, ['._popup-slider__slider', id]);
   },
 
   items: 5,
@@ -5222,16 +5337,17 @@ gz.news = {
     var _this = this;
 
     return _asyncToGenerator(function* () {
+      var locale = getCookie('locale').toLowerCase();
+      _this.page++;
       var news = yield fetch("/api/get-news?page=".concat(_this.page)).then(response => {
         return response.json();
       });
-      _this.page++;
       var template = news.reduce((acc, n) => {
         var date = new Intl.DateTimeFormat('ru-RU', {
           day: '2-digit',
           month: 'long'
         }).format(new Date(n.date));
-        return acc += _this.newTemplate.replace(/{{id}}/ig, n.id).replace(/{{title}}/ig, n.title).replace(/{{desc}}/ig, n.desc).replace(/{{date}}/ig, date).replace(/{{url}}/ig, n.img);
+        return acc += _this.newTemplate.replace(/{{id}}/ig, n.id).replace(/{{title}}/ig, n['title_' + locale]).replace(/{{desc}}/ig, n['desc_' + locale]).replace(/{{date}}/ig, date).replace(/{{url}}/ig, n.img);
       }, '');
       document.querySelector('._news__wrapper').insertAdjacentHTML('beforeend', template);
     })();
@@ -5279,6 +5395,107 @@ gz.newsDetail = {
   }
 
 };
+gz.servicesDetail = {
+  init() {
+    this.sliderInit();
+  },
+
+  sliderInit() {
+    $('._services-detail__slider').slick({
+      lazyLoad: 'ondemand',
+      mobileFirst: true,
+      infinite: false,
+      dots: false,
+      arrows: false,
+      vertical: true,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      responsive: [{
+        breakpoint: 768,
+        settings: {
+          vertical: false,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          arrows: true,
+          dots: true
+        }
+      }, {
+        breakpoint: 1024,
+        settings: {
+          vertical: false,
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          infinite: true,
+          arrows: true,
+          dots: true
+        }
+      }]
+    });
+  }
+
+};
+gz.articles = {
+  init() {},
+
+  filterArticlesByCategory(v) {
+    this.dataValue = v;
+    var articles = $('._articles__item');
+    articles.removeClass('show');
+
+    if (v === '') {
+      articles.removeClass('hide');
+    } else {
+      articles.filter("._articles__item[data-value=\"".concat(v, "\"]")).removeClass('hide');
+      articles.filter("._articles__item:not([data-value=\"".concat(v, "\"])")).addClass('hide');
+    }
+  }
+
+};
+gz.contacts = {
+  init() {
+    try {
+      ymaps.ready(this.initYamap);
+    } catch (e) {
+      console.log('no ymaps');
+    }
+  },
+
+  initYamap() {
+    var myMap = new ymaps.Map('yamap', {
+      center: [56.310931, 44.056161],
+      // Дзауджикау
+      zoom: 16
+    });
+    myMap.geoObjects.add(new ymaps.Placemark([56.310931, 44.056161], {
+      balloonContentHeader: 'ООО Бумаранг',
+      balloonContentBody: '<a href="tel:+7 (831) 28-28-911">+7 (831) 28-28-911</a><br/>'
+    }, {
+      preset: 'islands#governmentCircleIcon',
+      iconColor: '#2B303C'
+    }));
+  }
+
+};
+gz.documents = {
+  showPopup(item) {
+    this.initSlider(item);
+  },
+
+  initSlider(item) {
+    var $imgsList = $("._documents ._documents__item");
+    var id = $imgsList.index(item);
+    $imgsList = $imgsList.clone().attr('onclick', null);
+    var $slider = $('._popup-slider__slider');
+    if (!$slider.html()) $slider.html($imgsList);
+    this.openPopup('._popup-slider__slider', id);
+  },
+
+  openPopup(slider, id) {
+    gz.popup.open('_popup-slider', gz.popupSlider.initSlider, [slider, id]);
+  }
+
+};
 
 gz.init = function () {
   // $("._input-phone").mask("+7(999)999-99-99");
@@ -5288,6 +5505,9 @@ gz.init = function () {
   gz.aboutClients.init();
   gz.popup.init();
   gz.newsDetail.init();
+  gz.servicesDetail.init();
+  gz.contacts.init();
+  initLazyLoading();
 };
 
 $(document).ready(() => {

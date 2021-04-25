@@ -26,12 +26,12 @@
 
                 <div class="header__lang">
                     <button
-                        class="header__lang-item _lang-item _lang-item-ru header__lang-item--active"
-                        onclick="gz.header.changeLang('ru')">ru</button>
+                        class="header__lang-item _lang-item {% if locale == 'RU' %}header__lang-item--active{% endif %}"
+                        onclick="gz.header.changeLang(this, 'RU')">ru</button>
                     <div class="header__lang-dash"></div>
                     <button
-                        class="header__lang-item _lang-item _lang-item-en"
-                        onclick="gz.header.changeLang('en')">en</button>
+                        class="header__lang-item _lang-item {% if locale == 'EN' %}header__lang-item--active{% endif %}"
+                        onclick="gz.header.changeLang(this, 'EN')">en</button>
                 </div>
             </nav>
         </div>

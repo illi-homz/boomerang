@@ -1,12 +1,12 @@
 <div class="index-about container">
     <div class="g-block__title">
-        о нас
+        {{about.title}}
     </div>
     <div class="index-about__wrapper">
-        <div class="index-about__img">
+        <div class="index-about__img g-loading">
             <picture>
-                <source srcset="{{ about.img }}.webp" type="image/webp">
-                <img src="{{ about.img }}.jpg" alt="slide" />
+                <source data-srcset="{{about.img}}.webp" srcset="#" type="image/webp">
+                <img data-src="{{about.img}}.jpg" src="#" alt="slide" />
             </picture>
         </div>
         <div class="index-about__data">

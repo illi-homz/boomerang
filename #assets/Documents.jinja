@@ -1,0 +1,42 @@
+{% extends 'layouts/Base.jinja' %}
+
+{% block head %}
+<title>{{title}} | {{titleDesc}}</title>
+{% endblock %}
+
+{% block content %}
+<div class="documents _documents container">
+    {% include 'components/bread-crumbs/bread-crumbs.jinja' %}
+    <div class="g-block__title">{{title}}</div>
+    <div class="documents__wrapper documents__wrapper--first">
+        <div class="documents__title">{{mainLicenses}}</div>
+        <div class="documents__list">
+            {% for doc in documents %}
+                {% if doc.type == 'reg' %}
+                <div
+                    class="documents__item _documents__item"
+                    onclick="gz.documents.showPopup(this)">
+                    <img src="{{doc.img.url}}" alt="slide" />
+                </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    <div class="documents__wrapper">
+        <div class="documents__title">{{techLicenses}}</div>
+        <div class="documents__list">
+            {% for doc in documents %}
+                {% if doc.type == 'tech' %}
+                <div
+                    class="documents__item _documents__item"
+                    onclick="gz.documents.showPopup(this)">
+                    <img src="{{doc.img.url}}" alt="slide" />
+                </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+    {% include 'components/popup-slider/popup-slider.jinja' %}
+</div>
+{% endblock %}

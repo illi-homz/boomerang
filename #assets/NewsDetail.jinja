@@ -1,4 +1,9 @@
 {% extends 'layouts/Base.jinja' %}
+{% load get_locale %}
+
+{% block head %}
+<title>{{new.title}} | {{titleDesc}}</title>
+{% endblock %}
 
 {% block content %}
 
@@ -6,10 +11,10 @@
         <div class="container">
             {% include 'components/bread-crumbs/bread-crumbs.jinja' %}
             <div class="news-detail__item">
+                <h1 class="news-detail__title">{{new.title|get_locale:locale}}</h1>
                 <div class="news-detail__date">{{new.date|date:"d E Y"}} г.</div>
-                <h1 class="news-detail__title">{{new.title}}</h1>
                 <div class="news-detail__wrapper">
-                    <div class="news-detail__text">{{new.text|safe}}</div>
+                    <div class="news-detail__text">{{new.text|get_locale:locale|safe}}</div>
                     <div class="news-detail__img">
                         <img src="{{new.img.url}}" alt="">
                     </div>
@@ -23,12 +28,12 @@
                     {% for n in news %}
                         <div class="news-detail__slide g-news">
                             <div class="g-news__item-title">
-                                <a href="/news/{{n.id}}">{{n.title}}</a>
+                                <a href="/news/{{n.id}}">{{n.title|get_locale:locale}}</a>
                             </div>
-                            <div class="g-news__item-desc">{{n.desc}}</div>
+                            <div class="g-news__item-desc">{{n.desc|get_locale:locale}}</div>
                             <div class="g-news__item-df-jcsb">
                                 <div class="g-news__item-date">{{n.date|date:"d E"}}</div>
-                                <a href="/news/{{n.id}}" class="g-news__item-detail">Подробнее</a>
+                                <a href="/news/{{n.id}}" class="g-news__item-detail">{{moreDetails}}</a>
                             </div>
                             <div class="g-news__item-img">
                                 <a href="/news/{{n.id}}">

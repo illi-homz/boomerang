@@ -130,7 +130,7 @@
             @include font-set(12, 16px, 300);
             position: absolute;
             right: 0;
-            top: 50%;
+            top: 8px;
             transform: translateY(-50%);
         }
     }
@@ -139,6 +139,7 @@
     {
         @include font-set(12, 16px, 300);
         margin-bottom: 8px;
+        padding-right: 110px;
 
         &:last-of-type {margin-bottom: 24px;}
 
@@ -150,6 +151,8 @@
         @include font-set(12, 16px, 300);
         margin-bottom: 28px;
         display: none;
+
+        * {font-size: 12px;}
     }
 
     &__item-detail

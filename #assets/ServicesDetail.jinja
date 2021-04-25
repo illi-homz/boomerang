@@ -1,0 +1,46 @@
+{% extends 'layouts/Base.jinja' %}
+{% load get_locale %}
+
+{% block head %}
+<title>{{serviceItem.title|get_locale:locale}} | {{titleDesc}}</title>
+{% endblock %}
+
+{% block content %}
+    <div class="services-detail">
+        <div class="container">
+            {% include 'components/bread-crumbs/bread-crumbs.jinja' %}
+            <div class="services-detail__data">
+                <h1>
+                    {{serviceItem.title|get_locale:locale}}
+                </h1>
+                <div class="services-detail__text">
+                    {{serviceItem.text|get_locale:locale|safe}}
+                </div>
+            </div>
+        </div>
+
+        <div class="services-detail__see-same">
+            <div class="container">
+                <div class="g-block__title">{{seeSame}}</div>
+                <div class="services-detail__slider g-slider _services-detail__slider">
+                    {% for service in services %}
+                    <div class="services-detail__slider-item">
+                        <a href="/services/{{service.id}}">
+                            <div class="g-service">
+                                <div class="g-service__img">
+                                    <img src="{{service.img.url}}" alt="service">
+                                </div>
+                                {% if service.price %}
+                                    <div class="g-service__price">от {{service.price}} р.</div>
+                                {% endif %}
+                                <div class="g-service__title">{{service.title|get_locale:locale}}</div>
+                                <div class="g-service__desc">{{service.desc|get_locale:locale}}</div>
+                            </div>
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

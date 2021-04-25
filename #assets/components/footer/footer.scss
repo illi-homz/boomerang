@@ -39,7 +39,7 @@
         width: 121px;
         border-radius: 5px;
         background: $red;
-        z-index: 100;
+        z-index: 50;
 
         @include tablet {display: none;}
     }

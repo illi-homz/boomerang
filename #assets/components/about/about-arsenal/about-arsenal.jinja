@@ -23,7 +23,7 @@
                     {% endfor %}
 
                     {% for text in weapon.texts %}
-                    <p class="about-arsenal__item-text">{{text}}</p>
+                    <p class="about-arsenal__item-text">{{text|safe}}</p>
                     {% endfor %}
                     <button
                         class="about-arsenal__item-detail"

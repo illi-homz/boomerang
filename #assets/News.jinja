@@ -1,4 +1,9 @@
 {% extends 'layouts/Base.jinja' %}
+{% load get_locale %}
+
+{% block head %}
+<title>{{title}} | {{titleDesc}}</title>
+{% endblock %}
 
 {% block content %}
 
@@ -11,12 +16,12 @@
             {% for new in news %}
                 <div class="news__item g-news">
                     <div class="g-news__item-title">
-                        <a href="/news/{{new.id}}">{{new.title}}</a>
+                        <a href="/news/{{new.id}}">{{new.title|get_locale:locale}}</a>
                     </div>
-                    <div class="g-news__item-desc">{{new.desc}}</div>
+                    <div class="g-news__item-desc">{{new.desc|get_locale:locale}}</div>
                     <div class="g-news__item-df-jcsb">
                         <div class="g-news__item-date">{{new.date|date:"d E"}}</div>
-                        <a href="/news/{{new.id}}" class="g-news__item-detail">Подробнее</a>
+                        <a href="/news/{{new.id}}" class="g-news__item-detail">{{more}}</a>
                     </div>
                     <div class="g-news__item-img">
                         <a href="/news/{{new.id}}">
@@ -26,7 +31,7 @@
                 </div>
             {% endfor %}
         </div>
-        <button class="g-news__show-more" onclick="gz.news.getNews()">Показать ещё</button>
+        <button class="g-news__show-more" onclick="gz.news.getNews()">{{showMore}}</button>
     </div>
 
 {% endblock %}

@@ -46,8 +46,8 @@ gz.aboutClients = {
     showDetail(item)
     {
         const url = item.dataset.img
-        $('._popup-img__img').attr('src', url + '.png')
-        $('._popup-img__img-source').attr('srcset', url + '.webp')
+        $('._popup-img__img').attr('src', url)
+        // $('._popup-img__img-source').attr('srcset', url)
     },
 
     items: 4,

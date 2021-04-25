@@ -5,6 +5,7 @@
 @import 'lib/fragments';
 @import 'lib/fonts';
 @import 'lib/popup';
+@import 'lib/select';
 
 // global classes
 @import 'g-classes/g-burger';
@@ -16,7 +17,7 @@
 
 // components
 @import '@@webRoot/#assets/components/popup-img/popup-img';
-@import '@@webRoot/#assets/components/popup-galery/popup-galery';
+@import '@@webRoot/#assets/components/popup-slider/popup-slider';
 @import '@@webRoot/#assets/components/header/header';
 @import '@@webRoot/#assets/components/footer/footer';
 @import '@@webRoot/#assets/components/bread-crumbs/bread-crumbs';
@@ -36,7 +37,7 @@
 @import '@@webRoot/#assets/components/about/about-clients/about-clients';
 @import '@@webRoot/#assets/components/about/about-vacancies/about-vacancies';
 @import '@@webRoot/#assets/components/about/about-galery/about-galery';
-@import '@@webRoot/#assets/components/services/services-human/services-human';
+@import '@@webRoot/#assets/components/services/services';
 
 // pages
 @import '@@webRoot/#assets/pages/index/index';
@@ -44,6 +45,12 @@
 @import '@@webRoot/#assets/pages/news/news';
 @import '@@webRoot/#assets/pages/news-detail/news-detail';
 @import '@@webRoot/#assets/pages/services/services';
+@import '@@webRoot/#assets/pages/services-detail/services-detail';
+@import '@@webRoot/#assets/pages/prices/prices';
+@import '@@webRoot/#assets/pages/articles/articles';
+@import '@@webRoot/#assets/pages/article-detail/article-detail';
+@import '@@webRoot/#assets/pages/contacts/contacts';
+@import '@@webRoot/#assets/pages/documents/documents';
 
 *
 {

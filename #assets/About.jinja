@@ -1,5 +1,9 @@
 {% extends 'layouts/Base.jinja' %}
 
+{% block head %}
+<title>{{title}} | {{titleDesc}}</title>
+{% endblock %}
+
 {% block content %}
 
     <div class="about">
@@ -36,7 +40,7 @@
         </div>
 
         {% include 'components/popup-img/popup-img.jinja' %}
-        {% include 'components/popup-galery/popup-galery.jinja' %}
+        {% include 'components/popup-slider/popup-slider.jinja' %}
     </div>
 
 {% endblock %}

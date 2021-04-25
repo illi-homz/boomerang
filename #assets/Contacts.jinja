@@ -1,0 +1,46 @@
+{% extends 'layouts/Base.jinja' %}
+
+{% block head %}
+<title>{{title}} | {{titleDesc}}</title>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+{% endblock %}
+
+{% block content %}
+<div class="contacts container">
+    {% include 'components/bread-crumbs/bread-crumbs.jinja' %}
+    <div class="g-block__title">{{title}}</div>
+    <div class="contacts__wrapper">
+        <div class="contacts__data">
+            <div class="contacts__field">
+                <div class="contacts__title">{{postAdressTitle}}:</div>
+                <div class="contacts__text">{{postAdress}}</div>
+            </div>
+            <div class="contacts__field contacts__field--line">
+                <div class="contacts__title">E-mail:</div>
+                <div class="contacts__text">
+                    <a href="mailto:{{email}}">{{email}}</a>
+                </div>
+            </div>
+            <div class="contacts__field">
+                <div class="contacts__title">{{officeTitle}}</div>
+                <div class="contacts__text">{{office}}</div>
+            </div>
+            <div class="contacts__field contacts__field--line contacts__field--mb0">
+                <div class="contacts__title">{{phonesTitle}}:</div>
+                <div class="contacts__text">{% for t in phones %}<a href="tel:{{t}}">{{t}}</a>, {% endfor %}.</div>
+            </div>
+            <div class="contacts__field contacts__field--line">
+                <div class="contacts__title">{{cooperationTitle}}:</div>
+                <div class="contacts__text">
+                    <a href="mailto:{{email}}">{{cooperation}}</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="contacts__map" id="yamap"></div>
+    </div>
+</div>
+{% endblock %}

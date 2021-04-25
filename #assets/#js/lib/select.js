@@ -1,14 +1,15 @@
 'use strict';
 
 gz.select = {
+    speed: 200,
     open($select)
         {
-            $select.children('._options').first().slideDown(300)
+            $select.children('._options').first().slideDown(this.speed)
             $select.toggleClass('opened')
         },
     close($select)
         {
-            $select.children('._options').first().slideUp(300)
+            $select.children('._options').first().slideUp(this.speed)
             $select.toggleClass('opened')
         },
     toggle(instance)

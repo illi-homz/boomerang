@@ -1,12 +1,5 @@
 from django.db import models
 
-TYPES = [
-    ('human', 'Oхранные услуги'),
-    ('TECHNICAL', 'Техническая охрана'),
-    ('dress', 'Изготовление спецодежды'),
-    ('consultation', 'Консультационные и юридические услуги'),
-]
-
 class Service(models.Model):
     HUMAN = 'hm'
     TECHNICAL = 'th'
@@ -20,12 +13,33 @@ class Service(models.Model):
         (CONSULTATION, 'Консультационные и юридические услуги'),
     ]
 
-    title = models.CharField(max_length=200)
-    desc = models.CharField(max_length=300, default='', blank=True)
-    text = models.TextField(default='')
+    title_ru = models.CharField(max_length=200)
+    title_en = models.CharField(max_length=200, blank=True, null=True)
+    desc_ru = models.CharField(max_length=300, blank=True, null=True)
+    desc_en = models.CharField(max_length=300, blank=True, null=True)
+    text_ru = models.TextField(blank=True, null=True)
+    text_en = models.TextField(blank=True, null=True)
     type = models.CharField(max_length=2, choices=TYPES, default=HUMAN)
     price = models.SmallIntegerField(default=0)
     img = models.ImageField(upload_to='services', verbose_name='Картинка')
 
     def __str__(self):
-        return self.title
+        return self.title_ru
+
+    def title(self):
+        return {
+            'RU': self.title_ru,
+            'EN': self.title_en
+        }
+
+    def desc(self):
+        return {
+            'RU': self.desc_ru,
+            'EN': self.desc_en
+        }
+
+    def text(self):
+        return {
+            'RU': self.text_ru,
+            'EN': self.text_en
+        }

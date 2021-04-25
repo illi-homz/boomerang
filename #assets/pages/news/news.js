@@ -2,13 +2,13 @@ gz.news = {
     page: 1,
     async getNews()
     {
+        const locale = getCookie('locale').toLowerCase()
+
+        this.page++
         const news = await fetch(`/api/get-news?page=${this.page}`)
             .then((response) => {
                 return response.json();
             })
-
-        this.page++
-
 
         const template = news.reduce((acc, n) => {
             const date = new Intl
@@ -17,8 +17,8 @@ gz.news = {
 
             return acc += this.newTemplate
                 .replace( /{{id}}/ig, n.id )
-                .replace( /{{title}}/ig, n.title )
-                .replace( /{{desc}}/ig, n.desc )
+                .replace( /{{title}}/ig, n['title_' + locale] )
+                .replace( /{{desc}}/ig, n['desc_' + locale] )
                 .replace( /{{date}}/ig, date )
                 .replace( /{{url}}/ig, n.img )
         }, '')

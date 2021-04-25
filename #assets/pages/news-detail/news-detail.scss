@@ -14,9 +14,11 @@
         @include font-set(20, 24px, 700);
         margin-bottom: 24px;
 
-        @include tablet
+        @include desktop
         {
             margin-bottom: 32px;
+            max-width: 1044px;
+            padding-right: 200px;
         }
     }
 
@@ -41,7 +43,7 @@
     {
         display: none;
 
-        @include tablet
+        @include desktop
         {
             display: block;
             @include font-set(14, 32px, 300);
@@ -184,7 +186,7 @@
             position: absolute;
             bottom: 46px;
         }
-        .slick-prev {left: 0;}
+        .slick-prev {left: 10px;}
         .slick-next {right: 0;}
 
         .slick-dots

@@ -1,0 +1,109 @@
+.services-detail
+{
+    padding-top: 24px;
+
+    h1
+    {
+        @include font-set(20, 1.2em, 700);
+        margin-bottom: 24px;
+        @include tablet {margin-bottom: 32px;}
+    }
+
+    p
+    {
+        margin-bottom: 24px;
+    }
+
+    &__data
+    {
+        margin-bottom: 40px;
+        @include tablet
+        {
+            margin-bottom: 69px;
+            max-width: 830px;
+        }
+    }
+    &__see-same
+    {
+        padding-top: 32px;
+        background-color: $black2;
+
+        .g-block__title {margin-bottom: 24px;}
+
+        @include tablet
+        {
+            padding-top: 29px;
+
+            .g-block__title {margin-bottom: 55px;}
+        }
+    }
+
+    .bread-crumbs
+    {
+        margin-bottom: 24px;
+        @include tablet {margin-bottom: 32px;}
+    }
+
+    .g-slider
+    {
+        overflow: hidden;
+        padding-bottom: 30px;
+        position: relative;
+        margin-bottom: 57px;
+
+        @include tablet
+        {
+            margin-bottom: 105px;
+            padding-bottom: 143px;
+            width: calc(100% + 10px);
+            margin-left: -10px;
+        }
+
+        .slick-list
+        {
+            height: auto !important;
+            @include tablet {height: auto;}
+        }
+
+        .slick-track
+        {
+            display: block;
+            height: auto !important;
+            @include tablet
+            {
+                display: flex;
+                height: auto;
+                align-items: flex-end;
+            }
+        }
+
+        .slick-slide
+        {
+            margin-bottom: 22px;
+
+            &:nth-child(n + 4) {display: none;}
+
+            @include tablet
+            {
+                margin: 0 10px;
+                &:nth-child(n + 4) {display: block;}
+            }
+        }
+
+        .slick-arrow
+        {
+            position: absolute;
+            bottom: 46px;
+        }
+        .slick-prev {left: 10px;}
+        .slick-next {right: 0;}
+
+        .slick-dots
+        {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 60px;
+        }
+    }
+}

@@ -1,10 +1,10 @@
-gz.popupGalery = {
+gz.popupSlider = {
     $slider: null,
-    initSlider(id)
+    initSlider(slider, id)
     {
-        if (!gz.popupGalery.$slider)
+        if (!gz.popupSlider.$slider)
         {
-            gz.popupGalery.$slider = $('._popup-galery__slider').slick({
+            gz.popupSlider.$slider = $(slider).slick({
                 initialSlide: id,
                 lazyLoad: 'ondemand',
                 mobileFirst: true,
@@ -17,6 +17,6 @@ gz.popupGalery = {
                 slidesToScroll: 1
             })
         }
-        else {gz.popupGalery.$slider.slick('slickGoTo', id)}
+        else {gz.popupSlider.$slider.slick('slickGoTo', id)}
     },
 }

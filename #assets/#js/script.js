@@ -4,6 +4,8 @@
 @@include('@@webRoot/#assets/#js/lib/webp.js');
 @@include('@@webRoot/#assets/#js/lib/jquery.min.js');
 @@include('@@webRoot/#assets/#js/lib/slick.min.js');
+@@include('@@webRoot/#assets/#js/lib/cookies.js');
+@@include('@@webRoot/#assets/#js/lib/lazyload.js');
 
 
 const gz = {
@@ -18,16 +20,12 @@ const gz = {
             : $(target.hash).offset().top
         });
     },
-    changeLang(lang)
-    {
-        $('._lang-item').removeClass('active')
-        $('._lang-item-'+lang).addClass('active')
-    }
 }
 
 // components
+@@include('@@webRoot/#assets/#js/lib/select.js');
 @@include('@@webRoot/#assets/#js/lib/popup.js');
-@@include('@@webRoot/#assets/components/popup-galery/popup-galery.js');
+@@include('@@webRoot/#assets/components/popup-slider/popup-slider.js');
 @@include('@@webRoot/#assets/components/header/header.js');
 @@include('@@webRoot/#assets/components/index/index-services/index-services.js');
 @@include('@@webRoot/#assets/components/index/index-news/index-news.js');
@@ -38,6 +36,10 @@ const gz = {
 // pages
 @@include('@@webRoot/#assets/pages/news/news.js');
 @@include('@@webRoot/#assets/pages/news-detail/news-detail.js');
+@@include('@@webRoot/#assets/pages/services-detail/services-detail.js');
+@@include('@@webRoot/#assets/pages/articles/articles.js');
+@@include('@@webRoot/#assets/pages/contacts/contacts.js');
+@@include('@@webRoot/#assets/pages/documents/documents.js');
 
 
 gz.init = function() {
@@ -49,6 +51,9 @@ gz.init = function() {
     gz.aboutClients.init()
     gz.popup.init()
     gz.newsDetail.init()
+    gz.servicesDetail.init()
+    gz.contacts.init()
+    initLazyLoading()
 }
 
 $(document).ready(() => {

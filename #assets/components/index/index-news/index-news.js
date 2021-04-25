@@ -6,8 +6,8 @@ gz.indexNews = {
     sliderInit()
     {
         $('._index-news__slider').slick({
-            lazyLoad: 'ondemand',
-            mobileFirst: true,
+            // lazyLoad: 'ondemand',
+            // mobileFirst: true,
             infinite: false,
             dots: true,
             arrows: true,

@@ -1,8 +1,10 @@
 gz.header = {
-    changeLang(lang)
+    changeLang(btn, lang)
     {
         $('._lang-item').removeClass('header__lang-item--active')
-        $('._lang-item-'+lang).addClass('header__lang-item--active')
+        $(btn).addClass('header__lang-item--active')
+        setCookie('locale', lang)
+        window.location.reload(false)
     },
     toggleMenu()
     {

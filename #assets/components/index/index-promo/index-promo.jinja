@@ -3,14 +3,14 @@
 <div class="index-promo">
     <div class="container index-promo__container">
         <div class="g-block__title">
-            Акции
+            {{promo.title}}
         </div>
         <ul class="index-promo__list">
             {% for promo in promo.promos %}
                 <li class="index-promo__item">
                     <picture>
-                        <source srcset="{{ promo.img }}.webp" type="image/webp">
-                        <img src="{{ promo.img }}.jpg" alt="slide" />
+                        <source data-srcset="{{ promo.img }}.webp" srcset="#" type="image/webp">
+                        <img data-src="{{ promo.img }}.jpg" src="#" alt="slide" />
                     </picture>
                     <div class="index-promo__item-data">
                         <div class="index-promo__item-title">{{ promo.title }}</div>

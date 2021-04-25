@@ -1,0 +1,100 @@
+.articles
+{
+    padding: 24px 0 57px;
+    @include tablet {padding-bottom: 105px;}
+
+    .bread-crumbs
+    {
+        margin-bottom: 18px;
+        @include tablet {margin-bottom: 32px;}
+    }
+
+    .g-block__title
+    {
+        margin-bottom: 24px;
+    }
+
+    &__filters
+    {
+        margin-bottom: 32px;
+        @include tablet
+        {
+            display: flex;
+
+            & > div
+            {
+                flex: 1 0;
+                max-width: 412px;
+            }
+
+            & > div:first-child {margin-right: 20px;}
+        }
+    }
+
+    &__filters-item
+    {
+        margin-bottom: 16px;
+    }
+
+    &__filters-title
+    {
+        margin-bottom: 8px;
+        @include font-set(16, 1.5em, 300);
+    }
+
+    &__filters-categories
+    {}
+
+    &__list
+    {
+        display: grid;
+        grid-gap: 20px;
+
+        @include mobile
+        {
+            grid-template-columns: repeat(auto-fill,minmax(410px, 1fr));
+        }
+    }
+
+    &__item
+    {
+        height: 125px;
+        background: url($static + 'img/article_bg.svg') center / 100% 100% no-repeat;
+        padding: 16px;
+        position: relative;
+
+        &.hide {display: none;}
+    }
+
+    &__item-read
+    {
+        @include font-set(12, 1.333em, 300);
+        display: inline-flex;
+        align-items: center;
+        position: absolute;
+        right: 16px;
+        bottom: 16px;
+
+        svg
+        {
+            height: 11px;
+            margin-left: 10px;
+        }
+    }
+
+    &__show-more
+    {
+        height: 65px;
+        width: 100%;
+        border: 1px solid #FFFFFF;
+        margin-top: 40px;
+
+        @include mobile
+        {
+            display: block;
+            max-width: 304px;
+            margin: 0 auto;
+            margin-top: 40px;
+        }
+    }
+}

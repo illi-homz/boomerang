@@ -15,7 +15,7 @@ images/*.gif
 images/*.ico
 images/*.webp
 
-media/*
+media/**/*
 
 package-lock.json
 /*.sqlite3

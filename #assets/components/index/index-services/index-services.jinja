@@ -1,14 +1,16 @@
+{% load get_locale %}
+
 <section class="index-services" id="index-services">
     <div class="container">
         <div class="g-block__title">
-            услуги
+            {{services.title}}
 
-            <a class="index-services__more" href="#">
-                ВСЕ УСЛУГИ{% include '#img/arrow-empty-r.svg' %}
+            <a class="index-services__more" href="/services">
+                {{services.all_services}}{% include '#img/arrow-empty-r.svg' %}
             </a>
         </div>
         <div class="index-services__desc">
-            Группа охранных предприятий "Бумеранг" прочно обосновалось на рынке предоставления охранных услуг, более чем двадцатилетнюю работу создало себе имидж надежного, высокоинтеллектуального охранного предприятия.
+            {{services.desc}}
         </div>
         <div class="index-services__wrapper">
             <div class="index-services__col index-services__col--first">
@@ -17,23 +19,19 @@
                         Что то пошло не так
                     </div>
                     <a href="#" class="index-services__to-article _index-services__to-article">
-                        Что то пошло не так
+                        {{services.read_more}}
                     </a>
                 </div>
                 <div class="index-services__nav g-slider _index-services__nav"></div>
             </div>
             <div class="index-services__col index-services__col--second">
                 <div class="index-services__slider g-slider _index-services__slider">
-                    {% for slide in services.slides %}
+                    {% for service in services.slides %}
                     <div
                         class="index-services__slider-item"
-                        data-title="{{slide.title}}"
-                        data-link="{{slide.link.title}}"
-                        data-url="{{slide.link.url}}">
-                        <picture>
-                            <source srcset="{{slide.img}}.webp" type="image/webp">
-                            <img data-lazy="{{slide.img}}.jpg" alt="slide" />
-                        </picture>
+                        data-title="{{service.title|get_locale:locale}}"
+                        data-url="/services/{{service.id}}">
+                        <img src="{{service.img.url}}" alt="service" />
                     </div>
                     {% endfor %}
                 </div>

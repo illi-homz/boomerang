@@ -113,6 +113,11 @@
         @include tablet
         {
             @include font-set(57, 67px, 700);
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 4;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         @include desktop

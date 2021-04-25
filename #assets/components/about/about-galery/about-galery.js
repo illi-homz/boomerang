@@ -11,10 +11,10 @@ gz.aboutGalery = {
 
         $imgsList = $imgsList.clone().attr('onclick', null)
 
-        const $slider = $('._popup-galery__slider')
+        const $slider = $('._popup-slider__slider')
         if (!$slider.html()) $slider.html($imgsList)
 
-        gz.popup.open('_popup-galery', gz.popupGalery.initSlider, [id])
+        gz.popup.open('_popup-slider', gz.popupSlider.initSlider, ['._popup-slider__slider', id])
     },
     items: 5,
     showItems: 6,

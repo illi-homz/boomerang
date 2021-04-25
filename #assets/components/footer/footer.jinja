@@ -1,21 +1,21 @@
 {% load static %}
 
 <div class="footer container">
-    <a class="footer__gotoup" href="#header" onclick="gz.goToBlock(this)">Наверх</a>
+    <a class="footer__gotoup" href="#header" onclick="gz.goToBlock(this)">{{footer.toUp}}</a>
     <div class="footer__row footer__row--first">
         <a href="/" class="footer__logo">
             <img src="{% static 'img/logo.svg' %}" alt="logo" />
         </a>
         <div class="footer__links">
             <ul class="footer__links-list">
-                <li><a href="#">Услуги</a></li>
-                <li><a href="#">Наши цены</a></li>
-                <li><a href="#">Новости</a></li>
+                <li><a href="/services?tab=hm">{{footer.services}}</a></li>
+                <li><a href="/prices">{{footer.ourPrices}}</a></li>
+                <li><a href="/news">{{footer.news}}</a></li>
             </ul>
             <ul class="footer__links-list">
-                <li><a href="#">О нас</a></li>
-                <li><a href="#">Статьи</a></li>
-                <li><a href="#">Контакты</a></li>
+                <li><a href="/about?tab=history">{{footer.aboutUs}}</a></li>
+                <li><a href="/articles">{{footer.articles}}</a></li>
+                <li><a href="/contacts">{{footer.contacts}}</a></li>
             </ul>
         </div>
         <ul class="footer__contacts">
@@ -29,11 +29,11 @@
 
 
     <div class="footer__row footer__row--second">
-        <div class="footer__copyright">© 2006‐2020 ЧОП «Бумеранг»</div>
+        <div class="footer__copyright">© 2006‐2020 {{footer.chop}}</div>
         <ul class="footer__map">
-            <li><a href="#">Карта сайта</a></li>
-            <li><a href="#">Полезные ссылки</a></li>
-            <li><a href="#">Документы</a></li>
+            <li><a href="#">{{footer.siteMap}}</a></li>
+            <li><a href="#">{{footer.links}}</a></li>
+            <li><a href="/documents">{{footer.docs}}</a></li>
         </ul>
     </div>
 </div>

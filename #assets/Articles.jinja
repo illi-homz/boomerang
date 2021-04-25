@@ -1,0 +1,83 @@
+{% extends 'layouts/Base.jinja' %}
+{% load get_locale %}
+
+{% block head %}
+<title>{{title}} | {{titleDesc}}</title>
+{% endblock %}
+
+{% block content %}
+
+    <div class="articles">
+        <div class="container">
+            {% include 'components/bread-crumbs/bread-crumbs.jinja' %}
+            <div class="g-block__title">{{title}}</div>
+
+            <div class="articles__filters">
+                <div class="articles__filters-item">
+                    <div class="articles__filters-title">{{category}}</div>
+                    <div class="articles__filters-categories select _select">
+                        <input
+                            type="hidden"
+                            class="_select-input"
+                            onchange="gz.articles.filterArticlesByCategory(this.value)"/>
+                        <div class="select__header" onclick="gz.select.toggle(this)">
+                            <span class="_selected-text">{{any}}</span>
+                        </div>
+                        <div class="select__body select__body--no-bar _options">
+                            <ul class="select__items">
+                                <li
+                                    class="select__item _option"
+                                    data-value=""
+                                    onclick="gz.select.selectItem(this)">
+                                    {{all}}
+                                </li>
+                                {% for category in categories %}
+                                <li
+                                    class="select__item _option"
+                                    data-value="{{category.0}}"
+                                    onclick="gz.select.selectItem(this)">
+                                    {{category.1}}
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="articles__filters-item">
+                    <div class="articles__filters-title">{{theme}}</div>
+                    <div class="articles__filters-themes select _select">
+                        <input
+                            type="hidden"
+                            class="_select-input"
+                            onchange="gz.articles.filterArticlesByCategory(this.value)"/>
+                        <div class="select__header" onclick="gz.select.toggle(this)">
+                            <span class="_selected-text">{{any}}</span>
+                        </div>
+                        <div class="select__body _options">
+                            <ul class="select__items">
+                                {% for article in articles %}
+                                <li class="select__item _option">
+                                    <a href="/articles/{{article.id}}">{{article.title|get_locale:locale}}</a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="articles__list">
+            {% for article in articles %}
+                <div class="articles__item _articles__item" data-value="{{article.category}}">
+                    <a href="/articles/{{article.id}}"><div>{{article.title|get_locale:locale}}</div></a>
+                    <a href="/articles/{{article.id}}" class="articles__item-read">
+                        {{read}}
+                        {% include '#img/arrow-empty-r.svg' %}
+                    </a>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

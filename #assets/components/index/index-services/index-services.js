@@ -30,12 +30,12 @@ gz.indexServices = {
     {
         const $slide = $('.index-services .slick-slide.slick-active')
         const title = $slide.data('title')
-        const linkTitle = $slide.data('link')
+        // const linkTitle = $slide.data('link')
         const url = $slide.data('url')
 
         $('._index-services__slider-title').html(title)
         $('._index-services__to-article')
-            .html(linkTitle)
+            // .html(linkTitle)
             .attr('href', url)
 
     }
