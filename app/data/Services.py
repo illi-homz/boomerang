@@ -17,7 +17,7 @@ data = {
             {'title': 'Консультационные и юридические услуги', 'url': '/services?tab=cs', 'tab': 'cs'}
         ],
     },
-    'RU': {
+    'EN': {
         'title': 'Услуги',
 
         'breadCrumbs': [
