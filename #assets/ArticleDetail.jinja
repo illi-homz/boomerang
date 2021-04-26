@@ -10,11 +10,14 @@
     <div class="article-detail">
         <div class="container">
             {% include 'components/bread-crumbs/bread-crumbs.jinja' %}
-            <h1 class="g-block__title">{{article.title|get_locale:locale}}</h1>
-            <div class="article-detail__text">
-                {{article.text|get_locale:locale|safe}}
+            <div class="article-detail__read-style">{{readStyle}}</div>
+            <div class="article-detail__wrapper">
+                <h1 class="g-block__title">{{article.title|get_locale:locale}}</h1>
+                <div class="article-detail__text">
+                    {{article.text|get_locale:locale|safe}}
+                </div>
+                <a class="footer__gotoup" href="#header" onclick="gz.goToBlock(this)">{{toUp}}</a>
             </div>
-            <a class="footer__gotoup" href="#header" onclick="gz.goToBlock(this)">{{toUp}}</a>
         </div>
     </div>
 

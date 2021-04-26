@@ -18,6 +18,34 @@
         @include tablet {margin-bottom: 32px;}
     }
 
+    &__read-style
+    {
+        color: $black;
+        opacity: 0.4;
+        font-size: 12px;
+        @include font-set(12, 16px, 300);
+        background: #F0F0F0;
+        border-radius: 10px;
+        padding: 16px 70px;
+        text-align: center;
+        margin-bottom: 24px;
+
+        @include tablet
+        {
+            position: absolute;
+            right: 82px;
+            max-width: 194px;
+            padding: 16px 24px;
+            margin-bottom: 0;
+        }
+    }
+
+    &__wrapper
+    {
+        // position: relative;
+        max-width: 952px;
+    }
+
     .g-block__title
     {
         margin-bottom: 24px;
@@ -29,14 +57,14 @@
 
         h2
         {
-            @include font-set(20, 24px, 700);
+            &, & * {@include font-set(20, 24px, 700);}
             margin-bottom: 16px;
             text-transform: uppercase;
         }
 
         h3
         {
-            @include font-set(18, 21px, 700);
+            &, & * {@include font-set(18, 21px, 700);}
             margin-bottom: 16px;
         }
 
@@ -49,7 +77,6 @@
         p
         {
             margin-bottom: 24px;
-            max-width: 952px;
         }
 
         ul
@@ -84,7 +111,7 @@
 
         @include tablet
         {
-            right: 0;
+            right: 24px;
             bottom: -18px;
             top: unset;
             transform: translateY(100%);
