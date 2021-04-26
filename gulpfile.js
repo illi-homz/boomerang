@@ -1,5 +1,5 @@
 // let project_folder = 'dist';
-let project_folder = 'static';
+let project_folder = 'staticfiles';
 let source_folder = '#assets';
 let images_folder = 'images';
 let media_folder = 'media';

@@ -21,8 +21,8 @@ def index(request):
     current_data = data.Index.data[locale]
     current_data['locale'] = locale
     if len(services) > 0:
-        mainService = services[1]
-        randomServices = random.sample(list(services)[1:], 5)
+        mainService = services[0]
+        randomServices = random.sample(list(services)[0:], 5)
         current_data['services']['slides'] = [mainService] + randomServices
     else:
         current_data['services']['slides'] = []
