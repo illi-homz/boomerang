@@ -2843,7 +2843,7 @@ body.lock {
 }
 
 .g-loading {
-  background: url("/staticfiles/img/loading.gif") center/100px 100px no-repeat;
+  background: url("/staticfiles/img/loading.svg") center/100px 100px no-repeat;
 }
 
 @media (min-width: 479.98px) {
@@ -4111,7 +4111,7 @@ body.lock {
 .about-tasks__item:before{background:url("/staticfiles/img/mark.svg") center/auto 12px no-repeat}
 .about-any-info__item::before{background:url("/staticfiles/img/mark-cube.svg") center/cover no-repeat}
 .articles__item{background:url("/staticfiles/img/article_bg.svg") center/100% 100% no-repeat}
-.g-loading{background:url("/staticfiles/img/loading.gif") center/100px 100px no-repeat}
+.g-loading{background:url("/staticfiles/img/loading.svg") center/100px 100px no-repeat}
 }
 
  @media (min-width: 479.98px){
