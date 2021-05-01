@@ -42,12 +42,12 @@ data = {
                     'img': static + 'img/index/promo/promo'
                 },
                 {
-                    'title': 'Скидка 30% на охрану первым клиентам',
-                    'text': 'Ваша безопасность за доступную цену!',
-                    'img': static + 'img/index/promo/promo'
+                    'title': 'Скидка 30% на установку видео-камер',
+                    'text': 'Камеры видео-наблюдения высокого разрешения',
+                    'img': static + 'img/index/promo/camera'
                 },
                 {
-                    'title': 'Скидка 30% на охрану первым клиентам',
+                    'title': 'Скидка 20% на любую услугу',
                     'text': 'Ваша безопасность за доступную цену!',
                     'img': static + 'img/index/promo/promo'
                 },
@@ -98,12 +98,12 @@ data = {
                     'img': static + 'img/index/promo/promo'
                 },
                 {
-                    'title': 'Скидка 30% на охрану первым клиентам',
-                    'text': 'Ваша безопасность за доступную цену!',
-                    'img': static + 'img/index/promo/promo'
+                    'title': 'Скидка 30% на установку видео-камер',
+                    'text': 'Камеры видео-наблюдения высокого разрешения',
+                    'img': static + 'img/index/promo/camera'
                 },
                 {
-                    'title': 'Скидка 30% на охрану первым клиентам',
+                    'title': 'Скидка 20% на любую услугу',
                     'text': 'Ваша безопасность за доступную цену!',
                     'img': static + 'img/index/promo/promo'
                 },

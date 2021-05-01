@@ -26,7 +26,7 @@ def index(request):
         current_data['services']['slides'] = [mainService] + randomServices
     else:
         current_data['services']['slides'] = []
-    current_data['news'] = models.New.objects.all().order_by('-date')[:10]
+    current_data['news_list'] = models.New.objects.all().order_by('-date')[:10]
     current_data.update(g_data[locale])
     response = HttpResponse(render(request, 'Index.jinja', current_data))
     response = set_cookie(response, 'locale', locale)

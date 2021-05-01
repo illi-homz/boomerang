@@ -7,7 +7,7 @@
     </div>
     <div class="index-news__wrapper">
         <div class="index-news__slider g-slider _index-news__slider">
-            {% for new in news %}
+            {% for new in news_list %}
             <div class="index-news__slider-item">
                 <div class="index-news__slider-item-title"><a href="/news/{{new.id}}">{{new.title|get_locale:locale}}</a></div>
                 <div class="index-news__slider-item-text">{{new.desc|get_locale:locale}}</div>

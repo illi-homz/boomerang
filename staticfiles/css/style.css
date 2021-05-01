@@ -1223,6 +1223,9 @@ h1 {
   height: 100%;
   width: 100%;
   z-index: -1;
+  background-position: 17% center;
+  background-size: 140% 100%;
+  background-repeat: no-repeat;
 }
 
 .no-many-banner__banner-title {
@@ -2850,6 +2853,11 @@ body.lock {
     margin: 0 auto;
   }
 
+  .no-many-banner__banner-bg {
+    background-position: 17% center;
+    background-size: 100% 100%;
+  }
+
   .about-galery__wrapper {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -3031,6 +3039,11 @@ body.lock {
   .no-many-banner {
     height: 358px;
     padding-top: 80px;
+  }
+
+  .no-many-banner__banner-bg {
+    background-position: 20% center;
+    background-size: 150% auto;
   }
 
   .no-many-banner__banner-title {
@@ -4019,6 +4032,11 @@ body.lock {
     height: 14px;
     margin: 0 10px;
     display: block;
+  }
+
+  .no-many-banner__banner-bg {
+    background-position: center;
+    background-size: cover;
   }
 
   .index-services__col--first {

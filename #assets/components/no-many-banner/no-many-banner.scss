@@ -18,6 +18,27 @@
         height: 100%;
         width: 100%;
         z-index: -1;
+        background-position: 17% center;
+        background-size: 140% 100%;
+        background-repeat: no-repeat;
+
+        @include mobile
+        {
+            background-position: 17% center;
+            background-size: 100% 100%;
+        }
+
+        @include tablet
+        {
+            background-position: 20% center;
+            background-size: 150% auto;
+        }
+
+        @include desktop
+        {
+            background-position: center;
+            background-size: cover;
+        }
     }
 
     &__banner-title

@@ -1,9 +1,11 @@
 <div class="no-many-banner">
-    <div class="no-many-banner__banner-bg">
-        <picture>
-            <source srcset="{{ noManyBanner }}.webp" type="image/webp">
-            <img class="g-img-bg" src="{{ noManyBanner }}.jpg" alt="bg" />
-        </picture>
+    <div
+        class="no-many-banner__banner-bg"
+        style="background-image: url({{noManyBanner}}.jpg);">
+        <!-- <picture>
+            <source srcset="{{noManyBanner}}.webp" type="image/webp">
+            <img class="g-img-bg" src="{{noManyBanner}}.jpg" alt="bg" />
+        </picture> -->
     </div>
     <div class="container">
         <div class="no-many-banner__banner-title">{{noManyInstall}}</div>
