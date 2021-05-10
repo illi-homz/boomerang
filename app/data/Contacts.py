@@ -25,22 +25,22 @@ data = {
         'title': 'Contacts',
 
         'breadCrumbs': [
-            {'title': 'Главная', 'url': '/'},
-            {'title': 'Статьи', 'url': '#'}
+            {'title': 'Main', 'url': '/'},
+            {'title': 'Articles', 'url': '#'}
         ],
 
-        'postAdressTitle': 'Почтовый адрес',
-        'postAdress': '603093, г. Н.Новгород, ул. Яблоневая, д. 18',
+        'postAdressTitle': 'Post adress',
+        'postAdress': '603093, N. Novgorod, st. Yablonevaya, 18',
 
         'email': 'bumerang52@list.ru',
 
-        'officeTitle': 'Офис',
-        'office': '603093, г. Нижний Новгород, ул. Яблоневая, д. 18',
+        'officeTitle': 'Office',
+        'office': '603093, N. Novgorod, st. Yablonevaya, 18',
 
-        'phonesTitle': 'Телефоны',
+        'phonesTitle': 'Phones',
         'phones': ['+7 (831) 28-28-911', '28-26-112', '28-26-110'],
 
-        'cooperationTitle': 'По вопросам сотрудничества',
-        'cooperation': '+7 (831) 424-08-18 (круглосуточно)'
+        'cooperationTitle': 'Cooperation',
+        'cooperation': '+7 (831) 424-08-18 (around the clock)'
     }
 }

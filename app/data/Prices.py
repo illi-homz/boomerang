@@ -8,11 +8,11 @@ data = {
         ],
     },
     'EN': {
-        'title': 'Наши цены',
+        'title': 'Our prices',
 
         'breadCrumbs': [
-            {'title': 'Главная', 'url': '/'},
-            {'title': 'Наши цены', 'url': '#'}
+            {'title': 'Main', 'url': '/'},
+            {'title': 'Our prices', 'url': '#'}
         ],
     }
 }

@@ -18,18 +18,18 @@ data = {
         ],
     },
     'EN': {
-        'title': 'Услуги',
+        'title': 'Services',
 
         'breadCrumbs': [
-            {'title': 'Главная', 'url': '/'},
-            {'title': 'Услуги', 'url': '#'}
+            {'title': 'Main', 'url': '/'},
+            {'title': 'Services', 'url': '#'}
         ],
 
         'linksList': [
-            {'title': 'Oхранные услуги', 'url': '/services?tab=hm', 'tab': 'hm'},
-            {'title': 'Техническая охрана', 'url': '/services?tab=th', 'tab': 'th'},
-            {'title': 'Изготовление спецодежды', 'url': '/services?tab=ds', 'tab': 'ds'},
-            {'title': 'Консультационные и юридические услуги', 'url': '/services?tab=cs', 'tab': 'cs'}
+            {'title': 'Security services', 'url': '/services?tab=hm', 'tab': 'hm'},
+            {'title': 'Technical security', 'url': '/services?tab=th', 'tab': 'th'},
+            {'title': 'Making workwear', 'url': '/services?tab=ds', 'tab': 'ds'},
+            {'title': 'Consulting and legal services', 'url': '/services?tab=cs', 'tab': 'cs'}
         ],
     }
 }

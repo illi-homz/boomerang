@@ -15,18 +15,18 @@ data = {
         'any': 'Любая'
     },
     'EN': {
-        'title': 'Статьи',
+        'title': 'Articles',
 
         'breadCrumbs': [
-            {'title': 'Главная', 'url': '/'},
-            {'title': 'Статьи', 'url': '#'}
+            {'title': 'Main', 'url': '/'},
+            {'title': 'Articles', 'url': '#'}
         ],
 
-        'category': 'Категория',
-        'theme': 'Тема',
-        'read': 'Читать',
-        'load_more': 'Загрузить еще',
-        'all': 'Все',
-        'any': 'Любая'
+        'category': 'Category',
+        'theme': 'Theme',
+        'read': 'Read',
+        'load_more': 'Load more',
+        'all': 'All',
+        'any': 'Any'
     }
 }

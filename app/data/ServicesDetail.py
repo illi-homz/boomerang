@@ -11,9 +11,9 @@ data = {
     },
     'RU': {
         'breadCrumbs': [
-            {'title': 'Главная', 'url': '/'},
-            {'title': 'Услуги', 'url': '/services'},
-            {'title': 'Услуги', 'url': '#'}
+            {'title': 'Main', 'url': '/'},
+            {'title': 'Services', 'url': '/services'},
+            {'title': 'Services', 'url': '#'}
         ],
     }
 }
