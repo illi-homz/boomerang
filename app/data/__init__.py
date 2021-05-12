@@ -12,3 +12,4 @@ from . import Articles
 from . import ArticleDetail
 from . import Contacts
 from . import Documents
+from . import SiteMap

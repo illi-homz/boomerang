@@ -2817,6 +2817,72 @@ h1 {
   overflow: hidden;
 }
 
+.site-map {
+  padding-top: 24px;
+  padding-bottom: 64px;
+}
+
+.site-map .bread-crumbs {
+  margin-bottom: 18px;
+}
+
+.site-map .g-block__title {
+  margin-bottom: 24px;
+}
+
+.site-map__wrapper {
+  padding-left: 25px;
+}
+
+.site-map__link {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.site-map__link:last-child {
+  margin-bottom: 0;
+}
+
+.site-map__tab {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  padding-left: 14px;
+  position: relative;
+  margin-top: 8px;
+}
+
+.site-map__tab:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.site-map__big-tab {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.site-map__services {
+  padding-left: 14px;
+}
+
+.site-map__services-tab:before {
+  background: none;
+  border: 1px solid #fff;
+}
+
 * {
   font-family: 'Helvetica', sans-serif;
   font-size: 18px;
@@ -3914,6 +3980,22 @@ body.lock {
   .documents .popup-slider__slider {
     height: 695px;
     width: 491px;
+  }
+
+  .site-map {
+    padding-bottom: 104px;
+  }
+
+  .site-map .bread-crumbs {
+    margin-bottom: 32px;
+  }
+
+  .site-map .g-block__title {
+    margin-bottom: 40px;
+  }
+
+  .site-map__wrapper {
+    padding-left: 108px;
   }
 
   .container {

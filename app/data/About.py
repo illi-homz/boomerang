@@ -1,8 +1,10 @@
 from django.conf import settings
 static = settings.STATIC_URL
+from .Global import data as global_data
 
 data = {
     'RU': {
+        **global_data['RU'],
         'title': 'О нас',
 
         'breadCrumbs': [
@@ -238,6 +240,7 @@ data = {
         },
     },
     'EN': {
+        **global_data['EN'],
         'title': 'About us',
 
         'breadCrumbs': [

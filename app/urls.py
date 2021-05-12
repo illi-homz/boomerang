@@ -16,6 +16,7 @@ urlpatterns = [
     path('articles/<int:pk>', views.article_item),
     path('contacts', views.contacts),
     path('documents', views.documents),
+    path('site-map', views.site_map),
 
     path('api/get-news', NewsList.as_view(), name='news-list'),
 

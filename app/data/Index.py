@@ -1,8 +1,10 @@
 from django.conf import settings
 static = settings.STATIC_URL
+from .Global import data as global_data
 
 data = {
     'RU': {
+        **global_data['RU'],
         'title': 'Главная',
         'banner': {
             'title': 'Пультовая охрана <br>в Нижнем Новгороде',
@@ -59,6 +61,7 @@ data = {
         }
     },
     'EN': {
+        **global_data['EN'],
         'title': 'Main',
         'banner': {
             'title': 'Monitored security system <br>in Nizhny Novgorod',

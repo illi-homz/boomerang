@@ -1,5 +1,9 @@
+from .Global import data as global_data
+
+
 data = {
     'RU': {
+        **global_data['RU'],
         'title': 'Контакты',
 
         'breadCrumbs': [
@@ -22,6 +26,7 @@ data = {
         'cooperation': '+7 (831) 424-08-18 (круглосуточно)'
     },
     'EN': {
+        **global_data['EN'],
         'title': 'Contacts',
 
         'breadCrumbs': [

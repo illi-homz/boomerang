@@ -12,9 +12,6 @@ from .services.set_cookie import set_cookie
 from .services.get_locale import get_locale
 
 
-g_data = data.Global.data
-
-
 def index(request):
     locale = get_locale(request)
     services = models.Service.objects.all()
@@ -27,7 +24,6 @@ def index(request):
     else:
         current_data['services']['slides'] = []
     current_data['news_list'] = models.New.objects.all().order_by('-date')[:10]
-    current_data.update(g_data[locale])
     response = HttpResponse(render(request, 'Index.jinja', current_data))
     response = set_cookie(response, 'locale', locale)
     return response
@@ -43,7 +39,6 @@ def about(request):
     current_data['galery'] = models.Photo.objects.all()
     current_data['clients'] = models.Client.objects.all()
     current_data['feedbacks'] = models.Feedback.objects.all()
-    current_data.update(g_data[locale])
     response = HttpResponse(render(request, 'About.jinja', current_data))
     response = set_cookie(response, 'locale', locale)
     return response
@@ -53,7 +48,6 @@ def news(request):
     current_data = data.News.data[locale]
     current_data['locale'] = locale
     current_data['news'] = models.New.objects.all().order_by('-date')[:6]
-    current_data.update(g_data[locale])
     response = HttpResponse(render(request, 'News.jinja', current_data))
     response = set_cookie(response, 'locale', locale)
     return response
@@ -66,7 +60,6 @@ def news_item(request, pk):
     current_data['new'] = new
     current_data['news'] = models.New.objects.all().order_by('-date')[:6]
     current_data['breadCrumbs'][-1]['title'] = new.title()[locale]
-    current_data.update(g_data[locale])
     response = HttpResponse(render(request, 'NewsDetail.jinja', current_data))
     response = set_cookie(response, 'locale', locale)
     return response
@@ -80,7 +73,6 @@ def services(request):
     current_data['locale'] = locale
     current_data['tab'] = tab
     current_data['services'] = models.Service.objects.filter(type = tab)
-    current_data.update(g_data[locale])
     response = HttpResponse(render(request, 'Services.jinja', current_data))
     response = set_cookie(response, 'locale', locale)
     return response
@@ -93,7 +85,6 @@ def services_item(request, pk):
     current_data['serviceItem'] = service
     current_data['services'] = random.sample(list(models.Service.objects.all()), 6)
     current_data['breadCrumbs'][-1]['title'] = service.title()[locale]
-    current_data.update(g_data[locale])
     response = HttpResponse(render(request, 'ServicesDetail.jinja', current_data))
     response = set_cookie(response, 'locale', locale)
     return response
@@ -103,7 +94,6 @@ def prices(request):
     current_data = data.Prices.data[locale]
     current_data['locale'] = locale
     current_data['prices'] = models.Price.objects.all()
-    current_data.update(g_data[locale])
     response = HttpResponse(render(request, 'Prices.jinja', current_data))
     response = set_cookie(response, 'locale', locale)
     return response
@@ -115,7 +105,6 @@ def articles(request):
     arts = models.Article.objects.all()
     current_data['articles'] = [{'id': a.id, 'title': a.title, 'category': a.category} for a in arts]
     current_data['categories'] = models.article_categoryes[locale]
-    current_data.update(g_data[locale])
     response = HttpResponse(render(request, 'Articles.jinja', current_data))
     response = set_cookie(response, 'locale', locale)
     return response
@@ -127,7 +116,6 @@ def article_item(request, pk):
     article = models.Article.objects.get(id = pk)
     current_data['article'] = article
     current_data['breadCrumbs'][-1]['title'] = article.title()[locale]
-    current_data.update(g_data[locale])
     response = HttpResponse(render(request, 'ArticleDetail.jinja', current_data))
     response = set_cookie(response, 'locale', locale)
     return response
@@ -136,7 +124,6 @@ def contacts(request):
     locale = get_locale(request)
     current_data = data.Contacts.data[locale]
     current_data['locale'] = locale
-    current_data.update(g_data[locale])
     response = HttpResponse(render(request, 'Contacts.jinja', current_data))
     response = set_cookie(response, 'locale', locale)
     return response
@@ -146,8 +133,15 @@ def documents(request):
     current_data = data.Documents.data[locale]
     current_data['locale'] = locale
     current_data['documents'] = models.Document.objects.all()
-    current_data.update(g_data[locale])
     response = HttpResponse(render(request, 'Documents.jinja', current_data))
+    response = set_cookie(response, 'locale', locale)
+    return response
+
+def site_map(request):
+    locale = get_locale(request)
+    current_data = data.SiteMap.data[locale]
+    current_data['locale'] = locale
+    response = HttpResponse(render(request, 'SiteMap.jinja', current_data))
     response = set_cookie(response, 'locale', locale)
     return response
 

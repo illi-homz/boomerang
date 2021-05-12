@@ -1,5 +1,8 @@
+from .Global import data as global_data
+
 data = {
     'RU': {
+        **global_data['RU'],
         'title': 'Статьи',
 
         'breadCrumbs': [
@@ -15,6 +18,7 @@ data = {
         'any': 'Любая'
     },
     'EN': {
+        **global_data['EN'],
         'title': 'Articles',
 
         'breadCrumbs': [
