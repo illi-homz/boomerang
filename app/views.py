@@ -14,15 +14,16 @@ from .services.get_locale import get_locale
 
 def index(request):
     locale = get_locale(request)
-    services = models.Service.objects.all()
     current_data = data.Index.data[locale]
     current_data['locale'] = locale
-    if len(services) > 0:
-        mainService = services[0]
-        randomServices = random.sample(list(services)[0:], 5)
-        current_data['services']['slides'] = [mainService] + randomServices
-    else:
-        current_data['services']['slides'] = []
+
+    services = models.Service.objects.all()
+    currentServices = (random.sample(list(services)[1:], len(services) - 1)
+        if len(services) <= 5
+        else random.sample(list(services)[1:], 5))
+    current_data['services']['slides'] = ([services[0]] + currentServices
+        if len(services) > 0 else [])
+
     current_data['news_list'] = models.New.objects.all().order_by('-date')[:10]
     response = HttpResponse(render(request, 'Index.jinja', current_data))
     response = set_cookie(response, 'locale', locale)

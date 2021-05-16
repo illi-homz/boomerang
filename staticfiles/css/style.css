@@ -1008,7 +1008,7 @@ h1 {
 }
 
 .footer {
-  padding-top: 23px;
+  padding-top: 43px;
   padding-bottom: 47px;
   position: relative;
 }
@@ -3005,6 +3005,7 @@ body.lock {
   }
 
   .footer {
+    padding-top: 23px;
     min-height: 240px;
     display: -webkit-box;
     display: -ms-flexbox;
