@@ -29,8 +29,8 @@
                 <div class="contacts__text">{{office}}</div>
             </div>
             <div class="contacts__field contacts__field--line contacts__field--mb0">
-                <div class="contacts__title">{{phonesTitle}}:</div>
-                <div class="contacts__text">{% for t in phones %}<a href="tel:{{t}}">{{t}}</a>, {% endfor %}.</div>
+                <div class="contacts__title">{{phonesTitle}}: </div>
+                <div class="contacts__text">{% for t in phones %}<a href="tel:{{t}}">{{t}}</a>{% endfor %}.</div>
             </div>
             <div class="contacts__field contacts__field--line">
                 <div class="contacts__title">{{cooperationTitle}}:</div>
