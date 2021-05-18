@@ -5217,8 +5217,10 @@ gz.aboutArsenal = {
   },
 
   toggleDetails(el) {
-    var $item = $(el).parents('._about-arsenal__item');
-    $item.find('._about-arsenal__item-data').toggleClass('active');
+    var $item = $(el).parents('._about-arsenal__item'); // $item.find('._about-arsenal__item-data').toggleClass('active')
+
+    console.log($item.find('._about-arsenal__item-characteristic'));
+    $item.find('.about-arsenal__item-characteristic:nth-child(n + 5)').slideToggle(200);
     $(el).toggleClass('active');
   },
 

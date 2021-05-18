@@ -60,7 +60,7 @@ data = {
         'anyInfo': [
             'В августе 2013 года ГПБ «Бумеранг» путем приобретения доли стала соучредителем в Частной охранной  «Межрегиональное охранное предприятие «Центр»',
             'Группа охранных предприятий «Бумеранг» тесно сотрудничает с РУВД всех районов города, с сотрудниками отдела лицензионно-разрешительной работы ГУВД и РУВД.',
-            'В настоящее время в охранном предприятии работает 750 человек. На вооружении состоит 52 (пятьдесят две) единицы огнестрельного оружия (пистолеты ИЖ-71, ДОГ-1, карабины «Сайга-410К», ружья ИЖ-81, «Сайга- 12К», карабины ПКСК).'
+            'В настоящее время в охранном предприятии работает 750 человек. На вооружении состоит 52 (пятьдесят две) единицы огнестрельного оружия (пистолеты ИЖ-71, DOG-1, карабины «Сайга-410К», ружья ИЖ-81, «Сайга- 12К», карабины ПКСК).'
         ],
 
         'weapons': [
@@ -83,7 +83,7 @@ data = {
             },
             {
                 'title': 'САЙГА-20С',
-                'type': 'карабин гладкоствольный самозарядный',
+                'type': 'Карабин гладкоствольный самозарядный',
                 'characteristics': [
                     ['Калибр', '20 мм'],
                     ['Вместимость магазина', '5 (2) шт.'],
@@ -103,7 +103,7 @@ data = {
             },
             {
                 'title': 'САЙГА-410К',
-                'type': 'карабин охотничий гладкоствольный самозарядный',
+                'type': 'Карабин охотничий гладкоствольный самозарядный',
                 'characteristics': [
                     ['Калибр', '0,410 дюймов'],
                     ['Вместимость магазина', '2, 4 шт.'],
@@ -122,7 +122,7 @@ data = {
             },
             {
                 'title': 'САЙГА-410К',
-                'type': 'карабин короткоствольный',
+                'type': 'Карабин короткоствольный',
                 'characteristics': [
                     ['Калибр', '0,410 дюймов'],
                     ['Вместимость магазина', '4 шт.'],
@@ -141,7 +141,7 @@ data = {
             },
             {
                 'title': 'ПКСК',
-                'type': 'портативный короткоствольный служебный карабин',
+                'type': 'Портативный короткоствольный служебный карабин',
                 'characteristics': [
                     ['Калибр', '9 мм'],
                     ['Вместимость магазина', '10 шт.'],
@@ -158,29 +158,7 @@ data = {
             },
             {
                 'title': 'РСА',
-                'type': 'револьвер',
-                'characteristics': [
-                    ['Калибр', '9 мм'],
-                    ['Количество патронов в барабане', '6 шт.'],
-                    ['Масса без патронов', '0,84 кг'],
-                    ['Масса снаряженной обоймы', '0,065 кг'],
-                    ['Габаритные размеры (Д / Ш / В)', '215 / 40 / 150 мм'],
-                    ['Длина ствола', '75 мм'],
-                    ['Начальная скорость полета пули', '275 м/с'],
-                    ['Ресурс, выстрелов', 'не менее 3000'],
-                    ['Кучность стрельбы на дальности 25 м с руки с упора R100', 'не более 12 см'],
-                    ['Прицельная дальность стрельбы', '50 м'],
-                ],
-                'texts': [
-                    '9-мм револьвер служебной конструкции Стечкина и Авраамова предназначен для проведения охранных мероприятий по защите жизни, здоровья и собственности людей. Может эксплуатироваться',
-                    'в различных климатических условиях в пределах интервала температур окружающей среды от +50 <sup>о</sup>С до -50 <sup>о</sup>С.',
-                    'Для стрельбы из револьвера применяются патроны 9х17К ("КУРЦ").',
-                ],
-                'img': static + 'img/about/arsenal/weapon_5'
-            },
-            {
-                'title': 'РСА',
-                'type': 'револьвер',
+                'type': 'Револьвер',
                 'characteristics': [
                     ['Калибр', '9 мм'],
                     ['Количество патронов в барабане', '6 шт.'],
@@ -202,7 +180,7 @@ data = {
             },
             {
                 'title': 'ИЖ-71',
-                'type': 'пистолет',
+                'type': 'Пистолет',
                 'characteristics': [
                     ['Калибр', '9 мм'],
                     ['Вместимость магазина', '8 шт.'],
@@ -301,7 +279,7 @@ data = {
 
         'weapons': [
             {
-                'title': 'ДОГ-1',
+                'title': 'DOG-1',
                 'type': 'Smooth-bore revolver',
                 'characteristics': [
                     ['Caliber', '12,5 mm'],
@@ -319,7 +297,7 @@ data = {
             },
             {
                 'title': 'Saiga-20С',
-                'type': 'self-loading smooth-bore carbine',
+                'type': 'Self-loading smooth-bore carbine',
                 'characteristics': [
                     ['Caliber', '20 mm'],
                     ['Magazine capacity', '5 (2) cart.'],
@@ -339,7 +317,7 @@ data = {
             },
             {
                 'title': 'Saiga-410К',
-                'type': 'self-loading smooth-bore hunting carbine',
+                'type': 'Self-loading smooth-bore hunting carbine',
                 'characteristics': [
                     ['Caliber', '0,410 inches'],
                     ['Magazine capacity', '2, 4 cart.'],
@@ -358,7 +336,7 @@ data = {
             },
             {
                 'title': 'Saiga-410К',
-                'type': 'short-barreled carbine',
+                'type': 'Short-barreled carbine',
                 'characteristics': [
                     ['Caliber', '0,410 inches'],
                     ['Magazine capacity', '4 cart.'],
@@ -377,7 +355,7 @@ data = {
             },
             {
                 'title': 'PSSC',
-                'type': 'portable short-barreled service carbine',
+                'type': 'Portable short-barreled service carbine',
                 'characteristics': [
                     ['Caliber', '9 mm'],
                     ['Magazine capacity', '10 cart.'],
@@ -394,28 +372,7 @@ data = {
             },
             {
                 'title': 'RSA',
-                'type': 'revolver',
-                'characteristics': [
-                    ['Caliber', '9 mm'],
-                    ['The number of cartridges in the cylinder', '6 cart.'],
-                    ['Weight without cartridges', '0,84 kg'],
-                    ['Mass of the equipped magazine', '0,065 kg'],
-                    ['Overall dimensions (L / W / H)', '215 / 40 / 150 mm'],
-                    ['Barrel length', '75 mm'],
-                    ['Muzzle velocity', '275 m/s'],
-                    ['Amount of shots', 'not less than 3000'],
-                    ['Accuracy of shooting at a distance of 25 m from the hand from the support R100', 'no more than 12 cm'],
-                    ['Sighting range', '50 m'],
-                ],
-                'texts': [
-                    'The 9-mm revolver designed by Stechkin and Avraamov is intended for carrying out security measures to protect the life, health and property of people. It can be operated in various climatic conditions within the range of ambient temperatures from +50 to -50 degrees C.',
-                    '9x17K cartridges ("KURTS") are used for firing a revolver.',
-                ],
-                'img': static + 'img/about/arsenal/weapon_5'
-            },
-            {
-                'title': 'RSA',
-                'type': 'revolver',
+                'type': 'Revolver',
                 'characteristics': [
                     ['Caliber', '9 mm'],
                     ['The number of cartridges in the cylinder', '6 cart.'],
@@ -436,7 +393,7 @@ data = {
             },
             {
                 'title': 'IZH-71',
-                'type': 'pistol',
+                'type': 'Pistol',
                 'characteristics': [
                     ['Caliber', '9 mm'],
                     ['Magazine capacity', '8 cart.'],

@@ -1008,7 +1008,7 @@ h1 {
 }
 
 .footer {
-  padding-top: 43px;
+  padding-top: 59px;
   padding-bottom: 47px;
   position: relative;
 }
@@ -1868,7 +1868,7 @@ h1 {
 
 .about-arsenal .g-slider .slick-arrow {
   position: absolute;
-  bottom: 0;
+  top: 0;
 }
 
 .about-arsenal .g-slider .slick-prev {
@@ -2732,6 +2732,8 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .contacts__title {
@@ -2830,10 +2832,6 @@ h1 {
   margin-bottom: 24px;
 }
 
-.site-map__wrapper {
-  padding-left: 25px;
-}
-
 .site-map__link {
   font-size: 16px;
   line-height: 20px;
@@ -2894,10 +2892,6 @@ h1 {
 
 .links .g-block__title {
   margin-bottom: 24px;
-}
-
-.links__wrapper {
-  padding-left: 25px;
 }
 
 .links__wrapper * {
@@ -3582,7 +3576,7 @@ body.lock {
 
   .about-arsenal {
     position: relative;
-    padding-bottom: 56px;
+    padding-top: 56px;
     overflow: hidden;
   }
 
@@ -3598,7 +3592,10 @@ body.lock {
   }
 
   .about-arsenal__slider {
-    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: calc(100% + 10px);
     margin-left: -20px;
   }
 
