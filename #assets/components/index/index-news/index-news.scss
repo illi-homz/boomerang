@@ -91,7 +91,6 @@
         overflow: hidden;
         text-overflow: ellipsis;
         max-height: 46px;
-        padding: 0 5px;
 
         @include tablet
         {
@@ -110,7 +109,6 @@
         text-overflow: ellipsis;
         max-height: 32px;
         margin-top: 29px;
-        padding: 0 5px;
 
         @include tablet {padding: 0;}
     }
@@ -120,7 +118,6 @@
         display: flex;
         justify-content: space-between;
         margin-top: 20px;
-        padding: 0 5px;
 
         * {@include font-set(14, 16px);}
 

@@ -5,7 +5,8 @@
     @include tablet
     {
         height: calc(100vh - 104px);
-        min-height: 600px;
+        min-height: calc(600px - 104px);
+        // min-height: 456px;
     }
 
     &__bg

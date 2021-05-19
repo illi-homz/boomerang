@@ -2,7 +2,7 @@
 {% load get_locale %}
 
 {% block head %}
-<title>{{new.title}} | {{titleDesc}}</title>
+<title>{{new.title|get_locale:locale}} | {{titleDesc}}</title>
 {% endblock %}
 
 {% block content %}

@@ -31,7 +31,9 @@
                 </div>
             {% endfor %}
         </div>
+        {% if news|length > 5 %}
         <button class="g-news__show-more" onclick="gz.news.getNews()">{{showMore}}</button>
+        {% endif %}
     </div>
 
 {% endblock %}

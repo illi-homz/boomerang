@@ -23,7 +23,11 @@ data = {
         'phones': ['+7 (831) 28-28-911,', '28-26-112,', '28-26-110'],
 
         'cooperationTitle': 'По вопросам сотрудничества',
-        'cooperation': '+7 (831) 424-08-18 (круглосуточно)'
+        'cooperation': '+7 (831) 424-08-18 (круглосуточно)',
+        'cooperationTel': '+7 (831) 424-08-18',
+
+        'vkTitle': 'Мы Вконтакте',
+        'vk': 'vk.com/52bumerang52'
     },
     'EN': {
         **global_data['EN'],
@@ -46,6 +50,10 @@ data = {
         'phones': ['+7 (831) 28-28-911,', '28-26-112,', '28-26-110'],
 
         'cooperationTitle': 'Cooperation',
-        'cooperation': '+7 (831) 424-08-18 (around the clock)'
+        'cooperation': '+7 (831) 424-08-18 (around the clock)',
+        'cooperationTel': '+7 (831) 424-08-18',
+
+        'vkTitle': 'We are on Vkontakte',
+        'vk': 'vk.com/52bumerang52'
     }
 }

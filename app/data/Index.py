@@ -64,7 +64,7 @@ data = {
         **global_data['EN'],
         'title': 'Main',
         'banner': {
-            'title': 'Monitored security system <br>in Nizhny Novgorod',
+            'title': 'Console security <br>in Nizhny Novgorod',
             'data': [
                 {'count': 27, 'text': 'years on the market <br>of security companies'},
                 {'count': 3000, 'text': 'protected objects'},
@@ -89,7 +89,7 @@ data = {
             'img': static + 'img/index/about/office',
             'link': {
                 'text': 'read more',
-                'url': '#'
+                'url': '/about?tab=history'
             }
         },
         'promo': {

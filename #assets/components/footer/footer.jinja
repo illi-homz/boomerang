@@ -1,39 +1,38 @@
 {% load static %}
 
 <div class="footer container">
-    <a class="footer__gotoup" href="#header" onclick="gz.goToBlock(this)">{{footer.toUp}}</a>
+    <a class="footer__gotoup" href="{{footer.toUp.url}}" onclick="gz.goToBlock(this)">{{footer.toUp.title}}</a>
     <div class="footer__row footer__row--first">
         <a href="/" class="footer__logo">
             <img src="{% static 'img/logo.svg' %}" alt="logo" />
         </a>
         <div class="footer__links">
             <ul class="footer__links-list">
-                <li><a href="/services?tab=hm">{{footer.services}}</a></li>
-                <li><a href="/prices">{{footer.ourPrices}}</a></li>
-                <li><a href="/news">{{footer.news}}</a></li>
+                <li><a href="{{footer.services.url}}">{{footer.services.title}}</a></li>
+                <li><a href="{{footer.ourPrices.url}}">{{footer.ourPrices.title}}</a></li>
+                <li><a href="{{footer.news.url}}">{{footer.news.title}}</a></li>
             </ul>
             <ul class="footer__links-list">
-                <li><a href="/about?tab=history">{{footer.aboutUs}}</a></li>
-                <li><a href="/articles">{{footer.articles}}</a></li>
-                <li><a href="/contacts">{{footer.contacts}}</a></li>
+                <li><a href="{{footer.aboutUs.url}}">{{footer.aboutUs.title}}</a></li>
+                <li><a href="{{footer.articles.url}}">{{footer.articles.title}}</a></li>
+                <li><a href="{{footer.contacts.url}}">{{footer.contacts.title}}</a></li>
             </ul>
         </div>
         <ul class="footer__contacts">
-            <li><a href="tel:+7 (831) 28-28-911">+7 (831) 28-28-911</a></li>
-            <li><a href="tel:28-26-112">28-26-112</a></li>
-            <li><a href="tel:28-26-110">28-26-110</a></li>
-            <li><a href="mailto:bumerang52@list.ru">bumerang52@list.ru</a></li>
+            {% for contact in footerContacts %}
+            <li><a href="{{contact.url}}" target="_blank">{{contact.title}}</a></li>
+            {% endfor %}
         </ul>
     </div>
 
 
 
     <div class="footer__row footer__row--second">
-        <div class="footer__copyright">© 2006‐2020 {{footer.chop}}</div>
+        <div class="footer__copyright">© 2006‐2020 {{footer.chop.title}}</div>
         <ul class="footer__map">
-            <li><a href="/site-map">{{footer.siteMap}}</a></li>
-            <li><a href="/links">{{footer.links}}</a></li>
-            <li><a href="/documents">{{footer.docs}}</a></li>
+            <li><a href="{{footer.siteMap.url}}">{{footer.siteMap.title}}</a></li>
+            <li><a href="{{footer.links.url}}">{{footer.links.title}}</a></li>
+            <li><a href="{{footer.docs.url}}">{{footer.docs.title}}</a></li>
         </ul>
     </div>
 </div>

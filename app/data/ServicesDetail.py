@@ -12,7 +12,7 @@ data = {
             {'title': 'Услуги', 'url': '#'}
         ],
     },
-    'RU': {
+    'EN': {
         **global_data['EN'],
         'breadCrumbs': [
             {'title': 'Main', 'url': '/'},
