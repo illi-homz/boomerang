@@ -5330,6 +5330,17 @@ gz.aboutGalery = {
     if (itemCounter >= $items.length) $('._about-galery__show-more').css('display', 'none');
   }
 
+};
+gz.linksList = {
+  init() {
+    var link = $('._links-list li.active');
+
+    if (link.length) {
+      var linkOffset = link[0].offsetLeft - 16;
+      $('._links-list').scrollLeft(linkOffset);
+    }
+  }
+
 }; // pages
 
 gz.news = {
@@ -5509,6 +5520,7 @@ gz.init = function () {
   gz.newsDetail.init();
   gz.servicesDetail.init();
   gz.contacts.init();
+  gz.linksList.init();
   initLazyLoading();
 };
 

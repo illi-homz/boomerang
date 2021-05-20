@@ -97,34 +97,34 @@ data = {
     },
     'EN': {
         **global_data['EN'],
-        'title': 'Карта сайта',
+        'title': 'Site `s map',
 
         'breadCrumbs': [
-            {'title': 'Главная', 'url': '/'},
-            {'title': 'Карты сайта', 'url': '#'}
+            {'title': 'The main', 'url': '/'},
+            {'title': 'Site `s map', 'url': '#'}
         ],
 
         'linksList': [
-            { 'title': 'Главная', 'url': '/' },
+            { 'title': 'The main', 'url': '/' },
             {
-                'title': 'О нас',
+                'title': 'About us',
                 'url': '/about',
                 'tabs': [
-                    {'title': 'История', 'url': '/about?tab=history'},
-                    {'title': 'Наш арсенал', 'url': '/about?tab=arsenal'},
-                    {'title': 'Наши клиенты', 'url': '/about?tab=clients'},
-                    {'title': 'Отзывы', 'url': '/about?tab=feedbacks'},
-                    {'title': 'Вакансии', 'url': '/about?tab=vacancies'},
-                    {'title': 'Галерея', 'url': '/about?tab=galery'},
+                    {'title': 'History', 'url': '/about?tab=history'},
+                    {'title': 'Our Arsenal', 'url': '/about?tab=arsenal'},
+                    {'title': 'Сlients', 'url': '/about?tab=clients'},
+                    {'title': 'Reviews', 'url': '/about?tab=feedbacks'},
+                    {'title': 'Vacancies', 'url': '/about?tab=vacancies'},
+                    {'title': 'Gallery', 'url': '/about?tab=galery'},
                 ]
             },
-            { 'title': 'Новости', 'url': '/news' },
+            { 'title': 'News', 'url': '/news' },
             {
-                'title': 'Услуги',
+                'title': 'Services',
                 'url': '/services',
                 'tabs': [
                     {
-                        'title': 'Oхранные услуги',
+                        'title': 'Security services',
                         'url': '/services?tab=hm',
                         'big_tab': True,
                         'services': [
@@ -135,7 +135,7 @@ data = {
                         ]
                     },
                     {
-                        'title': 'Техническая охрана',
+                        'title': 'Technical security',
                         'url': '/services?tab=th',
                         'big_tab': True,
                         'services': [
@@ -146,7 +146,7 @@ data = {
                         ]
                     },
                     {
-                        'title': 'Изготовление спецодежды',
+                        'title': 'Making workwear',
                         'url': '/services?tab=ds',
                         'big_tab': True,
                         'services': [
@@ -157,7 +157,7 @@ data = {
                         ]
                     },
                     {
-                        'title': 'Консультационные и юридические услуги',
+                        'title': 'Consulting and legal services',
                         'url': '/services?tab=cs',
                         'big_tab': True,
                         'services': [
@@ -169,9 +169,9 @@ data = {
                     }
                 ]
             },
-            { 'title': 'Наши цены', 'url': '/prices' },
+            { 'title': 'Our prices', 'url': '/prices' },
             {
-                'title': 'Статьи',
+                'title': 'Articles',
                 'url': '/articles',
                 'tabs': [
                     {
@@ -180,8 +180,8 @@ data = {
                     } for article in articles
                 ]
             },
-            { 'title': 'Контакты', 'url': '/contacts' },
-            { 'title': 'Документы', 'url': '/documents' },
+            { 'title': 'Contacts', 'url': '/contacts' },
+            { 'title': 'Documents', 'url': '/documents' },
         ]
     }
 }
