@@ -26,7 +26,7 @@ data = {
         'cooperation': '+7 (831) 424-08-18 (круглосуточно)',
         'cooperationTel': '+7 (831) 424-08-18',
 
-        'vkTitle': 'Мы Вконтакте',
+        'vkTitle': 'Мы ВКонтакте',
         'vk': 'vk.com/52bumerang52'
     },
     'EN': {
@@ -53,7 +53,7 @@ data = {
         'cooperation': '+7 (831) 424-08-18 (around the clock)',
         'cooperationTel': '+7 (831) 424-08-18',
 
-        'vkTitle': 'We are on Vkontakte',
+        'vkTitle': 'We are on VKontakte',
         'vk': 'vk.com/52bumerang52'
     }
 }
