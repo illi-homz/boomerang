@@ -58,7 +58,7 @@ data = {
         'trainingImg': 'img/shield-big.svg',
 
         'anyInfo': [
-            'В августе 2013 года ГПБ «Бумеранг» путем приобретения доли стала соучредителем в Частной охранной  «Межрегиональное охранное предприятие «Центр»',
+            'В августе 2013 года ГПБ "Бумеранг" стала соучредителем в межрегиональном охранном предприятии «Центр»',
             'Группа охранных предприятий «Бумеранг» тесно сотрудничает с РУВД всех районов города, с сотрудниками отдела лицензионно-разрешительной работы ГУВД и РУВД.',
             'В настоящее время в охранном предприятии работает 750 человек. На вооружении состоит 52 (пятьдесят две) единицы огнестрельного оружия (пистолеты ИЖ-71, DOG-1, карабины «Сайга-410К», ружья ИЖ-81, «Сайга- 12К», карабины ПКСК).'
         ],
@@ -272,7 +272,7 @@ data = {
         'trainingImg': 'img/shield-big.svg',
 
         'anyInfo': [
-            'In August 2013, the group of security companies «Boomerang» through the acquisition of a share became a co-founder in the Private security organization «Interregional security company «Center»',
+            'In August 2013 GPB "Boomerang" became a co-founder in the interregional security company «Center»',
             'The group of security companies "Boomerang" closely cooperates with the all district police departments of the city, with the employees of the department of licensing and permitting work of district police department and the main police department.',
             'The security company currently employs 750 people. It is armed with 52 (fifty two) firearms (IZH-71, DOG-1 pistols, Saiga-410K carbines, IZH-81, Saiga-12K rifles, PSS carbines).'
         ],

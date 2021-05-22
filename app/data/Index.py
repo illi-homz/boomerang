@@ -40,12 +40,12 @@ data = {
             'promos': [
                 {
                     'title': 'Скидка 30% на охрану первым клиентам',
-                    'text': 'Ваша безопасность за доступную цену!',
+                    'text': 'Надежность здесь и сейчас с первого звонка!',
                     'img': static + 'img/index/promo/promo'
                 },
                 {
                     'title': 'Скидка 30% на установку видео-камер',
-                    'text': 'Камеры видео-наблюдения высокого разрешения',
+                    'text': 'Камеры видео-наблюдения высокого разрешения!',
                     'img': static + 'img/index/promo/camera'
                 },
                 {
@@ -97,12 +97,12 @@ data = {
             'promos': [
                 {
                     'title': '30\% discount on security for first customers',
-                    'text': 'Your safety at an affordable price!',
+                    'text': 'Reliability here and now from the first call!',
                     'img': static + 'img/index/promo/promo'
                 },
                 {
                     'title': '30\% discount on video cameras installation',
-                    'text': 'High Definition Video Surveillance Cameras',
+                    'text': 'High Definition Video Surveillance Cameras!',
                     'img': static + 'img/index/promo/camera'
                 },
                 {
