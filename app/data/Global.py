@@ -15,7 +15,6 @@ data = {
                 {'title': '+7 (831) 28-28-911', 'url': 'tel:+7(831)28-28-911'},
             ]
         },
-        # },
         'footer': {
             'toUp':         {'title': 'Наверх', 'url': '#header'},
             'services':     {'title': 'Услуги', 'url': '/services?tab=hm'},
