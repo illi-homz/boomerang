@@ -47,7 +47,7 @@ data = {
         'office': '603093, N. Novgorod, st. Yablonevaya, 18',
 
         'phonesTitle': 'Phones',
-        'phones': ['+7 (831) 28-28-911,', ' 28-26-112,', '28-26-110'],
+        'phones': ['+7 (831) 28-28-911,', '28-26-112,', '28-26-110'],
 
         'cooperationTitle': 'Cooperation',
         'cooperation': '+7 (831) 424-08-18 (around the clock)',

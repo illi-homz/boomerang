@@ -44,8 +44,8 @@ INSTALLED_APPS = [
 
     'app',
     'livereload',
-    'webp_converter',
-    'django_webp',
+    # 'webp_converter',
+    # 'django_webp',
     'rest_framework',
 ]
 
@@ -121,7 +121,17 @@ WSGI_APPLICATION = 'project.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-DATABASES = {'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))}
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'boomerang_db',
+        'USER': 'il',
+        'PASSWORD': 'bad',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
+# DATABASES = {'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))}
 
 
 # Password validation
