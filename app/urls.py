@@ -18,6 +18,7 @@ urlpatterns = [
     path('documents', views.documents),
     path('site-map', views.site_map),
     path('links', views.links),
+    # path('404', views.handle_page_not_found),
 
     path('api/get-news', NewsList.as_view(), name='news-list'),
 ]
