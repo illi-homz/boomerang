@@ -18,9 +18,9 @@ def index(request):
     current_data['locale'] = locale
 
     services = models.Service.objects.all()
-    currentServices = (random.sample(list(services), len(services))
+    currentServices = (random.sample(list(services[1:]), len(services[1:]))
                        if len(services) <= 5
-                       else random.sample(list(services)[1:], 5))
+                       else random.sample(list(services)[1:], 7))
     current_data['services']['slides'] = ([services[0]] + currentServices
                                           if len(services) > 0 else [])
 

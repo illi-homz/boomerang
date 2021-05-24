@@ -13,16 +13,16 @@
                 <div class="index-news__slider-item-text">{{new.desc|get_locale:locale}}</div>
                 <div class="index-news__slider-item-nav">
                     <div class="index-news__slider-item-date">{{new.date|date:"d E"}}</div>
-                    <div class="index-news__slider-item-details">
+                    <!-- <div class="index-news__slider-item-details">
                         <a href="/news/{{new.id}}">{{news.more_details}}</a>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="index-news__slider-item-img g-loading">
                     <a href="/news/{{new.id}}">
                         <img data-src="{{new.img.url}}" src="#" alt="Image">
                     </a>
                 </div>
-                <a class="index-news__details-btn" href="/news/{{new.id}}">{{news.more_details}}</a>
+                <a class="index-news__details-btn g-more-btn" href="/news/{{new.id}}">{{news.more_details}}</a>
             </div>
             {% endfor %}
         </div>

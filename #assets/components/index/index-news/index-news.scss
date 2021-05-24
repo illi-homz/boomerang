@@ -149,13 +149,6 @@
 
     &__details-btn
     {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 65px;
-        border: 1px solid #FFFFFF;
-        border-radius: 2px;
-        color: #FFFFFF;
         margin-top: 24px;
 
         @include tablet {display: none;}
