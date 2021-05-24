@@ -9,11 +9,8 @@ env
 .htaccess
 
 project/settings.py
-<<<<<<< HEAD
 gunicorn_config.py
 bin/start_gunicorn.sh
-=======
->>>>>>> 6ae56a04071f183b95aec027d00e3fa4ffef1ae9
 
 images/*.jpg
 images/*.png
