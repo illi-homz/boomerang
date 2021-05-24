@@ -27,7 +27,7 @@ SECRET_KEY = 'x9-jat#3l&4!+517wd(=u(!7n#gzb%%%ol*fnqr@fk-f_3cw%p'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*', 'http://127.0.0.1:8000']
+ALLOWED_HOSTS = ['*', '127.0.0.1']
 
 
 # Application definition
@@ -44,8 +44,8 @@ INSTALLED_APPS = [
 
     'app',
     'livereload',
-    # 'webp_converter',
-    # 'django_webp',
+    'webp_converter',
+    'django_webp',
     'rest_framework',
 ]
 
@@ -100,7 +100,7 @@ TEMPLATES = [
             'auto_reload': True,
             'trim_blocks': True,
             'lstrip_blocks': True,
-            'environment': 'project.jinja2.environment',
+            'environment': 'project.jinja2_settings.environment',
             'context_processors': [
                 # 'webp_converter.context_processors.webp_support',
                 # 'django_webp.context_processors.webp',
@@ -115,12 +115,12 @@ WSGI_APPLICATION = 'project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -131,7 +131,7 @@ WSGI_APPLICATION = 'project.wsgi.application'
 #         'PORT': '5432',
 #     }
 # }
-DATABASES = {'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))}
+# DATABASES = {'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))}
 
 
 # Password validation
@@ -180,6 +180,8 @@ STATICFILES_DIRS = [
 ]
 
 
-# STATIC_ROOT = os.path.join(BASE_DIR, '/')
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# SECURE_BROWSER_XSS_FILTER = True
+# SECURE_CONTENT_TYPE_NOSNIFF = True
