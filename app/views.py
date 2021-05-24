@@ -170,8 +170,8 @@ def links(request):
     response = set_cookie(response, 'locale', locale)
     return response
 
-# def handle_page_not_found(request, exception):
-def handle_page_not_found(request):
+def handle_page_not_found(request, exception):
+# def handle_page_not_found(request):
     locale = get_locale(request)
     current_data = data.Page404.data[locale]
     current_data['locale'] = locale
