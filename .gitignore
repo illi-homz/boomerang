@@ -8,6 +8,8 @@ env
 .htpasswd
 .htaccess
 
+project/settings.py
+
 images/*.jpg
 images/*.png
 images/*.svg

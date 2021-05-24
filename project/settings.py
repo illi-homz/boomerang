@@ -25,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'x9-jat#3l&4!+517wd(=u(!7n#gzb%%%ol*fnqr@fk-f_3cw%p'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*', 'http://127.0.0.1:8000']
+ALLOWED_HOSTS = ['79.143.30.139', '127.0.0.1']
 
 
 # Application definition
@@ -44,8 +44,8 @@ INSTALLED_APPS = [
 
     'app',
     'livereload',
-    # 'webp_converter',
-    # 'django_webp',
+    'webp_converter',
+    'django_webp',
     'rest_framework',
 ]
 
@@ -100,7 +100,7 @@ TEMPLATES = [
             'auto_reload': True,
             'trim_blocks': True,
             'lstrip_blocks': True,
-            'environment': 'project.jinja2.environment',
+            'environment': 'project.jinja2_settings.environment',
             'context_processors': [
                 # 'webp_converter.context_processors.webp_support',
                 # 'django_webp.context_processors.webp',
@@ -125,8 +125,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'boomerang_db',
-        'USER': 'il',
-        'PASSWORD': 'bad',
+        'USER': 'www',
+        'PASSWORD': '1234',
         'HOST': 'localhost',
         'PORT': '5432',
     }

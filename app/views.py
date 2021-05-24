@@ -18,7 +18,7 @@ def index(request):
     current_data['locale'] = locale
 
     services = models.Service.objects.all()
-    currentServices = (random.sample(list(services)[1:], len(services) - 1)
+    currentServices = (random.sample(list(services), len(services))
                        if len(services) <= 5
                        else random.sample(list(services)[1:], 5))
     current_data['services']['slides'] = ([services[0]] + currentServices
@@ -161,7 +161,6 @@ def site_map(request):
     response = HttpResponse(render(request, 'SiteMap.jinja', current_data))
     response = set_cookie(response, 'locale', locale)
     return response
-
 
 def links(request):
     locale = get_locale(request)
