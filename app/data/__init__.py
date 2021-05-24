@@ -14,3 +14,4 @@ from . import Contacts
 from . import Documents
 from . import SiteMap
 from . import Links
+from . import Page404

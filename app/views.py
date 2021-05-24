@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseNotFound
 from django.shortcuts import render
 from django.template import loader
 from django.shortcuts import redirect
@@ -170,10 +170,11 @@ def links(request):
     response = set_cookie(response, 'locale', locale)
     return response
 
-def page_not_found_view(request):
-    return render(request,'myapp/404.html')
-    # return HttpResponse('404')
-
-
-def handler404(request, *args, **argv):
-    return HttpResponse('404')
+def handle_page_not_found(request, exception):
+# def handle_page_not_found(request):
+    locale = get_locale(request)
+    current_data = data.Page404.data[locale]
+    current_data['locale'] = locale
+    response = HttpResponse(render(request, 'Page404.jinja', current_data))
+    response = set_cookie(response, 'locale', locale)
+    return response

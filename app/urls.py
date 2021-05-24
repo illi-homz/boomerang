@@ -20,6 +20,4 @@ urlpatterns = [
     path('links', views.links),
 
     path('api/get-news', NewsList.as_view(), name='news-list'),
-
-    # path('404', views.page_not_found_view),
 ]
