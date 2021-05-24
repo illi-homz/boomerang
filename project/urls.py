@@ -21,7 +21,7 @@ from django.conf.urls.static import static
 from app.views import handler404
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('my-admin/', admin.site.urls),
     path('', include('app.urls')),
 ]
 

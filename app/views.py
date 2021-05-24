@@ -162,7 +162,6 @@ def site_map(request):
     response = set_cookie(response, 'locale', locale)
     return response
 
-
 def links(request):
     locale = get_locale(request)
     current_data = data.Links.data[locale]
