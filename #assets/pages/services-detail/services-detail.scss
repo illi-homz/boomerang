@@ -46,13 +46,13 @@
 
     .g-slider
     {
-        overflow: hidden;
         padding-bottom: 30px;
         position: relative;
         margin-bottom: 57px;
 
         @include tablet
         {
+            overflow: hidden;
             margin-bottom: 105px;
             padding-bottom: 143px;
             width: calc(100% + 10px);
