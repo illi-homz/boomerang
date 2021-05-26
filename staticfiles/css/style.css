@@ -1569,6 +1569,7 @@ h1 {
   overflow: hidden;
   width: calc(100% + 10px);
   margin-left: -5px;
+  margin-top: 29px;
 }
 
 .index-news__slider {
