@@ -3292,6 +3292,7 @@ body.lock {
     font-size: 57px;
     line-height: 67px;
     font-weight: 700;
+    overflow: visible;
   }
 
   .index-services__to-article {
