@@ -1440,6 +1440,9 @@ h1 {
   line-height: 55px;
   font-weight: 700;
   letter-spacing: .02em;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
 }
 
 .index-services__slider-item img {
