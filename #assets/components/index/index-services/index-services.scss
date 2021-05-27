@@ -109,13 +109,11 @@
     {
         @include font-set(48, 55px, 700);
         letter-spacing: .02em;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        hyphens: auto;
 
         @include tablet
         {
             @include font-set(57, 67px, 700);
-            overflow: visible;
             // display: -webkit-box;
             // -webkit-box-orient: vertical;
             // -webkit-line-clamp: 4;

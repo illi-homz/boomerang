@@ -1440,9 +1440,9 @@ h1 {
   line-height: 55px;
   font-weight: 700;
   letter-spacing: .02em;
-  overflow: hidden;
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
 }
 
 .index-services__slider-item img {
@@ -3292,7 +3292,6 @@ body.lock {
     font-size: 57px;
     line-height: 67px;
     font-weight: 700;
-    overflow: visible;
   }
 
   .index-services__to-article {
