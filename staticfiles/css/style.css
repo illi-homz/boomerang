@@ -4208,10 +4208,6 @@ body.lock {
     background-size: cover;
   }
 
-  .index-banner__title {
-    margin-top: 100px;
-  }
-
   .index-services__col--first {
     max-width: 35%;
   }
@@ -4282,6 +4278,12 @@ body.lock {
     max-width: 430px;
   }
 }
+
+@media (min-width: 1050px) {
+  .index-banner__title {
+    margin-top: 100px;
+  }
+}
 @supports (-webkit-appearance:none){
 .g-slider .slick-prev{background:url("/staticfiles/img/arrow-body-l.svg") center/cover no-repeat}
 .g-slider .slick-next{background:url("/staticfiles/img/arrow-body-r.svg") center/cover no-repeat}
@@ -4309,6 +4311,14 @@ body.lock {
 }
 
  @media (min-width: 992.98px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (min-width: 1050px){
 
 @supports (-webkit-appearance:none){
 
