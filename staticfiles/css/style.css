@@ -3872,7 +3872,7 @@ body.lock {
 
   .services-detail .g-slider .slick-slide {
     margin: 0 10px;
-    padding: 0 1px;
+    padding: 0 2px;
   }
 
   .services-detail .g-slider .slick-slide:nth-child(n + 4) {
