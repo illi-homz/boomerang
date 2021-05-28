@@ -3251,8 +3251,7 @@ body.lock {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    height: 100vh;
-    height: 44.8vw;
+    height: 80vh;
     max-height: 652px;
     width: calc(100% + 82px);
   }
@@ -3289,8 +3288,8 @@ body.lock {
   }
 
   .index-services__slider-title {
-    font-size: 57px;
-    line-height: 67px;
+    font-size: 45px;
+    line-height: 50px;
     font-weight: 700;
   }
 
@@ -4207,7 +4206,7 @@ body.lock {
   }
 
   .index-services__col--first {
-    max-width: 330px;
+    max-width: 35%;
   }
 
   .index-services__col--second {
@@ -4215,8 +4214,8 @@ body.lock {
   }
 
   .index-services__slider-title {
-    font-size: 67px;
-    line-height: 77px;
+    font-size: 57px;
+    line-height: 67px;
     font-weight: 700;
   }
 
