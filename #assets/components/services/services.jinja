@@ -10,7 +10,7 @@
                 {% if service.price %}
                     <div class="g-service__price">от {{service.price}} р.</div>
                 {% endif %}
-                <div class="g-service__title">{{service.title|get_locale:locale|safe}}</div>
+                <div class="g-service__title">{{service.title|get_locale:locale}}</div>
                 <div class="g-service__desc">{{service.desc|get_locale:locale}}</div>
             </div>
         </a>
