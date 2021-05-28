@@ -1443,6 +1443,7 @@ h1 {
   -webkit-hyphens: auto;
       -ms-hyphens: auto;
           hyphens: auto;
+  word-break: break-word;
 }
 
 .index-services__slider-item img {
@@ -3265,7 +3266,7 @@ body.lock {
   }
 
   .index-services__col--first {
-    max-width: 270px;
+    max-width: 40%;
     margin-right: 20px;
     display: -webkit-box;
     display: -ms-flexbox;

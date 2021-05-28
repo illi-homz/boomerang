@@ -74,7 +74,8 @@
 
             &--first
             {
-                max-width: 270px;
+                // max-width: 270px;
+                max-width: 40%;
                 margin-right: 20px;
                 display: flex;
                 flex-direction: column;
@@ -113,6 +114,7 @@
         @include font-set(48, 55px, 700);
         letter-spacing: .02em;
         hyphens: auto;
+        word-break: break-word;
 
         @include tablet
         {
