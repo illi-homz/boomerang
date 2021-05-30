@@ -2,15 +2,15 @@
 
 <div class="about-clients about-feedbacks">
     <div class="about-clients__slider g-slider _about-clients__slider">
-        {% for client in clients %}
+        {% for feedback in feedbacks %}
         <div
             class="about-clients__item _about-clients__item"
-            data-img="{{client.img.url}}"
+            data-img="{{feedback.img.url}}"
             onclick="gz.popup.open('_popup-img', gz.aboutClients.showDetail, [this])">
             <div class="about-clients__item-bg">
-                <img src="{{ client.img.url }}" alt="bg" />
+                <img src="{{ feedback.img.url }}" alt="bg" />
             </div>
-            <div class="about-clients__item-text">{{client.title|get_locale:locale}}</div>
+            <div class="about-clients__item-text">{{feedback.title|get_locale:locale}}</div>
         </div>
         {% endfor %}
     </div>
