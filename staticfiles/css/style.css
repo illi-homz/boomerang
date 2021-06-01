@@ -3003,6 +3003,7 @@ body.lock {
 
   .about-galery__wrapper {
     grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 229px;
   }
 
   .news__wrapper {
