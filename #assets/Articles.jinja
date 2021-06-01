@@ -68,13 +68,18 @@
 
             <div class="articles__list">
             {% for article in articles %}
-                <div class="articles__item _articles__item" data-value="{{article.category}}">
-                    <a href="/articles/{{article.id}}"><div>{{article.title|get_locale:locale}}</div></a>
-                    <a href="/articles/{{article.id}}" class="articles__item-read">
-                        {{read}}
+                <a
+                    href="/articles/{{article.id}}"
+                    class="articles__item _articles__item"
+                    data-value="{{article.category}}">
+                    <span class="articles__item-title">
+                        {{article.title|get_locale:locale}}
+                    </span>
+                    <span class="articles__item-read">
+                        <span>{{read}}</span>
                         {% include '#img/arrow-empty-r.svg' %}
-                    </a>
-                </div>
+                    </span>
+                </a>
             {% endfor %}
             </div>
         </div>

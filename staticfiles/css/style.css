@@ -2533,10 +2533,16 @@ h1 {
 }
 
 .articles__item {
+  display: block;
   height: 125px;
   background: url("/staticfiles/img/article_bg.svg") center/100% 100% no-repeat;
   padding: 16px;
   position: relative;
+  border: 1px solid transparent;
+}
+
+.articles__item:hover {
+  border-color: #fff;
 }
 
 .articles__item.hide {
@@ -2544,9 +2550,6 @@ h1 {
 }
 
 .articles__item-read {
-  font-size: 12px;
-  line-height: 1.333em;
-  font-weight: 300;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -2556,6 +2559,17 @@ h1 {
   position: absolute;
   right: 16px;
   bottom: 16px;
+}
+
+.articles__item-read span {
+  font-size: 12px;
+  line-height: 1em;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.articles__item-read span:hover {
+  text-decoration: underline;
 }
 
 .articles__item-read svg {

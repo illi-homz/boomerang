@@ -58,22 +58,38 @@
 
     &__item
     {
+        display: block;
         height: 125px;
         background: url($static + 'img/article_bg.svg') center / 100% 100% no-repeat;
         padding: 16px;
         position: relative;
+        border: 1px solid transparent;
+
+        &:hover {
+            border-color: #fff;
+        }
 
         &.hide {display: none;}
     }
 
+    &__item-title
+    {
+        // &:hover {text-decoration: underline;}
+    }
+
     &__item-read
     {
-        @include font-set(12, 1.333em, 300);
         display: inline-flex;
         align-items: center;
         position: absolute;
         right: 16px;
         bottom: 16px;
+        span
+        {
+            @include font-set(12, 1em, 300);
+            &:hover {text-decoration: underline;}
+            cursor: pointer;
+        }
 
         svg
         {
