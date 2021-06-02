@@ -51,7 +51,7 @@ data = {
                 {
                     'title': 'Скидка 20% на любую услугу',
                     'text': 'Ваша безопасность за доступную цену!',
-                    'img': static + 'img/index/promo/promo'
+                    'img': static + 'img/index/promo/worker'
                 },
             ],
         },
