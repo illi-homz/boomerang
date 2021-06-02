@@ -2198,6 +2198,10 @@ h1 {
   margin-bottom: 56px;
 }
 
+.about .popup-slider .about-galery__img {
+  height: 80vh;
+}
+
 .news {
   padding-top: 24px;
 }
