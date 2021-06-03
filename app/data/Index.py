@@ -37,6 +37,7 @@ data = {
         },
         'promo': {
             'title': 'Акции',
+            'all_stocks': 'ВСЕ АКЦИИ',
             'promos': [
                 {
                     'title': 'Скидка 30% на охрану первым клиентам',
@@ -94,6 +95,7 @@ data = {
         },
         'promo': {
             'title': 'Promos',
+            'all_stocks': 'ALL STOCKS',
             'promos': [
                 {
                     'title': '30\% discount on security for first customers',

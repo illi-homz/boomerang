@@ -99,12 +99,12 @@ def services_item(request, pk):
     return response
 
 
-def prices(request):
+def stocks(request):
     locale = get_locale(request)
-    current_data = data.Prices.data[locale]
+    current_data = data.Stocks.data[locale]
     current_data['locale'] = locale
-    current_data['prices'] = models.Price.objects.all()
-    response = HttpResponse(render(request, 'Prices.jinja', current_data))
+    current_data['stocks'] = models.Stock.objects.all()
+    response = HttpResponse(render(request, 'Stocks.jinja', current_data))
     response = set_cookie(response, 'locale', locale)
     return response
 

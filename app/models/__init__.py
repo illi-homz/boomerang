@@ -1,6 +1,6 @@
 from .New import New
 from .Service import Service
-from .Price import Price
+from .Stock import Stock
 from .Article import Article
 from .Documents import Document
 from .Photo import Photo

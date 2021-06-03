@@ -486,11 +486,41 @@ h1 {
 }
 
 .g-block__title {
+  position: relative;
   text-transform: uppercase;
   color: #DE4F4F;
   font-size: 25px;
   line-height: 29px;
   font-weight: 700;
+}
+
+.g-block__more {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 42px;
+  width: 135px;
+  padding-right: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.g-block__more svg {
+  margin-bottom: 4px;
 }
 
 .g-slider .slick-track {
@@ -1376,45 +1406,12 @@ h1 {
   font-weight: 400;
 }
 
-.index-services .g-block__title {
-  position: relative;
-}
-
 .index-services__desc {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
   margin-top: 24px;
   max-width: 90%;
-}
-
-.index-services__more {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: 42px;
-  width: 135px;
-  padding-right: 4px;
-  cursor: pointer;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
-}
-
-.index-services__more svg {
-  margin-bottom: 4px;
 }
 
 .index-services__wrapper {
@@ -2440,19 +2437,19 @@ h1 {
   bottom: 60px;
 }
 
-.prices {
+.stocks {
   padding: 24px 0 57px;
 }
 
-.prices .bread-crumbs {
+.stocks .bread-crumbs {
   margin-bottom: 18px;
 }
 
-.prices .g-block__title {
+.stocks .g-block__title {
   margin-bottom: 24px;
 }
 
-.prices__item {
+.stocks__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2460,21 +2457,21 @@ h1 {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.prices__item-img {
+.stocks__item-img {
   width: 80px;
   height: 80px;
   border-radius: 12px;
   overflow: hidden;
 }
 
-.prices__item-img img {
+.stocks__item-img img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.prices__item-data {
+.stocks__item-data {
   -webkit-box-flex: 1;
       -ms-flex: 1 0;
           flex: 1 0;
@@ -2488,7 +2485,7 @@ h1 {
   padding-left: 22px;
 }
 
-.prices__item-title {
+.stocks__item-title {
   -webkit-box-flex: 1;
       -ms-flex: 1 0;
           flex: 1 0;
@@ -2498,7 +2495,7 @@ h1 {
   padding-right: 22px;
 }
 
-.prices__item-price {
+.stocks__item-stock {
   font-size: 14px;
   line-height: 16px;
   font-weight: 300;
@@ -3068,6 +3065,10 @@ body.lock {
     border-radius: 12px;
   }
 
+  .g-block__more {
+    width: 160px;
+  }
+
   .g-more-btn {
     max-width: 280px;
   }
@@ -3261,10 +3262,6 @@ body.lock {
     font-weight: 400;
     max-width: 795px;
     margin-top: 6px;
-  }
-
-  .index-services__more {
-    width: 160px;
   }
 
   .index-services__wrapper {
@@ -3901,19 +3898,19 @@ body.lock {
     display: block;
   }
 
-  .prices {
+  .stocks {
     padding-bottom: 105px;
   }
 
-  .prices .bread-crumbs {
+  .stocks .bread-crumbs {
     margin-bottom: 32px;
   }
 
-  .prices .g-block__title {
+  .stocks .g-block__title {
     margin-bottom: 32px;
   }
 
-  .prices__item-data {
+  .stocks__item-data {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -3923,13 +3920,13 @@ body.lock {
             align-items: center;
   }
 
-  .prices__item-title {
+  .stocks__item-title {
     font-size: 18px;
     line-height: 21px;
     font-weight: 400;
   }
 
-  .prices__item-price {
+  .stocks__item-stock {
     font-size: 18px;
     line-height: 21px;
     font-weight: 400;

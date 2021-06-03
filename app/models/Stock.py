@@ -1,27 +1,27 @@
 from django.db import models
 
-class Price(models.Model):
+class Stock(models.Model):
     title_ru = models.CharField(
         max_length=200 ,
-        verbose_name='Название услуги, рус',
+        verbose_name='Название акции, рус',
         blank=True,
         null=True
     )
     title_en = models.CharField(
         max_length=200 ,
-        verbose_name='Название услуги, англ',
+        verbose_name='Название акции, англ',
         blank=True,
         null=True
     )
     price_ru = models.CharField(
         max_length=50,
-        verbose_name='цена, рус',
+        verbose_name='условие, рус',
         blank=True,
         null=True
     )
     price_en = models.CharField(
         max_length=50,
-        verbose_name='цена, англ',
+        verbose_name='условие, англ',
         blank=True,
         null=True
     )

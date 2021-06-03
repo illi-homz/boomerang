@@ -1,4 +1,4 @@
-.prices
+.stocks
 {
     padding: 24px 0 57px;
     @include tablet {padding-bottom: 105px;}
@@ -61,7 +61,7 @@
         }
     }
 
-    &__item-price
+    &__item-stock
     {
         @include font-set(14, 16px, 300);
         text-align: right;

@@ -15,7 +15,7 @@ data = {
         'linksList': [
             {'title': 'Oхранные услуги', 'url': '/services?tab=hm', 'tab': 'hm'},
             {'title': 'Техническая охрана', 'url': '/services?tab=th', 'tab': 'th'},
-            {'title': 'Изготовление спецодежды', 'url': '/services?tab=ds', 'tab': 'ds'},
+            # {'title': 'Изготовление спецодежды', 'url': '/services?tab=ds', 'tab': 'ds'},
             {'title': 'Консультационные и юридические услуги', 'url': '/services?tab=cs', 'tab': 'cs'}
         ],
     },
@@ -31,7 +31,7 @@ data = {
         'linksList': [
             {'title': 'Security services', 'url': '/services?tab=hm', 'tab': 'hm'},
             {'title': 'Technical security', 'url': '/services?tab=th', 'tab': 'th'},
-            {'title': 'Making workwear', 'url': '/services?tab=ds', 'tab': 'ds'},
+            # {'title': 'Making workwear', 'url': '/services?tab=ds', 'tab': 'ds'},
             {'title': 'Consulting and legal services', 'url': '/services?tab=cs', 'tab': 'cs'}
         ],
     }

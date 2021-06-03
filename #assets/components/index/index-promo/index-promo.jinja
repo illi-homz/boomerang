@@ -4,6 +4,10 @@
     <div class="container index-promo__container">
         <div class="g-block__title">
             {{promo.title}}
+
+            <a class="g-block__more" href="/stocks">
+                {{promo.all_stocks}}{% include '#img/arrow-empty-r.svg' %}
+            </a>
         </div>
         <ul class="index-promo__list">
             {% for promo in promo.promos %}

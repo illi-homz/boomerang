@@ -4,20 +4,20 @@ from .Global import data as global_data
 data = {
     'RU': {
         **global_data['RU'],
-        'title': 'Наши цены',
+        'title': 'Наши акции',
 
         'breadCrumbs': [
             {'title': 'Главная', 'url': '/'},
-            {'title': 'Наши цены', 'url': '#'}
+            {'title': 'Наши акции', 'url': '#'}
         ],
     },
     'EN': {
         **global_data['EN'],
-        'title': 'Our prices',
+        'title': 'Our stocks',
 
         'breadCrumbs': [
             {'title': 'Main', 'url': '/'},
-            {'title': 'Our prices', 'url': '#'}
+            {'title': 'Our stocks', 'url': '#'}
         ],
     }
 }

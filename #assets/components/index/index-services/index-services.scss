@@ -1,6 +1,6 @@
 .index-services
 {
-    .g-block__title {position: relative}
+    // .g-block__title {position: relative}
 
     &__desc
     {
@@ -14,26 +14,6 @@
             max-width: 795px;
             margin-top: 6px;
         }
-    }
-
-    &__more
-    {
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        height: 42px;
-        width: 135px;
-        padding-right: 4px;
-        cursor: pointer;
-        @include font-set(16, 20px, 400);
-
-        svg {margin-bottom: 4px;}
-
-        @include tablet {width: 160px;}
     }
 
     &__wrapper
@@ -74,7 +54,6 @@
 
             &--first
             {
-                // max-width: 270px;
                 max-width: 40%;
                 margin-right: 20px;
                 display: flex;
@@ -88,7 +67,6 @@
         {
             &--first
             {
-                // max-width: 330px;
                 max-width: 35%;
                 
             }
@@ -119,17 +97,10 @@
         @include tablet
         {
             @include font-set(45, 50px, 700);
-            // @include font-set(57, 67px, 700);
-            // display: -webkit-box;
-            // -webkit-box-orient: vertical;
-            // -webkit-line-clamp: 4;
-            // overflow: hidden;
-            // text-overflow: ellipsis;
         }
 
         @include desktop
         {
-            // @include font-set(67, 77px, 700);
             @include font-set(57, 67px, 700);
         }
     }

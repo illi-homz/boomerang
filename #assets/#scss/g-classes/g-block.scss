@@ -2,8 +2,29 @@
 {
     &__title
     {
+        position: relative;
         text-transform: uppercase;
         color: $red;
         @include font-set(25, 29px, 700);
+    }
+
+    &__more
+    {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 42px;
+        width: 135px;
+        padding-right: 4px;
+        cursor: pointer;
+        @include font-set(16, 20px, 400);
+
+        svg {margin-bottom: 4px;}
+
+        @include tablet {width: 160px;}
     }
 }
