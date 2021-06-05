@@ -19,27 +19,29 @@
                 <div class="contacts__text">{{postAdress}}</div>
             </div>
             <div class="contacts__field contacts__field--line">
-                <div class="contacts__title">E-mail:&nbsp;</div>
+                <div class="contacts__title">E-mails:</div>
                 <div class="contacts__text">
-                    <a href="mailto:{{email}}">{{email}}</a>
+                    {% for item in emails %}
+                    <a href="mailto:{{item.email}}">{{item.title}}</a>
+                    {% endfor %}
                 </div>
             </div>
             <div class="contacts__field">
-                <div class="contacts__title">{{officeTitle}}:&nbsp;</div>
+                <div class="contacts__title">{{officeTitle}}:</div>
                 <div class="contacts__text">{{office}}</div>
             </div>
             <div class="contacts__field contacts__field--line contacts__field--mb0">
                 <div class="contacts__title">{{phonesTitle}}:&nbsp;</div>
                 <div class="contacts__text">
                     {% for t in phones %}
-                    <pre style="display: inline;"><a href="tel:{{t}}">{{t}}</pre></a>
+                    <pre style="display: inline;"><a href="tel:{{t.phone}}">{{t.title}}</pre></a>
                     {% endfor %}
                 </div>
             </div>
             <div class="contacts__field contacts__field--line">
-                <div class="contacts__title">{{cooperationTitle}}:&nbsp;</div>
+                <div class="contacts__title">{{cooperation.title}}:&nbsp;</div>
                 <div class="contacts__text">
-                    <a href="tel:{{cooperationTel}}">{{cooperation}}</a>
+                    <a href="tel:{{cooperation.phone}}">{{cooperation.telTitle}}</a>
                 </div>
             </div>
             <div class="contacts__field contacts__field--line">

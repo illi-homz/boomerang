@@ -7,9 +7,9 @@ data = {
         'header': {
             'links': [
                 {'title': 'о нас', 'url': '/about?tab=history'},
-                {'title': 'новости', 'url': '/news'},
                 {'title': 'услуги ', 'url': '/services?tab=hm'},
                 {'title': 'наши акции', 'url': '/stocks'},
+                {'title': 'новости', 'url': '/news'},
                 {'title': 'статьи', 'url': '/articles'},
                 {'title': 'контакты', 'url': '/contacts'},
                 {'title': '+7 (831) 28-28-911', 'url': 'tel:+7(831)28-28-911'},
@@ -51,9 +51,9 @@ data = {
         'header': {
             'links': [
                 {'title': 'about us', 'url': '/about?tab=history'},
-                {'title': 'news', 'url': '/news'},
                 {'title': 'services ', 'url': '/services?tab=hm'},
                 {'title': 'our stocks', 'url': '/stocks'},
+                {'title': 'news', 'url': '/news'},
                 {'title': 'articles', 'url': '/articles'},
                 {'title': 'contacts', 'url': '/contacts'},
                 {'title': '+7 (831) 28-28-911', 'url': 'tel:+7(831)28-28-911'},
