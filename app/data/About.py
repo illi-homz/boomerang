@@ -211,7 +211,7 @@ data = {
                     'items': [
                         'Различные графики работы',
                         'Объекты в разных частях города',
-                        'З/П 1700 рублей смена'
+                        'З/П от 1700 рублей смена'
                     ]
                 },
             ],
@@ -425,7 +425,7 @@ data = {
                     'items': [
                         'Various work schedules',
                         'Facilities in different parts of the city',
-                        'Salary 1700 rubles shift'
+                        'Salary from 1700 rubles shift'
                     ]
                 },
             ],
