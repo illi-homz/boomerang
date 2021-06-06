@@ -17,20 +17,12 @@
         {% for link in links %}
             <li class="links__item">
                 <div class="links__item-title">{{ link.title|get_locale:locale }}</div>
-                <a class="links__item-link" href="{{ link.url }}">
+                <a class="links__item-link" target="_blank" href="{{ link.url }}">
                     {{ link.url_title }}
                 </a>
 
-                <!-- {% if link.descs|length > 0 %}
-                    <ul class="links__item-desc">
-                        {% for d in link.descs %}
-                            <li>{{d}}</li>
-                        {% endfor %}
-                    </ul>
-                {% endif %} -->
-
                 {% if link.description %}
-                    <div class="links__item-desc">{{link.description|get_locale:locale}}</div>
+                    <div class="links__item-desc">{{link.description|get_locale:locale|safe}}</div>
                 {% endif %}
 
             </li>
