@@ -196,16 +196,16 @@ data = {
         ],
 
         'vacancies': {
-            'desc': 'В связи с расширением компании примем на работу охранников.',
+            'desc': 'В связи с расширением компании примем на работу охранников с опытом и без опыта работы. Проводим обучение и обеспечиваем лицензией новых сотрудников охранного предприятия.',
             'items': [
-                {
-                    'title': 'Требования',
-                    'items': [
-                        'Опыт работы',
-                        'Наличие лицензии (Обязательно)',
-                        'Без вредных привычек'
-                    ]
-                },
+                # {
+                #     'title': 'Требования',
+                #     'items': [
+                #         'Опыт работы',
+                #         'Наличие лицензии (Обязательно)',
+                #         'Без вредных привычек'
+                #     ]
+                # },
                 {
                     'title': 'Условия работы',
                     'items': [
@@ -409,16 +409,17 @@ data = {
         ],
 
         'vacancies': {
-            'desc': 'Due to the expansion of the company, we will employ security guards.',
+            # 'desc': 'Due to the expansion of the company, we will employ security guards.',
+            'desc': 'In connection with the expansion of the company, we will hire security guards with and without work experience. We provide training and licenses for new employees of the security company.',
             'items': [
-                {
-                    'title': 'Requirements',
-                    'items': [
-                        'Work experience',
-                        'Availability of a license (Required)',
-                        'Without bad habbits'
-                    ]
-                },
+                # {
+                #     'title': 'Requirements',
+                #     'items': [
+                #         'Work experience',
+                #         'Availability of a license (Required)',
+                #         'Without bad habbits'
+                #     ]
+                # },
                 {
                     'title': 'Working conditions',
                     'items': [

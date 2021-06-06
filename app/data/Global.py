@@ -8,7 +8,7 @@ data = {
             'links': [
                 {'title': 'о нас', 'url': '/about?tab=history'},
                 {'title': 'услуги ', 'url': '/services?tab=hm'},
-                {'title': 'наши акции', 'url': '/stocks'},
+                {'title': 'акции', 'url': '/stocks'},
                 {'title': 'новости', 'url': '/news'},
                 {'title': 'статьи', 'url': '/articles'},
                 {'title': 'контакты', 'url': '/contacts'},
@@ -18,7 +18,7 @@ data = {
         'footer': {
             'toUp':         {'title': 'Наверх', 'url': '#header'},
             'services':     {'title': 'Услуги', 'url': '/services?tab=hm'},
-            'ourPrices':    {'title': 'Наши акции', 'url': '/stocks'},
+            'ourPrices':    {'title': 'Акции', 'url': '/stocks'},
             'news':         {'title': 'Новости', 'url': '/news'},
             'aboutUs':      {'title': 'О нас', 'url': '/about?tab=history'},
             'articles':     {'title': 'Статьи', 'url': '/articles'},
@@ -52,7 +52,7 @@ data = {
             'links': [
                 {'title': 'about us', 'url': '/about?tab=history'},
                 {'title': 'services ', 'url': '/services?tab=hm'},
-                {'title': 'our stocks', 'url': '/stocks'},
+                {'title': 'stocks', 'url': '/stocks'},
                 {'title': 'news', 'url': '/news'},
                 {'title': 'articles', 'url': '/articles'},
                 {'title': 'contacts', 'url': '/contacts'},
@@ -62,7 +62,7 @@ data = {
         'footer': {
             'toUp':         {'title': 'Up', 'url': '#header'},
             'services':     {'title': 'Services', 'url': '/services?tab=hm'},
-            'ourPrices':    {'title': 'Our stocks', 'url': '/stocks'},
+            'ourPrices':    {'title': 'Stocks', 'url': '/stocks'},
             'news':         {'title': 'News', 'url': '/news'},
             'aboutUs':      {'title': 'About us', 'url': '/about?tab=history'},
             'articles':     {'title': 'Articles', 'url': '/articles'},
