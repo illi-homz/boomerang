@@ -24,8 +24,8 @@
                 <li class="index-promo__item">
                     <img data-src="{{promo.img.url}}" src="#" alt="slide" />
                     <div class="index-promo__item-data">
-                        <div class="index-promo__item-title">{{ promo.price|get_locale:locale }}</div>
-                        <div class="index-promo__item-text">{{ promo.title|get_locale:locale}}</div>
+                        <div class="index-promo__item-title">{{ promo.title|get_locale:locale}}</div>
+                        <div class="index-promo__item-text">{{ promo.price|get_locale:locale }}</div>
                     </div>
                 </li>
             {% endfor %}
