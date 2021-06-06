@@ -2,6 +2,7 @@ from django.http import HttpResponse, HttpResponseNotFound
 from django.shortcuts import render
 from django.template import loader
 from django.shortcuts import redirect
+from django.views.decorators.http import require_GET
 
 import random
 
@@ -179,3 +180,13 @@ def handle_page_not_found(request, exception):
     response = HttpResponse(render(request, 'Page404.jinja', current_data))
     response = set_cookie(response, 'locale', locale)
     return response
+
+@require_GET
+def robots_txt(request):
+    lines = [
+        "User-Agent: *",
+        "Crawl-delay: 5",
+        "Host: bumaranger.ru",
+        "Disallow: /my-admin/",
+    ]
+    return HttpResponse("\n".join(lines), content_type="text/plain")

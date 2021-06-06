@@ -21,4 +21,6 @@ urlpatterns = [
     # path('404', views.handle_page_not_found),
 
     path('api/get-news', NewsList.as_view(), name='news-list'),
+
+    path("robots.txt", views.robots_txt),
 ]
