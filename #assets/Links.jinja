@@ -1,4 +1,5 @@
 {% extends 'layouts/Base.jinja' %}
+{% load get_locale %}
 
 {% block head %}
 <title>{{title}} | {{titleDesc}}</title>
@@ -15,21 +16,21 @@
     <ul class="links__wrapper">
         {% for link in links %}
             <li class="links__item">
-                <div class="links__item-title">{{ link.title }}</div>
-                <a class="links__item-link" href="{{ link.url.url }}">
-                    {{ link.url.title }}
+                <div class="links__item-title">{{ link.title|get_locale:locale }}</div>
+                <a class="links__item-link" href="{{ link.url }}">
+                    {{ link.url_title }}
                 </a>
 
-                {% if link.descs|length > 0 %}
+                <!-- {% if link.descs|length > 0 %}
                     <ul class="links__item-desc">
                         {% for d in link.descs %}
                             <li>{{d}}</li>
                         {% endfor %}
                     </ul>
-                {% endif %}
+                {% endif %} -->
 
                 {% if link.description %}
-                    <div class="links__item-desc">{{link.description}}</div>
+                    <div class="links__item-desc">{{link.description|get_locale:locale}}</div>
                 {% endif %}
 
             </li>

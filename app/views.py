@@ -165,6 +165,7 @@ def site_map(request):
 def links(request):
     locale = get_locale(request)
     current_data = data.Links.data[locale]
+    current_data['links'] = models.Link.objects.all()
     current_data['locale'] = locale
     response = HttpResponse(render(request, 'Links.jinja', current_data))
     response = set_cookie(response, 'locale', locale)
