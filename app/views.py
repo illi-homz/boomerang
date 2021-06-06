@@ -24,6 +24,10 @@ def index(request):
                        else random.sample(list(services)[1:], 7))
     current_data['services']['slides'] = ([services[0]] + currentServices
                                           if len(services) > 0 else [])
+    
+    stocks = models.Stock.objects.all()
+    randomStocks = random.sample(list(stocks), 3)
+    current_data['promo']['promos'] = randomStocks
 
     current_data['news_list'] = models.New.objects.all().order_by('-date')[:10]
     response = HttpResponse(render(request, 'Index.jinja', current_data))

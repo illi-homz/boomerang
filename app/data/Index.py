@@ -38,23 +38,23 @@ data = {
         'promo': {
             'title': 'Акции',
             'all_stocks': 'ВСЕ АКЦИИ',
-            'promos': [
-                {
-                    'title': 'Скидка 30% на охрану первым клиентам',
-                    'text': 'Надежность здесь и сейчас с первого звонка!',
-                    'img': static + 'img/index/promo/promo'
-                },
-                {
-                    'title': 'Скидка 30% на установку видео-камер',
-                    'text': 'Камеры видео-наблюдения высокого разрешения!',
-                    'img': static + 'img/index/promo/camera'
-                },
-                {
-                    'title': 'Скидка 20% на любую услугу',
-                    'text': 'Ваша безопасность за доступную цену!',
-                    'img': static + 'img/index/promo/worker'
-                },
-            ],
+            # 'promos': [
+            #     {
+            #         'title': 'Скидка 30% на охрану первым клиентам',
+            #         'text': 'Надежность здесь и сейчас с первого звонка!',
+            #         'img': static + 'img/index/promo/promo'
+            #     },
+            #     {
+            #         'title': 'Скидка 30% на установку видео-камер',
+            #         'text': 'Камеры видео-наблюдения высокого разрешения!',
+            #         'img': static + 'img/index/promo/camera'
+            #     },
+            #     {
+            #         'title': 'Скидка 20% на любую услугу',
+            #         'text': 'Ваша безопасность за доступную цену!',
+            #         'img': static + 'img/index/promo/worker'
+            #     },
+            # ],
         },
         'news': {
             'title': 'Новости',
@@ -96,23 +96,23 @@ data = {
         'promo': {
             'title': 'Promos',
             'all_stocks': 'ALL STOCKS',
-            'promos': [
-                {
-                    'title': '30\% discount on security for first customers',
-                    'text': 'Reliability here and now from the first call!',
-                    'img': static + 'img/index/promo/promo'
-                },
-                {
-                    'title': '30\% discount on video cameras installation',
-                    'text': 'High Definition Video Surveillance Cameras!',
-                    'img': static + 'img/index/promo/camera'
-                },
-                {
-                    'title': '20\% discount on any service',
-                    'text': 'Your safety at an affordable price!',
-                    'img': static + 'img/index/promo/promo'
-                },
-            ],
+            # 'promos': [
+            #     {
+            #         'title': '30\% discount on security for first customers',
+            #         'text': 'Reliability here and now from the first call!',
+            #         'img': static + 'img/index/promo/promo'
+            #     },
+            #     {
+            #         'title': '30\% discount on video cameras installation',
+            #         'text': 'High Definition Video Surveillance Cameras!',
+            #         'img': static + 'img/index/promo/camera'
+            #     },
+            #     {
+            #         'title': '20\% discount on any service',
+            #         'text': 'Your safety at an affordable price!',
+            #         'img': static + 'img/index/promo/promo'
+            #     },
+            # ],
         },
         'news': {
             'title': 'News',

@@ -8,7 +8,7 @@ class Stock(models.Model):
         null=True
     )
     title_en = models.CharField(
-        max_length=200 ,
+        max_length=200,
         verbose_name='Название акции, англ',
         blank=True,
         null=True

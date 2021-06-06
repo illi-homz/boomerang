@@ -1,4 +1,4 @@
-{% load webp_converter %}
+{% load get_locale %}
 
 <div class="index-promo">
     <div class="container index-promo__container">
@@ -11,7 +11,7 @@
         </div>
         <ul class="index-promo__list">
             {% for promo in promo.promos %}
-                <li class="index-promo__item">
+                <!-- <li class="index-promo__item">
                     <picture>
                         <source data-srcset="{{ promo.img }}.webp" srcset="#" type="image/webp">
                         <img data-src="{{ promo.img }}.jpg" src="#" alt="slide" />
@@ -19,6 +19,13 @@
                     <div class="index-promo__item-data">
                         <div class="index-promo__item-title">{{ promo.title }}</div>
                         <div class="index-promo__item-text">{{ promo.text }}</div>
+                    </div>
+                </li> -->
+                <li class="index-promo__item">
+                    <img data-src="{{promo.img.url}}" src="#" alt="slide" />
+                    <div class="index-promo__item-data">
+                        <div class="index-promo__item-title">{{ promo.price|get_locale:locale }}</div>
+                        <div class="index-promo__item-text">{{ promo.title|get_locale:locale}}</div>
                     </div>
                 </li>
             {% endfor %}
