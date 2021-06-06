@@ -45,11 +45,11 @@ data = {
             }
         ],
 
-        'cooperation': {
-            'title': 'По вопросам сотрудничества',
-            'telTitle': '+7 (831) 424-08-18 (круглосуточно)',
-            'phone': '+7 (831) 424-08-18'
-        },
+        # 'cooperation': {
+        #     'title': 'По вопросам сотрудничества',
+        #     'telTitle': '+7 (831) 424-08-18 (круглосуточно)',
+        #     'phone': '+7 (831) 424-08-18'
+        # },
 
         'vkTitle': 'Мы ВКонтакте',
         'vk': 'vk.com/52bumerang52'
@@ -98,11 +98,11 @@ data = {
             }
         ],
 
-        'cooperation': {
-            'title': 'Cooperation',
-            'telTitle': '+7 (831) 424-08-18 (around the clock)',
-            'phone': '+7 (831) 424-08-18'
-        },
+        # 'cooperation': {
+        #     'title': 'Cooperation',
+        #     'telTitle': '+7 (831) 424-08-18 (around the clock)',
+        #     'phone': '+7 (831) 424-08-18'
+        # },
 
         'vkTitle': 'We are on VKontakte',
         'vk': 'vk.com/52bumerang52'
