@@ -14,9 +14,17 @@
     <div class="g-block__title">{{title}}</div>
     <div class="contacts__wrapper">
         <div class="contacts__data">
+            <div class="contacts__field contacts__field--line">
+                <div class="contacts__title">{{phonesTitle}}:&nbsp;</div>
+                <div class="contacts__text">
+                    {% for t in phones %}
+                    <pre style="display: inline;"><a href="tel:{{t.phone}}">{{t.title}}</pre></a>
+                    {% endfor %}
+                </div>
+            </div>
             <div class="contacts__field">
-                <div class="contacts__title">{{postAdressTitle}}:</div>
-                <div class="contacts__text">{{postAdress}}</div>
+                <div class="contacts__title">{{officeTitle}}:</div>
+                <div class="contacts__text">{{office}}</div>
             </div>
             <div class="contacts__field contacts__field--line">
                 <div class="contacts__title">E-mails:</div>
@@ -27,17 +35,16 @@
                 </div>
             </div>
             <div class="contacts__field">
-                <div class="contacts__title">{{officeTitle}}:</div>
-                <div class="contacts__text">{{office}}</div>
+                <div class="contacts__title">{{postAdressTitle}}:</div>
+                <div class="contacts__text">{{postAdress}}</div>
             </div>
-            <div class="contacts__field contacts__field--line contacts__field--mb0">
-                <div class="contacts__title">{{phonesTitle}}:&nbsp;</div>
-                <div class="contacts__text">
-                    {% for t in phones %}
-                    <pre style="display: inline;"><a href="tel:{{t.phone}}">{{t.title}}</pre></a>
-                    {% endfor %}
-                </div>
-            </div>
+
+
+
+
+            
+
+            
             <!-- <div class="contacts__field contacts__field--line">
                 <div class="contacts__title">{{cooperation.title}}:&nbsp;</div>
                 <div class="contacts__text">
