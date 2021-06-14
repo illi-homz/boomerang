@@ -26,7 +26,7 @@ data = {
             }
         ],
 
-        'addressTitle': 'Адрес   ',
+        'addressTitle': 'Адрес',
         'address': '603093, г. Нижний Новгород, ул. Яблоневая, д. 18',
 
         'phonesTitle': 'Телефоны',
