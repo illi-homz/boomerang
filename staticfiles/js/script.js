@@ -5383,6 +5383,7 @@ gz.newsDetail = {
       vertical: true,
       slidesToShow: 3,
       slidesToScroll: 3,
+      adaptiveHeight: true,
       responsive: [{
         breakpoint: 768,
         settings: {

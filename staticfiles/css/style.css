@@ -1578,12 +1578,6 @@ h1 {
   padding-bottom: 64px;
 }
 
-.index-news__slider .slick-track {
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
 .index-news__slider .slick-arrow {
   position: absolute;
   z-index: 100;
@@ -1678,6 +1672,7 @@ h1 {
       -ms-flex: 1 0;
           flex: 1 0;
   margin-top: 17px;
+  max-height: 286px;
 }
 
 .index-news__slider-item-img img {
@@ -3449,6 +3444,10 @@ body.lock {
 
   .index-news__slider-item-nav {
     padding: 0;
+  }
+
+  .index-news__slider-item-img {
+    max-height: unset;
   }
 
   .index-news__details-btn {
