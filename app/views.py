@@ -67,7 +67,8 @@ def news_item(request, pk):
     current_data['locale'] = locale
     new = models.New.objects.get(id=pk)
     current_data['new'] = new
-    current_data['news'] = models.New.objects.all().order_by('-date')[:6]
+    news = models.New.objects.all().order_by('-date')
+    current_data['news'] = [n for n in news if n.id != pk][:6]
     current_data['breadCrumbs'][-1]['title'] = new.title()[locale]
     response = HttpResponse(render(request, 'NewsDetail.jinja', current_data))
     response = set_cookie(response, 'locale', locale)

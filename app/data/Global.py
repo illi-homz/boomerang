@@ -86,8 +86,8 @@ data = {
         'techСharacteristic': 'Specifications',
         'detail': 'Detail',
         'showMore': 'Show more',
-        'seeSame': 'See same',
-        'readSame': 'Read same',
+        'seeSame': 'See also',
+        'readSame': 'Read also',
         'moreDetails': 'More details',
     },
 }

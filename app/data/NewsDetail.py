@@ -18,6 +18,6 @@ data = {
             {'title': 'News', 'url': '/news'},
             {'title': '', 'url': '#'}
         ],
-        'readSame': 'Read the same'
+        'readSame': 'Read also'
     }
 }
