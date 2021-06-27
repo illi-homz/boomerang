@@ -19,12 +19,12 @@ def index(request):
     current_data['locale'] = locale
 
     services = models.Service.objects.all()
-    currentServices = (random.sample(list(services[1:]), len(services[1:]))
+    currentServices = (random.sample(list(services), len(services))
                        if len(services) <= 5
-                       else random.sample(list(services)[1:], 7))
-    current_data['services']['slides'] = ([services[0]] + currentServices
-                                          if len(services) > 0 else [])
-    
+                       else random.sample(list(services), 7))
+    current_data['services']['slides'] = (
+        currentServices if len(services) > 0 else [])
+
     stocks = models.Stock.objects.all()
     randomStocks = random.sample(list(stocks), 3)
     current_data['promo']['promos'] = randomStocks
@@ -168,6 +168,7 @@ def site_map(request):
     response = set_cookie(response, 'locale', locale)
     return response
 
+
 def links(request):
     locale = get_locale(request)
     current_data = data.Links.data[locale]
@@ -177,14 +178,16 @@ def links(request):
     response = set_cookie(response, 'locale', locale)
     return response
 
+
 def handle_page_not_found(request, exception):
-# def handle_page_not_found(request):
+    # def handle_page_not_found(request):
     locale = get_locale(request)
     current_data = data.Page404.data[locale]
     current_data['locale'] = locale
     response = HttpResponse(render(request, 'Page404.jinja', current_data))
     response = set_cookie(response, 'locale', locale)
     return response
+
 
 @require_GET
 def robots_txt(request):
