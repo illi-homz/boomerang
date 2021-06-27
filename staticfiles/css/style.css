@@ -2400,6 +2400,7 @@ h1 {
 
 .services-detail .g-slider .slick-list {
   height: auto !important;
+  width: 100%;
 }
 
 .services-detail .g-slider .slick-track {

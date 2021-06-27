@@ -67,6 +67,7 @@
         .slick-list
         {
             height: auto !important;
+            width: 100%;
             @include tablet {height: auto;}
         }
 
@@ -74,6 +75,7 @@
         {
             display: block;
             height: auto !important;
+
             @include tablet
             {
                 display: flex;
