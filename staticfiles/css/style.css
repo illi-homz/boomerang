@@ -34,14 +34,10 @@ aside {
 
 html,
 body {
-  height: 100%;
   width: 100%;
   font-size: 100%;
   line-height: 1;
   font-size: 14px;
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
 }
 
 input,
@@ -947,8 +943,6 @@ h1 {
 .header__container {
   position: relative;
   height: 104px;
-  padding: 0 150px;
-  padding-right: 230px;
 }
 
 .header__topline--shadow {
@@ -1014,7 +1008,6 @@ h1 {
 
 .header__ul {
   margin-top: 184px;
-  width: 100%;
 }
 
 .header__ul li {
@@ -3237,6 +3230,11 @@ body.lock {
 
   .popup-slider .slick-slide.slick-current.slick-active {
     margin: 0;
+  }
+
+  .header__container {
+    padding-left: 150px;
+    padding-right: 230px;
   }
 
   .footer .container {

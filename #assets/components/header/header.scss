@@ -2,7 +2,6 @@
 {
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
     background-color: $bg;
-    // color: #fff !important;
 
     * {
         color: var(--text-color);
@@ -16,9 +15,12 @@
     {
         position: relative;
         height: 104px;
-        padding: 0 150px;
-        // padding-right: 70px;
-        padding-right: 230px;
+
+        @include tablet
+        {
+            padding-left: 150px;
+            padding-right: 230px;
+        }
     }
 
     &__topline--shadow
@@ -98,7 +100,7 @@
     &__ul
     {
         margin-top: 184px;
-        width: 100%;
+        // width: 100%;
 
         @include desktop
         {
