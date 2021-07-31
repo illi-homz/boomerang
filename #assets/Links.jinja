@@ -1,0 +1,33 @@
+{% extends 'layouts/Base.jinja' %}
+{% load get_locale %}
+
+{% block head %}
+<title>{{title}} | {{titleDesc}}</title>
+{% endblock %}
+
+{% block content %}
+
+<div class="links container">
+    {% include 'components/bread-crumbs/bread-crumbs.jinja' %}
+    <div class="g-block__title">
+        {{title}}
+    </div>
+
+    <ul class="links__wrapper">
+        {% for link in links %}
+            <li class="links__item">
+                <div class="links__item-title">{{ link.title|get_locale:locale }}</div>
+                <a class="links__item-link" target="_blank" href="{{ link.url }}">
+                    {{ link.url_title }}
+                </a>
+
+                {% if link.description %}
+                    <div class="links__item-desc">{{link.description|get_locale:locale|safe}}</div>
+                {% endif %}
+
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% endblock %}

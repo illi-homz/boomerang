@@ -20,6 +20,23 @@ const gz = {
             : $(target.hash).offset().top
         });
     },
+    setTheme()
+    {
+        const theme = localStorage.getItem('theme')
+        const isLight = theme === 'light'
+
+        console.log('isLight', isLight);
+
+        if (isLight) {
+            document.documentElement.setAttribute('theme', 'light')
+            $('._theme-switcher').addClass('light')
+            $('._header__ul').addClass('light')
+        } else {
+            document.documentElement.setAttribute('theme', 'dark')
+            $('._theme-switcher').removeClass('light')
+            $('._header__ul').removeClass('light')
+        }
+    }
 }
 
 // components
@@ -32,6 +49,7 @@ const gz = {
 @@include('@@webRoot/#assets/components/about/about-arsenal/about-arsenal.js');
 @@include('@@webRoot/#assets/components/about/about-clients/about-clients.js');
 @@include('@@webRoot/#assets/components/about/about-galery/about-galery.js');
+@@include('@@webRoot/#assets/components/links-list/links-list.js');
 
 // pages
 @@include('@@webRoot/#assets/pages/news/news.js');
@@ -53,6 +71,8 @@ gz.init = function() {
     gz.newsDetail.init()
     gz.servicesDetail.init()
     gz.contacts.init()
+    gz.linksList.init()
+    gz.setTheme()
     initLazyLoading()
 }
 

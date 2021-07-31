@@ -16,7 +16,8 @@
             content: '';
             height: 100%;
             width: 1px;
-            background: #fff;
+            // background: #fff;
+            background: var(--text-color);
             position: absolute;
             right: 0;
             transform: rotate(20deg);

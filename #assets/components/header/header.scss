@@ -1,12 +1,24 @@
 .header
 {
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
+    background-color: $bg;
+    // color: #fff !important;
+
+    * {
+        color: var(--text-color);
+
+        @include desktop {
+            color: #fff;
+        }
+    }
 
     &__container
     {
         position: relative;
         height: 104px;
         padding: 0 150px;
+        // padding-right: 70px;
+        padding-right: 230px;
     }
 
     &__topline--shadow
@@ -65,7 +77,8 @@
             visibility: visible;
             z-index: 10;
             padding: 0 16px;
-            background-color: $bg;
+            // background-color: $bg;
+            background-color: var(--bg-color);
         }
 
         @include desktop
@@ -108,7 +121,8 @@
                 border-bottom: none;
                 height: 50px;
                 margin-top: 24px;
-                background: #434854;
+                // background: #434854;
+                background: var(--black2-color);
                 border-radius: 4px;
                 width: 201px;
                 margin-bottom: 24px;
@@ -162,7 +176,7 @@
                 }
             }
 
-            a
+            a, button
             {
                 @include font-set(16, 49px, 400);
                 display: block;
@@ -184,14 +198,81 @@
         }
 
     }
-    &__lang
+
+    &__actions
     {
         position: absolute;
         top: 124px;
         left: 0;
         width: 100%;
         display: flex;
+        align-items: center;
+
+        @include desktop
+        {
+            top: auto;
+            right: 0;
+            left: auto;
+            display: flex;
+            width: fit-content;
+            padding: 0;
+        }
+    }
+
+    &__ul
+    {
+        li.dark {display: none;}
+
+        &.light
+        {
+            li.dark {display: block;}
+            li.light {display: none;}
+        }
+    }
+
+    & &__ul-theme-switcher
+    {
+        &:active {opacity: .7;}
+        @include desktop {display: none !important;}
+    }
+
+    &__theme-switcher
+    {
+        display: none;
+
+
+        &:active {opacity: .7;}
+
+        @include desktop
+        {
+            display: block;
+            margin-right: 45px;
+
+            button.dark {display: none;}
+
+            &.light
+            {
+                button.dark {display: flex;}
+                button.light {display: none;}
+            }
+        }
+
+        button
+        {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__lang
+    {
+        // position: absolute;
+        // top: 124px;
+        // left: 0;
+        width: 100%;
+        display: flex;
         padding: 0 16px;
+        height: fit-content;
 
         @include desktop
         {
@@ -236,6 +317,7 @@
             }
         }
     }
+
     &__lang-dash
     {
         display: none;
@@ -248,5 +330,15 @@
             margin: 0 10px;
             display: block;
         }
+    }
+}
+
+
+:root[theme='light'] .header__ul li:last-child
+{
+    a:before
+    {
+        border-color: #080B12;
+        background: url($static + 'img/phone-black.svg') center / 16px 16px no-repeat;
     }
 }

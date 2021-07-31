@@ -8,6 +8,10 @@ env
 .htpasswd
 .htaccess
 
+project/settings.py
+gunicorn_config.py
+bin/start_gunicorn.sh
+
 images/*.jpg
 images/*.png
 images/*.svg

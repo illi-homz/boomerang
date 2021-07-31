@@ -1,10 +1,12 @@
 .select
 {
     position: relative;
-    border: 1px solid #fff;
+    // border: 1px solid #fff;
+    border: 1px solid var(--select-border);
     border-radius: 3px;
     transition: all .3s ease;
-    background-color: #242830;
+    // background-color: #242830;
+    background-color: var(--select-bg);
 
     &__header
     {
@@ -25,7 +27,7 @@
             content: '';
             width: 12px;
             height: 1px;
-            background-color: #ECEFEF;
+            background-color: var(--text-color);
             position: absolute;
             right: 0;
             top: 50%;
@@ -50,11 +52,11 @@
         overflow-y: auto;
         left: -1px;
         top: 100%;
-        border: 1px solid #fff;
+        border: 1px solid var(--select-border);
         border-radius: 3px;
         background-color: #242830;
         position: absolute;
-        z-index: 5;
+        z-index: 11;
         transition: border-radius .3s ease;
 
         &--no-bar
@@ -104,8 +106,9 @@
 
     &__item
     {
-        border-bottom: 1px solid #fff;
+        border-bottom: 1px solid var(--select-border);
         line-height: 60px;
+        background-color: var(--select-bg);
 
         &:last-child {border-bottom: none;}
     }

@@ -3,6 +3,8 @@
     background: $black2;
     padding: 32px 0 80px;
 
+    * {color: #fff;}
+
     @include tablet
     {
         padding: 56px 0 56px;

@@ -7,6 +7,7 @@
         @include font-set(20, 1.2em, 700);
         margin-bottom: 24px;
         @include tablet {margin-bottom: 32px;}
+        color: var(--red-color);
     }
 
     p
@@ -26,7 +27,7 @@
     &__see-same
     {
         padding-top: 32px;
-        background-color: $black2;
+        background-color: var(--black2-color);
 
         .g-block__title {margin-bottom: 24px;}
 
@@ -44,24 +45,34 @@
         @include tablet {margin-bottom: 32px;}
     }
 
+    &__slider
+    {
+        display: flex;
+    }
+
     .g-slider
     {
-        overflow: hidden;
         padding-bottom: 30px;
         position: relative;
         margin-bottom: 57px;
 
         @include tablet
         {
+            overflow: hidden;
             margin-bottom: 105px;
             padding-bottom: 143px;
             width: calc(100% + 10px);
             margin-left: -10px;
         }
 
+        .g-service {
+            border-color: var(--promo2-bg);
+        }
+
         .slick-list
         {
             height: auto !important;
+            width: 100%;
             @include tablet {height: auto;}
         }
 
@@ -69,6 +80,7 @@
         {
             display: block;
             height: auto !important;
+
             @include tablet
             {
                 display: flex;
@@ -86,6 +98,7 @@
             @include tablet
             {
                 margin: 0 10px;
+                padding: 0 2px;
                 &:nth-child(n + 4) {display: block;}
             }
         }

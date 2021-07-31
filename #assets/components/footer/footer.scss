@@ -1,8 +1,27 @@
 .footer
 {
-    padding-top: 23px;
-    padding-bottom: 47px;
     position: relative;
+    background-color: $bg;
+
+    * {color: #fff;}
+
+    .container
+    {
+        padding-top: 59px;
+        padding-bottom: 47px;
+
+        @include tablet
+        {
+            padding-top: 23px;
+            min-height: 240px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-bottom: 37px;
+
+            &::before {width: calc(100% - 82px);}
+        }
+    }
 
     &::before
     {
@@ -18,12 +37,6 @@
 
     @include tablet
     {
-        min-height: 240px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding-bottom: 37px;
-
         &::before {width: calc(100% - 82px);}
     }
 
@@ -39,7 +52,8 @@
         width: 121px;
         border-radius: 5px;
         background: $red;
-        z-index: 50;
+        color: #fff;
+        z-index: 5;
 
         @include tablet {display: none;}
     }

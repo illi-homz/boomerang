@@ -1,0 +1,44 @@
+{% extends 'layouts/Base.jinja' %}
+{% load get_locale %}
+
+{% block head %}
+<title>{{title}} | {{titleDesc}}</title>
+{% endblock %}
+
+{% block content %}
+<div class="site-map container">
+    {% include 'components/bread-crumbs/bread-crumbs.jinja' %}
+    <div class="g-block__title">
+        {{title}}
+    </div>
+    <ul class="site-map__wrapper">
+        {% for link in linksList %}
+            <li class="site-map__link">
+                <a href="{{link.url}}">{{link.title}}</a>
+
+                {% if link.tabs %}
+                    <ul>
+                        {% for tab in link.tabs %}
+                            <li class="site-map__tab {% if tab.big_tab %}site-map__big-tab{% endif %}">
+                                <a href="{{tab.url}}">{{tab.title}}</a>
+                            </li>
+
+                            {% if tab.services %}
+                                <ul class="site-map__services">
+                                    {% for service in tab.services %}
+                                    <li class="site-map__tab site-map__services-tab">
+                                        <a href="{{service.url}}">{{service.title}}</a>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

@@ -7,7 +7,11 @@
         grid-gap: 20px;
         padding: 0 20px;
 
-        @include mobile {grid-template-columns: repeat(2,1fr);}
+        @include mobile
+        {
+            grid-template-columns: repeat(2,1fr);
+            // grid-auto-rows: 229px;
+        }
 
         @include tablet
         {
@@ -23,6 +27,7 @@
         border-radius: 5px;
         overflow: hidden;
         margin-bottom: 24px;
+        height: 229px;
 
         img
         {
@@ -43,8 +48,6 @@
     &__show-more
     {
         width: 100%;
-        height: 65px;
-        border: 1px solid #FFFFFF;
 
         @include tablet
         {

@@ -37,7 +37,11 @@
     {
         margin-bottom: 16px;
 
-        &--line {display: flex;}
+        &--line
+        {
+            display: flex;
+            flex-wrap: wrap;
+        }
 
         @include tablet
         {
@@ -58,7 +62,9 @@
     }
 
     &__text
-    {}
+    {
+        a:hover {text-decoration: underline;}
+    }
 
     &__map
     {

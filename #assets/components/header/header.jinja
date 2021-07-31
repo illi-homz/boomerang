@@ -15,7 +15,14 @@
             </div>
 
             <nav class="header__nav _header__nav">
-                <ul class="header__ul">
+                <ul class="header__ul _header__ul">
+                    <li class="header__ul-theme-switcher dark">
+                        <button onclick="gz.header.toggleTheme()" class="_theme-switcher-btn">Темная</button>
+                    </li>
+
+                    <li class="header__ul-theme-switcher light">
+                        <button onclick="gz.header.toggleTheme()" class="_theme-switcher-btn">Светлая</button>
+                    </li>
 
                     {% for link in header.links %}
                         <li>
@@ -24,7 +31,28 @@
                     {% endfor %}
                 </ul>
 
-                <div class="header__lang">
+                <div class="header__actions">
+                    <div class="header__theme-switcher _theme-switcher">
+                        <button onclick="gz.header.toggleTheme()" class="_theme-switcher-btn dark">
+                            {% include '#img/theme-dark.svg' %}
+                        </button>
+                        <button onclick="gz.header.toggleTheme()" class="_theme-switcher-btn light">
+                            {% include '#img/theme-light.svg' %}
+                        </button>
+                    </div>
+
+                    <div class="header__lang">
+                        <button
+                            class="header__lang-item _lang-item {% if locale == 'RU' %}header__lang-item--active{% endif %}"
+                            onclick="gz.header.changeLang(this, 'RU')">ru</button>
+                        <div class="header__lang-dash"></div>
+                        <button
+                            class="header__lang-item _lang-item {% if locale == 'EN' %}header__lang-item--active{% endif %}"
+                            onclick="gz.header.changeLang(this, 'EN')">en</button>
+                    </div>
+                </div>
+
+                <!-- <div class="header__lang">
                     <button
                         class="header__lang-item _lang-item {% if locale == 'RU' %}header__lang-item--active{% endif %}"
                         onclick="gz.header.changeLang(this, 'RU')">ru</button>
@@ -32,7 +60,7 @@
                     <button
                         class="header__lang-item _lang-item {% if locale == 'EN' %}header__lang-item--active{% endif %}"
                         onclick="gz.header.changeLang(this, 'EN')">en</button>
-                </div>
+                </div> -->
             </nav>
         </div>
 

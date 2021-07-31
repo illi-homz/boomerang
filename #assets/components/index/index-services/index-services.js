@@ -6,7 +6,7 @@ gz.indexServices = {
     },
     sliderInit()
     {
-        $('._index-services__slider').slick({
+        this.silder = $('._index-services__slider').slick({
             lazyLoad: 'ondemand',
             mobileFirst: true,
             infinite: true,
@@ -30,12 +30,10 @@ gz.indexServices = {
     {
         const $slide = $('.index-services .slick-slide.slick-active')
         const title = $slide.data('title')
-        // const linkTitle = $slide.data('link')
         const url = $slide.data('url')
 
         $('._index-services__slider-title').html(title)
         $('._index-services__to-article')
-            // .html(linkTitle)
             .attr('href', url)
 
     }

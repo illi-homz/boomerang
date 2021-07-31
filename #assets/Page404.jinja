@@ -1,0 +1,16 @@
+{% extends 'layouts/Base.jinja' %}
+{% load static %}
+
+{% block head %}
+<title>{{title}} | {{titleDesc}}</title>
+{% endblock %}
+
+{% block content %}
+
+    <div class="page404 container">
+        <img src="{% static 'img/404.svg' %}" class="page404__img" alt="404" />
+        <div class="page404__text">{{text}}</div>
+        <a class="page404__btn g-more-btn" href="/">{{btn}}</a>
+    </div>
+
+{% endblock %}

@@ -1,5 +1,9 @@
+from .Global import data as global_data
+
+
 data = {
     'RU': {
+        **global_data['RU'],
         'title': 'Новости',
         'more': 'Подробнее',
         'breadCrumbs': [
@@ -8,11 +12,12 @@ data = {
         ],
     },
     'EN': {
-        'title': 'Новости',
-        'more': 'Подробнее',
+        **global_data['EN'],
+        'title': 'News',
+        'more': 'More',
         'breadCrumbs': [
-            {'title': 'Главная', 'url': '/'},
-            {'title': 'Новости', 'url': '#'}
+            {'title': 'Main', 'url': '/'},
+            {'title': 'News', 'url': '#'}
         ],
     }
 }

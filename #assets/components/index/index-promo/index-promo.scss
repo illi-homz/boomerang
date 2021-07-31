@@ -27,7 +27,7 @@
 
     &__item
     {
-        background: #fff;
+        background: var(--promo-bg);
         margin-bottom: 16px;
 
         &:last-child {margin-bottom: 0;}

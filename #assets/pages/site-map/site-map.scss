@@ -1,0 +1,69 @@
+.site-map {
+    padding-top: 24px;
+    padding-bottom: 64px;
+
+    @include tablet {padding-bottom: 104px;}
+
+    .bread-crumbs {
+        margin-bottom: 18px;
+
+        @include tablet {margin-bottom: 32px;}
+    }
+    .g-block__title {
+        margin-bottom: 24px;
+        @include tablet {margin-bottom: 40px;}
+    }
+
+    &__wrapper
+    {
+        @include tablet {padding-left: 108px;}
+    }
+
+    &__link
+    {
+        @include font-set(16, 20px);
+        margin-bottom: 16px;
+
+        &:last-child {margin-bottom: 0;}
+    }
+
+    &__tab
+    {
+        @include font-set(14, 16px);
+        padding-left: 14px;
+        position: relative;
+        margin-top: 8px;
+
+        &:before
+        {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: var(--text-color);
+        }
+    }
+
+    &__big-tab
+    {
+        @include font-set(16, 20px);
+    }
+
+    &__services
+    {
+        padding-left: 14px;
+    }
+
+    &__services-tab
+    {
+        &:before
+        {
+            background: none;
+            border: 1px solid #fff;
+        }
+    }
+}

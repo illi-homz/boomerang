@@ -3,13 +3,13 @@ from django.db import models
 class Service(models.Model):
     HUMAN = 'hm'
     TECHNICAL = 'th'
-    DRESS = 'ds'
+    # DRESS = 'ds'
     CONSULTATION = 'cs'
 
     TYPES = [
         (HUMAN, 'Oхранные услуги'),
         (TECHNICAL, 'Техническая охрана'),
-        (DRESS, 'Изготовление спецодежды'),
+        # (DRESS, 'Изготовление спецодежды'),
         (CONSULTATION, 'Консультационные и юридические услуги'),
     ]
 
@@ -20,7 +20,7 @@ class Service(models.Model):
     text_ru = models.TextField(blank=True, null=True)
     text_en = models.TextField(blank=True, null=True)
     type = models.CharField(max_length=2, choices=TYPES, default=HUMAN)
-    price = models.SmallIntegerField(default=0)
+    price = models.SmallIntegerField(default=0, blank=True, null=True)
     img = models.ImageField(upload_to='services', verbose_name='Картинка')
 
     def __str__(self):

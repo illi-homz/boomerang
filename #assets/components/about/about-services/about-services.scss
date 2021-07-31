@@ -1,6 +1,7 @@
 .about-services
 {
-    background: $black2;
+    // background: $black2;
+    background: var(--black2-color);
     padding: 32px 16px;
     padding-right: 29px;
     margin-left: -16px;
@@ -37,11 +38,17 @@
         margin-bottom: 32px;
         position: relative;
 
-        img
+        svg
         {
             position: absolute;
             left: 16px;
             top: 13px;
+
+            path
+            {
+                &:first-child {stroke: var(--red-color);}
+                &:last-child {fill: var(--red-color);}
+            }
         }
 
         @include tablet

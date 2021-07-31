@@ -22,7 +22,7 @@
         {
             width: 8px;
             height: 8px;
-            background-color: #fff;
+            background-color: var(--dot-color);
             opacity: .7;
             margin: 0 3px;
             cursor: pointer;
@@ -47,12 +47,12 @@
     }
 
 
-    .slick-prev
-    {
-        background: url($static+'img/arrow-body-l.svg') center/cover no-repeat;
-    }
-    .slick-next
-    {
-        background: url($static+'img/arrow-body-r.svg') center/cover no-repeat;
-    }
+    // .slick-prev
+    // {
+    //     background: url($static+'img/arrow-body-l.svg') center/cover no-repeat;
+    // }
+    // .slick-next
+    // {
+    //     background: url($static+'img/arrow-body-r.svg') center/cover no-repeat;
+    // }
 }

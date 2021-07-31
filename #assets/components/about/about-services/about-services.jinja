@@ -2,7 +2,7 @@
     <div class="about-services__title">{{servicesTitle}}</div>
     {% for service in services %}
     <div class="about-services__item">
-        <img src="/staticfiles/img/shield.svg" alt="shield">{{service}}
+        {% include '#img/shield.svg' %}{{service}}
     </div>
     {% endfor %}
 </div>

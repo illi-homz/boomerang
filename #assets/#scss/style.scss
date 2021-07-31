@@ -14,6 +14,7 @@
 @import 'g-classes/g-img-bg';
 @import 'g-classes/g-news';
 @import 'g-classes/g-service';
+@import 'g-classes/g-more-btn.scss';
 
 // components
 @import '@@webRoot/#assets/components/popup-img/popup-img';
@@ -46,23 +47,28 @@
 @import '@@webRoot/#assets/pages/news-detail/news-detail';
 @import '@@webRoot/#assets/pages/services/services';
 @import '@@webRoot/#assets/pages/services-detail/services-detail';
-@import '@@webRoot/#assets/pages/prices/prices';
+@import '@@webRoot/#assets/pages/stocks/stocks';
 @import '@@webRoot/#assets/pages/articles/articles';
 @import '@@webRoot/#assets/pages/article-detail/article-detail';
 @import '@@webRoot/#assets/pages/contacts/contacts';
 @import '@@webRoot/#assets/pages/documents/documents';
+@import '@@webRoot/#assets/pages/site-map/site-map';
+@import '@@webRoot/#assets/pages/links/links';
+@import '@@webRoot/#assets/pages/page404/page404';
 
 *
 {
     font-family: 'Helvetica', sans-serif;
     @include font-set(18, 21px, 400);
-    color: #fff;
+    // color: #fff;
+    color: var(--text-color);
     letter-spacing: 0.01em;
 }
 
 body
 {
-    background-color: $bg;
+    // background-color: $bg;
+    background-color: var(--bg-color);
 
     &.lock {overflow: hidden;}
 }
