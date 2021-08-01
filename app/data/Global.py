@@ -4,6 +4,10 @@ static = settings.STATIC_URL
 data = {
     'RU': {
         'titleDesc': 'ЧОП Бумеранг - пультовая охрана, тревожная кнопка, техническая охрана, охрана персонала и материальных ценностей, сопровождение грузов по территории РФ, охранное предприятие ',
+        'lightTheme': 'Светлая тема',
+        'lightSiteTheme': 'Светлая тема сайта',
+        'darkTheme': 'Темная тема',
+        'darkSiteTheme': 'Темная тема сайта',
         'header': {
             'links': [
                 {'title': 'о нас', 'url': '/about?tab=history'},
@@ -48,6 +52,10 @@ data = {
     },
     'EN': {
         'titleDesc': 'PSC Boomerang - monitored security system, alarm button, technical security, security of personnel and material values, escort of goods on the territory of the Russian Federation, security company',
+        'lightTheme': 'Light theme',
+        'lightSiteTheme': 'Light site theme',
+        'darkTheme': 'Dark theme',
+        'darkSiteTheme': 'Black site theme',
         'header': {
             'links': [
                 {'title': 'about us', 'url': '/about?tab=history'},

@@ -17,11 +17,11 @@
             <nav class="header__nav _header__nav">
                 <ul class="header__ul _header__ul">
                     <li class="header__ul-theme-switcher dark">
-                        <button onclick="gz.header.toggleTheme()" class="_theme-switcher-btn">Темная</button>
+                        <button onclick="gz.header.toggleTheme()" class="_theme-switcher-btn">{{darkSiteTheme}}</button>
                     </li>
 
                     <li class="header__ul-theme-switcher light">
-                        <button onclick="gz.header.toggleTheme()" class="_theme-switcher-btn">Светлая</button>
+                        <button onclick="gz.header.toggleTheme()" class="_theme-switcher-btn">{{lightSiteTheme}}</button>
                     </li>
 
                     {% for link in header.links %}
@@ -34,10 +34,10 @@
                 <div class="header__actions">
                     <div class="header__theme-switcher _theme-switcher">
                         <button onclick="gz.header.toggleTheme()" class="_theme-switcher-btn dark">
-                            {% include '#img/theme-dark.svg' %}
+                            {{darkTheme}}&nbsp;{% include '#img/theme-dark.svg' %}
                         </button>
                         <button onclick="gz.header.toggleTheme()" class="_theme-switcher-btn light">
-                            {% include '#img/theme-light.svg' %}
+                            {{lightTheme}}&nbsp;{% include '#img/theme-light.svg' %}
                         </button>
                     </div>
 
