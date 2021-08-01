@@ -1,6 +1,7 @@
 .index-banner
 {
     position: relative;
+    min-width: 375px;
 
     @include tablet
     {
