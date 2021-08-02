@@ -30,7 +30,9 @@ def index(request):
     randomStocks = random.sample(list(stocks), 3)
     current_data['promo']['promos'] = randomStocks
 
-    current_data['news_list'] = models.New.objects.all().order_by('-date')[:10]
+    news = models.New.objects.all().order_by('-date')[:10]
+    # news = map(lambda new: new.date = 'dddd', news)
+    current_data['news_list'] = news
     print('news_list', current_data['news_list'][0].date)
     response = HttpResponse(render(request, 'Index.jinja', current_data))
     response = set_cookie(response, 'locale', locale)

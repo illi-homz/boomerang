@@ -1,5 +1,6 @@
 {% load static %}
 {% load get_locale %}
+{% load i18n %}
 
 <div class="index-news container">
     <div class="g-block__title">
@@ -12,8 +13,9 @@
                 <div class="index-news__slider-item-title"><a href="/news/{{new.id}}">{{new.title|get_locale:locale}}</a></div>
                 <div class="index-news__slider-item-text">{{new.desc|get_locale:locale}}</div>
                 <div class="index-news__slider-item-nav">
-                    <!-- <div class="index-news__slider-item-date">{{new.date|date:"d E"}}</div> -->
-                    <div class="index-news__slider-item-date">{{new.date|date:"SHORT_DATE_FORMAT"}}</div>
+                    {% language locale|lower %}
+                        <div class="index-news__slider-item-date">{{new.date|date:"d E"}}</div>
+                    {% endlanguage %}
                     <!-- <div class="index-news__slider-item-details">
                         <a href="/news/{{new.id}}">{{news.more_details}}</a>
                     </div> -->

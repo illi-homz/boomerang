@@ -1,5 +1,6 @@
 {% extends 'layouts/Base.jinja' %}
 {% load get_locale %}
+{% load i18n %}
 
 {% block head %}
 <title>{{title}} | {{titleDesc}}</title>
@@ -20,7 +21,9 @@
                     </div>
                     <div class="g-news__item-desc">{{new.desc|get_locale:locale}}</div>
                     <div class="g-news__item-df-jcsb">
-                        <div class="g-news__item-date">{{new.date|date:"d E"}}</div>
+                        {% language locale|lower %}
+                            <div class="g-news__item-date">{{new.date|date:"d E"}}</div>
+                        {% endlanguage %}
                         <a href="/news/{{new.id}}" class="g-news__item-detail">{{more}}</a>
                     </div>
                     <div class="g-news__item-img">

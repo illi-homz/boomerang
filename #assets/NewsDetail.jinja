@@ -1,5 +1,6 @@
 {% extends 'layouts/Base.jinja' %}
 {% load get_locale %}
+{% load i18n %}
 
 {% block head %}
 <title>{{new.title|get_locale:locale}} | {{titleDesc}}</title>
@@ -12,7 +13,10 @@
             {% include 'components/bread-crumbs/bread-crumbs.jinja' %}
             <div class="news-detail__item">
                 <h1 class="news-detail__title">{{new.title|get_locale:locale}}</h1>
-                <div class="news-detail__date">{{new.date|date:"d E Y"}} г.</div>
+                {% language locale|lower %}
+                    <div class="news-detail__date">{{new.date|date:"d E Y"}}</div>
+                {% endlanguage %}
+                <!-- <div class="news-detail__date">{{new.date|date:"d E Y"}} г.</div> -->
                 <div class="news-detail__wrapper">
                     <div class="news-detail__text">{{new.text|get_locale:locale|safe}}</div>
                     <div class="news-detail__img">
