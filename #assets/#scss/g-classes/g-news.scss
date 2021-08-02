@@ -31,6 +31,7 @@
 
     &__item-date
     {
+        text-transform: lowercase;
         @include font-set(14, 1.14rem, 400);
     }
 

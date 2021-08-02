@@ -42,6 +42,7 @@
     &__date
     {
         display: none;
+        text-transform: lowercase;
 
         @include desktop
         {
