@@ -645,7 +645,7 @@ h1 {
   overflow: hidden;
   -o-text-overflow: ellipsis;
      text-overflow: ellipsis;
-  margin-bottom: 29px;
+  margin-bottom: 20px;
 }
 
 .g-news__item-title a {
@@ -737,6 +737,7 @@ h1 {
 
 .g-service__price {
   position: absolute;
+  color: #fff;
   right: 9px;
   top: 9px;
   background: rgba(8, 11, 18, 0.5);
@@ -1806,7 +1807,13 @@ h1 {
 }
 
 .index-news__slider-item-img {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-flex: 1;
       -ms-flex: 1 0;
           flex: 1 0;
@@ -1817,7 +1824,9 @@ h1 {
 
 .index-news__slider-item-img img {
   width: 100%;
-  height: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -2374,6 +2383,7 @@ h1 {
 
 .news__item {
   margin-bottom: 24px;
+  margin-top: 40px;
 }
 
 .news-detail {
@@ -3169,6 +3179,7 @@ body.lock {
 
   .news__item {
     margin-bottom: 0;
+    margin-top: 30px;
   }
 
   .news-detail__img {
@@ -3891,11 +3902,11 @@ body.lock {
   }
 
   .index .index-services {
-    margin-bottom: 146px;
+    margin-bottom: 112px;
   }
 
   .index .index-about {
-    margin-bottom: 112px;
+    margin-bottom: 146px;
   }
 
   .index .index-promo {

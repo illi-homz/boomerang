@@ -9,13 +9,15 @@
     .index-services
     {
         margin-bottom: 80px;
-        @include tablet {margin-bottom: 146px;}
+        // @include tablet {margin-bottom: 146px;}
+        @include tablet {margin-bottom: 112px;}
     }
 
     .index-about
     {
         margin-bottom: 40px;
-        @include tablet {margin-bottom: 112px;}
+        // @include tablet {margin-bottom: 112px;}
+        @include tablet {margin-bottom: 146px;}
     }
 
     .index-promo

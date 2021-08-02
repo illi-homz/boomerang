@@ -17,6 +17,7 @@ def index(request):
     locale = get_locale(request)
     current_data = data.Index.data[locale]
     current_data['locale'] = locale
+    # print('locale',locale)
 
     services = models.Service.objects.all()
     currentServices = (random.sample(list(services), len(services))
@@ -30,6 +31,7 @@ def index(request):
     current_data['promo']['promos'] = randomStocks
 
     current_data['news_list'] = models.New.objects.all().order_by('-date')[:10]
+    print('news_list', current_data['news_list'][0].date)
     response = HttpResponse(render(request, 'Index.jinja', current_data))
     response = set_cookie(response, 'locale', locale)
     return response
