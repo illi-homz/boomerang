@@ -2,7 +2,7 @@
     @include font-set(16, 105%, 400);
     display: block;
     height: 65px;
-    background-color: #DE4F4F;
+    background-color: $red;
     border-radius: 2px;
     display: flex;
     align-items: center;

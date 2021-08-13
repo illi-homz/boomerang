@@ -37,7 +37,8 @@
         }
 
         &::before {background: rgba(36, 40, 48, .5);}
-        &::after {background: linear-gradient(180deg, rgba(36, 40, 48, 0.17) 17.68%, rgba(36, 40, 48, 0.19) 47.61%, #2F3440 89.51%), linear-gradient(0deg, rgba(36, 40, 48, 0.45), rgba(36, 40, 48, 0.45));}
+        // &::after {background: linear-gradient(180deg, rgba(36, 40, 48, 0.17) 17.68%, rgba(36, 40, 48, 0.19) 47.61%, #2F3440 89.51%), linear-gradient(0deg, rgba(36, 40, 48, 0.45), rgba(36, 40, 48, 0.45));}
+        &::after {background: linear-gradient(180deg, #1E304190 7.68%, rgba(36, 40, 48, 0.19) 20%, #1E3041ff 89.51%), linear-gradient(0deg, rgba(36, 40, 48, 0.45), rgba(36, 40, 48, 0.45));}
 
         @include tablet
         {

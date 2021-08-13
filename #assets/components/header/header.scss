@@ -142,9 +142,8 @@
                         content: '';
                         width: 24px;
                         height: 24px;
-                        border: 1px solid #FFFFFF;
                         border-radius: 3px;
-                        background: url($static + 'img/phone.svg') center / 16px 16px no-repeat;
+                        background: url($static + 'img/phone-blue.svg') center / 100% no-repeat;
                         position: absolute;
                         top: 50%;
                         transform: translateY(-50%);
@@ -301,6 +300,7 @@
         color: $bg;
         border-radius: 10px;
         height: 32px;
+        border: 1px solid var(--menu-border);
 
         &:first-child {margin-right: 10px;}
 
@@ -308,6 +308,7 @@
         {
             color: $gray;
             background: $red;
+            border-color: transparent;
         }
 
         @include desktop
@@ -337,15 +338,5 @@
             margin: 0 10px;
             display: block;
         }
-    }
-}
-
-
-:root[theme='light'] .header__ul li:last-child
-{
-    a:before
-    {
-        border-color: #080B12;
-        background: url($static + 'img/phone-black.svg') center / 16px 16px no-repeat;
     }
 }

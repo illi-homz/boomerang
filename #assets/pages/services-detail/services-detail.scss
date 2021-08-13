@@ -6,13 +6,30 @@
     {
         @include font-set(20, 1.2em, 700);
         margin-bottom: 24px;
-        @include tablet {margin-bottom: 32px;}
-        color: var(--red-color);
+        color: var(--text-color);
+
+        @include tablet
+        {
+            margin-bottom: 32px;
+            color: var(--red-color);
+        }
     }
 
     p
     {
         margin-bottom: 24px;
+    }
+
+    &__img
+    {
+        margin-bottom: 24px;
+
+        @include tablet {display: none;}
+
+        img
+        {
+            width: 100%;
+        }
     }
 
     &__data

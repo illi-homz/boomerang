@@ -1,15 +1,21 @@
 .g-news
 {
+    border: 1px solid #fff;
+    border-radius: 4px;
+    padding-top: 15px;
+
     &__item-title
     {
         @include font-set(18, 1.6rem, 400);
+        height: 3.2rem;
         max-height: 45px;
         display: -webkit-box;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;
         overflow: hidden;
         text-overflow: ellipsis;
-        margin-bottom: 20px;
+        margin-bottom: 8px;
+        padding: 0 18px;
 
         a
         {
@@ -21,12 +27,19 @@
     &__item-desc
     {
         @include font-set(12, 1.33rem, 400);
+        height: 2.66rem;
         display: -webkit-box;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;
         overflow: hidden;
         text-overflow: ellipsis;
         margin-bottom: 20px;
+        padding: 0 18px;
+    }
+
+    &__item-info
+    {
+        padding: 0 18px;
     }
 
     &__item-date

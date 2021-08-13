@@ -13,6 +13,9 @@
                 <h1>
                     {{serviceItem.title|get_locale:locale}}
                 </h1>
+                <div class="services-detail__img">
+                    <img src="{{serviceItem.img.url}}" alt="service">
+                </div>
                 <div class="services-detail__text">
                     {{serviceItem.text|get_locale:locale|safe}}
                 </div>

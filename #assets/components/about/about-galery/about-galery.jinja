@@ -8,9 +8,11 @@
             </div>
         {% endfor %}
     </div>
+    {% if galery|length > 5 %}
     <button
         class="about-galery__show-more g-more-btn _about-galery__show-more"
         onclick="gz.aboutGalery.showMoreItems()">
         {{showMore}}
     </button>
+    {% endif %}
 </div>

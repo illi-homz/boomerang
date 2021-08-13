@@ -14,9 +14,11 @@
         </div>
         {% endfor %}
     </div>
+    {% if clients|length > 5 %}
     <button
         class="about-clients__show-more g-more-btn _about-clients__show-more"
         onclick="gz.aboutClients.showMoreItems()">
         {{showMore}}
     </button>
+    {% endif %}
 </div>

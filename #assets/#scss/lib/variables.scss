@@ -17,11 +17,14 @@ $mobile: 'min-width: 479.98px';
     --dot-color: #2F3440;
     --promo-bg: #F9F9F9;
     --promo2-bg: #DCDCDC;
-    --red-color: #DE4F4F;
+    // --red-color: #DE4F4F;
+    --red-color: #4294CC;
     --stock-border: rgba(21, 21, 21, 0.2);
     --select-bg: #fff;
     // --select-border: rgba(0, 0, 0, .3);
     --select-border: #ccc;
+    --menu-border: #080B12;
+    --service-border: #C5C6C9;
 
     .g-slider
     {
@@ -33,18 +36,21 @@ $mobile: 'min-width: 479.98px';
 }
 
 :root[theme='dark'] {
-    --bg-color: #2F3440;
-    // --black-color: #2F3440;
-    --black2-color: #2B303C;
+    // --bg-color: #2F3440;
+    --bg-color: #1E3041;
+    // --black2-color: #2B303C;
+    --black2-color: #2E4151;
     --text-color: #fff;
     --dot-color: #fff;
     --promo-bg: #fff;
     --promo2-bg: #fff;
     --red-color: #fff;
     --stock-border: rgba(255, 255, 255, 0.2);
-    --select-bg: #242830;
+    // --select-bg: #242830;
+    --select-bg: #1E3041;
     --select-border: rgba(255, 255, 255, .4);
-
+    --menu-border: transparent;
+    --service-border: #fff;
 
     .g-slider
     {
@@ -55,8 +61,11 @@ $mobile: 'min-width: 479.98px';
     .articles__item {background: url($static + 'img/article_bg.svg') center / 100% 100% no-repeat;}
 }
 
-$bg: #2F3440;
+// $bg: #2F3440;
+$bg: #1E3041;
 $black: #030303;
-$black2: #2B303C;
-$red: #DE4F4F;
+// $black2: #2B303C;
+$black2: #2E4151;
+// $red: #DE4F4F;
+$red: #4294CC;
 $gray: #F9F9F9;
