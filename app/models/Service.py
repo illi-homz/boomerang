@@ -15,8 +15,8 @@ class Service(models.Model):
 
     title_ru = models.CharField(max_length=200)
     title_en = models.CharField(max_length=200, blank=True, null=True)
-    desc_ru = models.CharField(max_length=300, blank=True, null=True)
-    desc_en = models.CharField(max_length=300, blank=True, null=True)
+    desc_ru = models.CharField(max_length=300, blank=True, default='')
+    desc_en = models.CharField(max_length=300, blank=True, default='')
     text_ru = models.TextField(blank=True, null=True)
     text_en = models.TextField(blank=True, null=True)
     type = models.CharField(max_length=2, choices=TYPES, default=HUMAN)
