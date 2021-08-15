@@ -42,8 +42,8 @@ data = {
             {'title': 'Мы ВКонтакте', 'url': 'https://vk.com/52bumerang52'},
         ],
         'noManyBanner': static + 'img/index/promo/big',
-        'noManyInstall': 'Free equipment installation',
-        'rentTerms': 'На On lease terms',
+        'noManyInstall': 'Бесплатная установка оборудования',
+        'rentTerms': 'На условиях аренды',
 
         'techСharacteristic': 'Технические характеристики',
         'detail': 'Подробнее',
