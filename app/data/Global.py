@@ -1,5 +1,8 @@
 from django.conf import settings
 static = settings.STATIC_URL
+import datetime
+
+currentYear = datetime.date.today().year
 
 data = {
     'RU': {
@@ -27,7 +30,7 @@ data = {
             'aboutUs':      {'title': 'О нас', 'url': '/about?tab=history'},
             'articles':     {'title': 'Статьи', 'url': '/articles'},
             'contacts':     {'title': 'Контакты', 'url': '/contacts'},
-            'chop':         {'title': 'ЧОП «Бумеранг»', 'url': ''},
+            'chop':         {'title': f'© 2006‐{currentYear} ЧОП «Бумеранг»', 'url': ''},
             'siteMap':      {'title': 'Карта сайта', 'url': '/site-map'},
             'links':        {'title': 'Полезные ссылки', 'url': '/links'},
             'docs':         {'title': 'Документы', 'url': '/documents'}
@@ -74,7 +77,7 @@ data = {
             'aboutUs':      {'title': 'About us', 'url': '/about?tab=history'},
             'articles':     {'title': 'Articles', 'url': '/articles'},
             'contacts':     {'title': 'Contacts', 'url': '/contacts'},
-            'chop':         {'title': 'PSC «Boomerang»', 'url': ''},
+            'chop':         {'title': f'© 2006‐{currentYear} PSC «Boomerang»', 'url': ''},
             'siteMap':      {'title': 'Site map', 'url': '/site-map'},
             'links':        {'title': 'Links', 'url': '/links'},
             'docs':         {'title': 'Documents', 'url': '/documents'}
