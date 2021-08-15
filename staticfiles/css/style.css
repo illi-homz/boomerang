@@ -4473,6 +4473,7 @@ body.lock {
     background: transparent;
     color: #F9F9F9;
     border: unset;
+    border-radius: unset;
   }
 
   .header__lang-item:first-child {
