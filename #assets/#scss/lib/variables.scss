@@ -31,8 +31,6 @@ $mobile: 'min-width: 479.98px';
         .slick-prev {background: url($static+'img/arrow-body-dark-l.svg') center/cover no-repeat;}
         .slick-next {background: url($static+'img/arrow-body-dark-r.svg') center/cover no-repeat;}
     }
-
-    .articles__item {background: url($static + 'img/article_bg-light.svg') center / 100% 100% no-repeat;}
 }
 
 :root[theme='dark'] {
@@ -57,8 +55,6 @@ $mobile: 'min-width: 479.98px';
         .slick-prev {background: url($static+'img/arrow-body-l.svg') center/cover no-repeat;}
         .slick-next {background: url($static+'img/arrow-body-r.svg') center/cover no-repeat;}
     }
-
-    .articles__item {background: url($static + 'img/article_bg.svg') center / 100% 100% no-repeat;}
 }
 
 // $bg: #2F3440;

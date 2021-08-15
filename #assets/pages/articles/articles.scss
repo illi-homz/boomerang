@@ -114,3 +114,13 @@
         }
     }
 }
+
+:root[theme='light']
+{
+    .articles__item {background: url($static + 'img/article_bg-light.svg') center / 100% no-repeat;}
+}
+
+:root[theme='dark']
+{
+    .articles__item {background: url($static + 'img/article_bg.svg') center / 100% no-repeat;}
+}

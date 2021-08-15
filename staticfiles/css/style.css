@@ -119,10 +119,6 @@ h6 {
   background: url("/staticfiles/img/arrow-body-dark-r.svg") center/cover no-repeat;
 }
 
-:root[theme='light'] .articles__item {
-  background: url("/staticfiles/img/article_bg-light.svg") center/100% 100% no-repeat;
-}
-
 :root[theme='dark'] {
   --bg-color: #1E3041;
   --black2-color: #2E4151;
@@ -144,10 +140,6 @@ h6 {
 
 :root[theme='dark'] .g-slider .slick-next {
   background: url("/staticfiles/img/arrow-body-r.svg") center/cover no-repeat;
-}
-
-:root[theme='dark'] .articles__item {
-  background: url("/staticfiles/img/article_bg.svg") center/100% 100% no-repeat;
 }
 
 h1 {
@@ -2776,6 +2768,14 @@ h1 {
   margin-top: 40px;
 }
 
+:root[theme='light'] .articles__item {
+  background: url("/staticfiles/img/article_bg-light.svg") center/100% no-repeat;
+}
+
+:root[theme='dark'] .articles__item {
+  background: url("/staticfiles/img/article_bg.svg") center/100% no-repeat;
+}
+
 .article-detail {
   background-color: #fff;
   padding: 24px 0 56px;
@@ -4574,13 +4574,13 @@ body.lock {
 @supports (-webkit-appearance:none){
 :root[theme='light'] .g-slider .slick-prev{background:url("/staticfiles/img/arrow-body-dark-l.svg") center/cover no-repeat}
 :root[theme='light'] .g-slider .slick-next{background:url("/staticfiles/img/arrow-body-dark-r.svg") center/cover no-repeat}
-:root[theme='light'] .articles__item{background:url("/staticfiles/img/article_bg-light.svg") center/100% 100% no-repeat}
 :root[theme='dark'] .g-slider .slick-prev{background:url("/staticfiles/img/arrow-body-l.svg") center/cover no-repeat}
 :root[theme='dark'] .g-slider .slick-next{background:url("/staticfiles/img/arrow-body-r.svg") center/cover no-repeat}
-:root[theme='dark'] .articles__item{background:url("/staticfiles/img/article_bg.svg") center/100% 100% no-repeat}
 .header__ul li:last-child a::before{background:url("/staticfiles/img/phone-blue.svg") center/100% no-repeat}
 .about-tasks__item:before{background:url("/staticfiles/img/mark.svg") center/auto 12px no-repeat}
 .about-any-info__item::before{background:url("/staticfiles/img/mark-cube.svg") center/cover no-repeat}
+:root[theme='light'] .articles__item{background:url("/staticfiles/img/article_bg-light.svg") center/100% no-repeat}
+:root[theme='dark'] .articles__item{background:url("/staticfiles/img/article_bg.svg") center/100% no-repeat}
 .g-loading{background:url("/staticfiles/img/loading.svg") center/100px 100px no-repeat}
 }
 
