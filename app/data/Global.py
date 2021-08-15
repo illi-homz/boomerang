@@ -34,14 +34,13 @@ data = {
         },
         'footerContacts': [
             {'title': '+7 (831) 28-28-911', 'url': 'tel:+7 (831) 28-28-911'},
-            {'title': '28-26-112', 'url': 'tel:28-26-112'},
-            {'title': '28-26-110', 'url': 'tel:28-26-110'},
+            {'title': '+7 (953) 571-88-77', 'url': 'tel:+7 (953) 571-88-77'},
             {'title': 'bumerang52@list.ru', 'url': 'mailto:bumerang52@list.ru'},
             {'title': 'Мы ВКонтакте', 'url': 'https://vk.com/52bumerang52'},
         ],
         'noManyBanner': static + 'img/index/promo/big',
-        'noManyInstall': 'Бесплатная установка оборудования',
-        'rentTerms': 'На условиях аренды',
+        'noManyInstall': 'Free equipment installation',
+        'rentTerms': 'На On lease terms',
 
         'techСharacteristic': 'Технические характеристики',
         'detail': 'Подробнее',
@@ -88,8 +87,8 @@ data = {
             {'title': 'We are on VKontakte', 'url': 'https://vk.com/52bumerang52'},
         ],
         'noManyBanner': static + 'img/index/promo/big',
-        'noManyInstall': 'No money install',
-        'rentTerms': 'Rent terms',
+        'noManyInstall': 'Free equipment installation',
+        'rentTerms': 'On lease terms',
 
         'techСharacteristic': 'Specifications',
         'detail': 'Detail',
