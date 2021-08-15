@@ -3167,6 +3167,7 @@ h1 {
 
 body {
   background-color: var(--bg-color);
+  min-width: 375px;
 }
 
 body.lock {
@@ -4470,6 +4471,7 @@ body.lock {
     height: auto;
     background: transparent;
     color: #F9F9F9;
+    border: unset;
   }
 
   .header__lang-item:first-child {

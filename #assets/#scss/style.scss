@@ -69,6 +69,7 @@ body
 {
     // background-color: $bg;
     background-color: var(--bg-color);
+    min-width: 375px;
 
     &.lock {overflow: hidden;}
 }
