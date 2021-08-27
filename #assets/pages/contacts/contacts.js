@@ -16,7 +16,7 @@ gz.contacts = {
         })
 
         myMap.geoObjects.add(new ymaps.Placemark([56.310931, 44.056161], {
-            balloonContentHeader: 'ООО Бумаранг',
+            balloonContentHeader: '<span class="contacts__map-title">ООО Бумаранг</span>',
             balloonContentBody: '<a href="tel:+7 (831) 28-28-911">+7 (831) 28-28-911</a><br/>'
         }, {
             preset: 'islands#governmentCircleIcon',

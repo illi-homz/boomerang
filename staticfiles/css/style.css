@@ -2938,6 +2938,11 @@ h1 {
   margin-left: -16px;
 }
 
+.contacts__map-title {
+  color: #080B12;
+  font-weight: bold;
+}
+
 .contacts .ymaps-2-1-78-balloon-content__header,
 .contacts ymaps a {
   color: #030303;

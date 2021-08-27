@@ -86,6 +86,12 @@
         }
     }
 
+    &__map-title
+    {
+        color: $text-black;
+        font-weight: bold;
+    }
+
     .ymaps-2-1-78-balloon-content__header, ymaps a {color: $black;}
 
 }
