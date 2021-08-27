@@ -571,6 +571,12 @@ h1 {
   stroke: var(--text-color);
 }
 
+.g-slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .g-slider .slick-track {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4029,7 +4035,7 @@ body.lock {
   .news-detail .g-slider {
     margin-bottom: 105px;
     padding-bottom: 143px;
-    width: calc(100% + 10px);
+    width: calc(100% + 12px);
     margin-left: -10px;
   }
 
