@@ -2938,6 +2938,10 @@ h1 {
   margin-left: -16px;
 }
 
+.contacts__map * {
+  color: #080B12;
+}
+
 .contacts__map-title {
   color: #080B12;
   font-weight: bold;

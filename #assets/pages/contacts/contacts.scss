@@ -72,6 +72,10 @@
         width: calc(100% + 32px);
         margin-left: -16px;
 
+        * {
+            color: $text-black;
+        }
+
         @include mobile
         {
             height: 320px;
