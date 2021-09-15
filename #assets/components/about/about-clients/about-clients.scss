@@ -66,7 +66,7 @@
         padding: 16px;
 
         &:not(:last-child) {margin-bottom: 24px;}
-        &:nth-child(n + 5) {display: none;}
+        &:nth-child(n + 6) {display: none;}
 
         @include tablet
         {

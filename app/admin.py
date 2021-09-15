@@ -4,12 +4,12 @@ from . import models
 # admin.site.register(models.New)
 # admin.site.register(models.Service)
 # admin.site.register(models.Stock)
-admin.site.register(models.Article)
-admin.site.register(models.Document)
-admin.site.register(models.Photo)
-admin.site.register(models.Client)
-admin.site.register(models.Feedback)
-admin.site.register(models.Link)
+# admin.site.register(models.Article)
+# admin.site.register(models.Document)
+# admin.site.register(models.Photo)
+# admin.site.register(models.Client)
+# admin.site.register(models.Feedback)
+# admin.site.register(models.Link)
 
 
 def dublicate_ad(modeladmin, request, queryset):
@@ -29,5 +29,29 @@ class NewAdmin(admin.ModelAdmin):
 	actions = [dublicate_ad]
 
 @admin.register(models.Stock)
+class StockAdmin(admin.ModelAdmin):
+	actions = [dublicate_ad]
+
+@admin.register(models.Client)
+class StockAdmin(admin.ModelAdmin):
+	actions = [dublicate_ad]
+
+@admin.register(models.Article)
+class StockAdmin(admin.ModelAdmin):
+	actions = [dublicate_ad]
+
+@admin.register(models.Document)
+class StockAdmin(admin.ModelAdmin):
+	actions = [dublicate_ad]
+
+@admin.register(models.Photo)
+class StockAdmin(admin.ModelAdmin):
+	actions = [dublicate_ad]
+
+@admin.register(models.Feedback)
+class StockAdmin(admin.ModelAdmin):
+	actions = [dublicate_ad]
+
+@admin.register(models.Link)
 class StockAdmin(admin.ModelAdmin):
 	actions = [dublicate_ad]

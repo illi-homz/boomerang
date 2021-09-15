@@ -2205,7 +2205,7 @@ h1 {
   margin-bottom: 24px;
 }
 
-.about-clients__item:nth-child(n + 5) {
+.about-clients__item:nth-child(n + 6) {
   display: none;
 }
 
