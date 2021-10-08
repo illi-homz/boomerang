@@ -156,13 +156,25 @@
             margin-bottom: 105px;
             padding-bottom: 143px;
             width: calc(100% + 12px);
-            margin-left: -10px;
+            margin-left: -6px;
+        }
+        @include desktop {
+            margin-left: -10;
         }
 
         .slick-list
         {
             height: auto !important;
-            @include tablet {height: auto;}
+            width: 100%;
+            @include tablet {
+                height: auto;
+                width: inherit;
+                margin-left: -4px;
+            }
+            @include desktop {
+                margin-left: 0;
+            }
+
         }
 
         .slick-track

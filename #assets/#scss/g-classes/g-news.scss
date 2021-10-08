@@ -7,7 +7,6 @@
     &__item-title
     {
         @include font-set(18, 1.6rem, 400);
-        height: 3.2rem;
         max-height: 45px;
         display: -webkit-box;
         -webkit-box-orient: vertical;
@@ -20,14 +19,19 @@
         a
         {
             display: block;
-            &::first-letter {text-transform: uppercase;}
+            &::first-letter {
+                text-transform: uppercase;
+            }
         }
+
+        @include tablet {
+            height: 3.2rem;
+    }
     }
 
     &__item-desc
     {
         @include font-set(12, 1.33rem, 400);
-        height: 2.66rem;
         display: -webkit-box;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;
@@ -35,6 +39,10 @@
         text-overflow: ellipsis;
         margin-bottom: 20px;
         padding: 0 18px;
+
+        @include tablet {
+            height: 2.66rem;
+    }
     }
 
     &__item-info
