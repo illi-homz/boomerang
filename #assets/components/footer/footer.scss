@@ -63,6 +63,7 @@
 
     &__row {
         &--first {
+            // background-color: red;
             position: relative;
             margin-bottom: 45px;
 
@@ -101,8 +102,8 @@
     }
 
     &__links {
-        // background-color: green;
-        margin-top: 32px;
+        // margin-top: 32px;
+        margin-top: 45px;
         margin-bottom: 60px;
 
         @include tablet {
@@ -120,8 +121,11 @@
     &__links-list {
         flex: 1;
 
-        &:first-child {
-            margin-right: 115px;
+
+        @include tablet {
+            &:first-child {
+                margin-right: 115px;
+            }
         }
 
         li {
@@ -129,7 +133,6 @@
 
             @include tablet {
                 margin-bottom: 19px;
-
 
                 &:last-child {
                     margin-bottom: 0;

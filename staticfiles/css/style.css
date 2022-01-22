@@ -1245,7 +1245,7 @@ h1 {
 }
 
 .footer__links {
-  margin-top: 32px;
+  margin-top: 45px;
   margin-bottom: 60px;
 }
 
@@ -1253,10 +1253,6 @@ h1 {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-}
-
-.footer__links-list:first-child {
-  margin-right: 115px;
 }
 
 .footer__links-list li {
@@ -3388,6 +3384,10 @@ body.lock {
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%);
+  }
+
+  .footer__links-list:first-child {
+    margin-right: 115px;
   }
 
   .footer__links-list li {
