@@ -7,6 +7,7 @@
             <a href="/" class="footer__logo">
                 <img src="{% static 'img/logo.svg' %}" alt="logo" />
             </a>
+
             <div class="footer__links">
                 <ul class="footer__links-list">
                     <li><a href="{{footer.services.url}}">{{footer.services.title}}</a></li>
@@ -19,6 +20,7 @@
                     <li><a href="{{footer.contacts.url}}">{{footer.contacts.title}}</a></li>
                 </ul>
             </div>
+
             <ul class="footer__contacts">
                 {% for contact in footerContacts %}
                 <li><a href="{{contact.url}}" target="_blank">{{contact.title}}</a></li>
