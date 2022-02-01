@@ -2470,6 +2470,10 @@ h1 {
   margin-bottom: 24px;
 }
 
+.news-detail__slide-wrapper {
+  padding: 1px;
+}
+
 .news-detail .g-slider {
   overflow: hidden;
   padding-bottom: 30px;

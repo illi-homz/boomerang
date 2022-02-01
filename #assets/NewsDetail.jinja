@@ -30,19 +30,21 @@
                 <div class="g-block__title">{{readSame}}</div>
                 <div class="news-detail__slider _news-detail__slider g-slider">
                     {% for n in news %}
-                        <div class="news-detail__slide g-news">
-                            <div class="g-news__item-title">
-                                <a href="/news/{{n.id}}">{{n.title|get_locale:locale}}</a>
-                            </div>
-                            <div class="g-news__item-desc">{{n.desc|get_locale:locale}}</div>
-                            <div class="g-news__item-info g-news__item-df-jcsb">
-                                <div class="g-news__item-date">{{n.date|date:"d E"}}</div>
-                                <a href="/news/{{n.id}}" class="g-news__item-detail">{{moreDetails}}</a>
-                            </div>
-                            <div class="g-news__item-img">
-                                <a href="/news/{{n.id}}">
-                                    <img src="{{ n.img.url }}" alt="img">
-                                </a>
+                        <div class="news-detail__slide-wrapper">
+                            <div class="news-detail__slide g-news">
+                                <div class="g-news__item-title">
+                                    <a href="/news/{{n.id}}">{{n.title|get_locale:locale}}</a>
+                                </div>
+                                <div class="g-news__item-desc">{{n.desc|get_locale:locale}}</div>
+                                <div class="g-news__item-info g-news__item-df-jcsb">
+                                    <div class="g-news__item-date">{{n.date|date:"d E"}}</div>
+                                    <a href="/news/{{n.id}}" class="g-news__item-detail">{{moreDetails}}</a>
+                                </div>
+                                <div class="g-news__item-img">
+                                    <a href="/news/{{n.id}}">
+                                        <img src="{{ n.img.url }}" alt="img">
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     {% endfor %}

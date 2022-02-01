@@ -1,76 +1,69 @@
-.news-detail
-{
+.news-detail {
     padding-top: 24px;
 
-    &.container
-    {
+    &.container {
         margin-bottom: 56px;
 
-        @include tablet {margin-bottom: 0;}
+        @include tablet {
+            margin-bottom: 0;
+        }
     }
 
-    h1
-    {
+    h1 {
         @include font-set(20, 24px, 700);
         margin-bottom: 24px;
 
-        @include desktop
-        {
+        @include desktop {
             margin-bottom: 32px;
             max-width: 1044px;
             padding-right: 200px;
         }
     }
 
-    p
-    {
+    p {
         margin-bottom: 28px;
     }
 
-    .bread-crumbs
-    {
+    .bread-crumbs {
         margin-bottom: 24px;
 
-        @include tablet {margin-bottom: 16px;}
+        @include tablet {
+            margin-bottom: 16px;
+        }
     }
 
-    &__item
-    {
+    &__item {
         position: relative;
     }
 
-    &__date
-    {
+    &__date {
         display: none;
         text-transform: lowercase;
 
-        @include desktop
-        {
+        @include desktop {
             display: block;
             @include font-set(14, 32px, 300);
             width: 195px;
             text-align: center;
             position: absolute;
-            right: 0; top: 0;
+            right: 0;
+            top: 0;
             // background-color: #2B303B;
             background-color: var(--black2-color);
             border-radius: 5px;
         }
     }
 
-    &__wrapper
-    {
+    &__wrapper {
         margin-bottom: 40px;
 
-        @include desktop
-        {
+        @include desktop {
             display: flex;
             margin-bottom: 20px;
         }
     }
 
-    &__text
-    {
+    &__text {
         flex: 1 0;
         margin-bottom: 24px;
 
@@ -80,79 +73,79 @@
         }
     }
 
-    &__img
-    {
+    &__img {
         width: 100vw;
         margin-left: -16px;
         height: 273px;
 
-        img
-        {
-            width: 100%;height: 100%;
+        img {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
         }
 
-        @include mobile
-        {
+        @include mobile {
             width: 100%;
             margin: 0;
         }
 
-        @include desktop
-        {
+        @include desktop {
             flex: 1 0;
             max-width: 430px;
         }
     }
 
-    &__read-same
-    {
+    &__read-same {
         padding-top: 32px;
         background-color: var(--black2-color);
 
-        .g-block__title {margin-bottom: 24px;}
+        .g-block__title {
+            margin-bottom: 24px;
+        }
 
-        @include tablet
-        {
+        @include tablet {
             padding-top: 29px;
 
-            .g-block__title {margin-bottom: 55px;}
+            .g-block__title {
+                margin-bottom: 55px;
+            }
         }
     }
 
-    .g-news
-    {
-        &__item-title
-        {
-            @include tablet
-            {
+    &__slide-wrapper {
+        padding: 1px;
+    }
+
+    .g-news {
+        &__item-title {
+            @include tablet {
                 font-size: 16px;
                 line-height: 20px;
                 margin-bottom: 8px;
             }
         }
 
-        &__item-desc
-        {
-            @include tablet {margin-bottom: 16px;}
+        &__item-desc {
+            @include tablet {
+                margin-bottom: 16px;
+            }
         }
 
-        &__item-df-jcsb
-        {
-            @include tablet {margin-bottom: 3px;}
+        &__item-df-jcsb {
+            @include tablet {
+                margin-bottom: 3px;
+            }
         }
     }
 
-    .g-slider
-    {
+    .g-slider {
         overflow: hidden;
         padding-bottom: 30px;
         position: relative;
         margin-bottom: 57px;
         display: flex;
 
-        @include tablet
-        {
+        @include tablet {
             margin-bottom: 105px;
             padding-bottom: 143px;
             width: calc(100% + 12px);
@@ -162,8 +155,7 @@
             margin-left: -10;
         }
 
-        .slick-list
-        {
+        .slick-list {
             height: auto !important;
             width: 100%;
             @include tablet {
@@ -174,44 +166,45 @@
             @include desktop {
                 margin-left: 0;
             }
-
         }
 
-        .slick-track
-        {
+        .slick-track {
             display: block;
             height: auto !important;
-            @include tablet
-            {
+            @include tablet {
                 display: flex;
                 height: auto;
                 align-items: flex-end;
             }
         }
 
-        .slick-slide
-        {
+        .slick-slide {
             margin-bottom: 22px;
 
-            &:nth-child(n + 4) {display: none;}
+            &:nth-child(n + 4) {
+                display: none;
+            }
 
-            @include tablet
-            {
+            @include tablet {
                 margin: 0 10px;
-                &:nth-child(n + 4) {display: block;}
+                &:nth-child(n + 4) {
+                    display: block;
+                }
             }
         }
 
-        .slick-arrow
-        {
+        .slick-arrow {
             position: absolute;
             bottom: 46px;
         }
-        .slick-prev {left: 10px;}
-        .slick-next {right: 0;}
+        .slick-prev {
+            left: 10px;
+        }
+        .slick-next {
+            right: 0;
+        }
 
-        .slick-dots
-        {
+        .slick-dots {
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
