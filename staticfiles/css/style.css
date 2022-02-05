@@ -1295,6 +1295,9 @@ h1 {
   padding: 0 8px;
   position: relative;
   text-align: center;
+  border-left-width: 1px;
+  border-style: solid;
+  border-color: #fff;
 }
 
 .footer__map li a {
@@ -1303,26 +1306,13 @@ h1 {
   font-weight: 300;
 }
 
-.footer__map li:after {
-  content: "";
-  width: 1px;
-  height: 100%;
-  background-color: #fff;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
 .footer__map li:first-child {
   padding-left: 0;
+  border-width: 0;
 }
 
 .footer__map li:last-child {
   padding-right: 0;
-}
-
-.footer__map li:last-child:after {
-  display: none;
 }
 
 .bread-crumbs {

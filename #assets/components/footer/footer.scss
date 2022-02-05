@@ -189,6 +189,9 @@
             padding: 0 8px;
             position: relative;
             text-align: center;
+            border-left-width: 1px;
+            border-style: solid;
+            border-color: #fff;
 
             a {
                 @include font-set(14, 16px, 300);
@@ -197,24 +200,12 @@
                 }
             }
 
-            &:after {
-                content: "";
-                width: 1px;
-                height: 100%;
-                background-color: #fff;
-                position: absolute;
-                right: 0;
-                top: 0;
-            }
-
             &:first-child {
                 padding-left: 0;
+                border-width: 0;
             }
             &:last-child {
                 padding-right: 0;
-                &:after {
-                    display: none;
-                }
             }
         }
     }
