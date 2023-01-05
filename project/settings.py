@@ -4,10 +4,11 @@ import dj_database_url
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'x9-jat#3l&4!+517wd(=u(!7n#gzb%%%ol*fnqr@fk-f_3cw%p'
-# DEBUG = True
-DEBUG = False
+DEBUG = True
+#DEBUG = False
 
-ALLOWED_HOSTS = ['79.143.30.139', '127.0.0.1', 'localhost']
+#ALLOWED_HOSTS = ['82.148.28.107', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -155,3 +156,26 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # SECURE_BROWSER_XSS_FILTER = True
 # SECURE_CONTENT_TYPE_NOSNIFF = True
+
+# CSRF_COOKIE_SECURE = True
+# CSRF_USE_SESSIONS = True
+
+CSRF_TRUSTED_ORIGINS = [
+    '82.148.28.107',
+    'bumeranger.ru',
+    'www.bumeranger.ru',
+    '127.0.0.1:8080',
+    'localhost:8080',
+]
+
+CORS_ORIGIN_WHITELIST = [
+    'http://127.0.0.1:8080',
+    'http://localhost:8080',
+]
+
+CORS_ALLOWED_ORIGINS = [
+    'http://127.0.0.1:8080',
+    'http://localhost:8080',
+]
+
+CORS_ALLOW_ALL_ORIGINS = True
