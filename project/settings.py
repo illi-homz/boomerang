@@ -97,7 +97,7 @@ dev_bases = {
 prod_bases = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'boomerang_db',
+        'NAME': 'dbms_db',
         'USER': 'www',
         'PASSWORD': '1234',
         'HOST': 'localhost',
