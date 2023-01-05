@@ -27,13 +27,13 @@ def index(request):
         currentServices if len(services) > 0 else [])
 
     stocks = models.Stock.objects.all()
-    randomStocks = random.sample(list(stocks), 3)
+    randomStocks = random.sample(list(stocks), 3) if len(stocks) >= 3 else stocks
     current_data['promo']['promos'] = randomStocks
 
     news = models.New.objects.all().order_by('-date')[:10]
     # news = map(lambda new: new.date = 'dddd', news)
     current_data['news_list'] = news
-    print('news_list', current_data['news_list'][0].date)
+    # print('news_list', current_data['news_list'][0].date)
     response = HttpResponse(render(request, 'Index.jinja', current_data))
     response = set_cookie(response, 'locale', locale)
     return response
