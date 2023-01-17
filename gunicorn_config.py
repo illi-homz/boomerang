@@ -1,5 +1,5 @@
-command = '/home/www/boomerang/env/bin/gunicorn'
-pythonpath = '/home/www/boomerang'
+command = '/home/www/code/boomerang/env/bin/gunicorn'
+pythonpath = '/home/www/code/boomerang'
 bind = '127.0.0.1:8001'
 workers = 3
 user = 'www'
