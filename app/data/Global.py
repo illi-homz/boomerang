@@ -38,6 +38,7 @@ data = {
         'footerContacts': [
             {'title': '+7 (831) 28-28-911', 'url': 'tel:+7 (831) 28-28-911'},
             {'title': '+7 (953) 571-88-77', 'url': 'tel:+7 (953) 571-88-77'},
+            {'title': '+7 (951) 910-10-03', 'url': 'tel:+7 (951) 910-10-03'},
             {'title': 'bumerang52@list.ru', 'url': 'mailto:bumerang52@list.ru'},
             {'title': 'Мы ВКонтакте', 'url': 'https://vk.com/52bumerang52'},
         ],
