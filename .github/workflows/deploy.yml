@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+
+    steps:
+      - uses: fifsky/ssh-action@master
+        with:
+          command: |
+            cd ~/projects/boomerang
+            source env/bin/activate
+            git pull
+            pip install -r requirements.txt
+            rm -rf ~/projects/boomerang/static/*
+            ./manage.py collectstatic
+            ./manage.py makemigrations
+            ./manage.py migrate
+            killall gunicorn
+          host: ${{secrets.HOST}}
+          user: www
+          key: ${{secrets.SSH_PRIVATE_KEY}}
+          args: "-tt"
