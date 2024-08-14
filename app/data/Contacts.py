@@ -17,28 +17,20 @@ data = {
                 'email': 'bumerang52@list.ru',
             },
             {
-                'title': 'ohrana@bumerang52.ru,',
+                'title': 'ohrana@bumerang52.ru',
                 'email': 'ohrana@bumerang52.ru',
             },
-            {
-                'title': 'kk.mashin@bumerang52.ru',
-                'email': 'kk.mashin@bumerang52.ru',
-            }
         ],
 
         'addressTitle': 'Адрес',
-        'address': '603093, г. Нижний Новгород, ул. Яблоневая, д. 18',
+        'address': '603093, г. Нижний Новгород, ул. Яблоневая, д.18Ж1',
 
         'phonesTitle': 'Телефоны',
         'phones': [
             {
-                'title': '+7 (831) 28-28-911,',
+                'title': '+7 (831) 28-28-911',
                 'phone': '+7 (831) 28-28-911'
             },
-            {
-                'title': '+7 (953) 571-88-77',
-                'phone': '+7 (953) 571-88-77'
-            }
         ],
 
         'vkTitle': 'Мы ВКонтакте',

@@ -2,9 +2,9 @@ from app import models
 from .Global import data as global_data
 
 services = models.Service.objects.all()
-#services = []
+# services = []
 articles = models.Article.objects.all()
-#articles = []
+# articles = []
 
 data = {
     'RU': {
