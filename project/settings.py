@@ -1,11 +1,16 @@
 import os
+import environ
 from pathlib import Path
 import dj_database_url
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-SECRET_KEY = 'x9-jat#3l&4!+517wd(=u(!7n#gzb%%%ol*fnqr@fk-f_3cw%p'
-# DEBUG = True
-DEBUG = False
+
+env = environ.Env()
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
+
+SECRET_KEY = env('SECRET_KEY')
+DEBUG = bool(int(env('DEBUG')))
+# DEBUG = False
 
 #ALLOWED_HOSTS = ['82.148.28.107', '127.0.0.1', 'localhost']
 ALLOWED_HOSTS = ['*']
